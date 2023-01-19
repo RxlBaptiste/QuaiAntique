@@ -70,9 +70,108 @@ h1 {
 /*Les images*/
 
 img {
-  width: 200px;
+  width: 250px;
   height: 180px;
   border: 5px solid #f8cf2c;
 }
 
-/*CAROUSEL ENTRÉ*/
+.slider-container {
+  display: flex;
+  align-items: center;
+  height: 290px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/*CONTAINER ENTRÉ*/
+
+.slider {
+  height: 290px;
+  padding: 20px 0;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 690px;
+}
+
+.slider .slide-track {
+  animation: scroll 25s linear infinite;
+  display: flex;
+  width: calc(200px * 10);
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+.slider .slide {
+  height: 250px;
+  width: 200px;
+  padding: 0 10px;
+  transition: 0.15s;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-920px);
+  }
+}
+
+.imgHover {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.HoverBox {
+  width: 220px;
+  height: 250px;
+  position: absolute;
+  color: transparent;
+  background-color: none;
+  transition: 0.15s;
+  margin-bottom: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.HoverBox:hover {
+  width: 220px;
+  height: 250px;
+  position: absolute;
+  color: #f8cf2c;
+  background-color: #28252790;
+  transition: 0.15s;
+  margin-bottom: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+/*CONTAINER PLAT*/
+
+.containerPlat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  background-color: #291211;
+  margin: 2em 0em;
+}
+
+/*CONTAINER DESSERT*/
+
+.containerDessert {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  background-color: #291211;
+  margin: 2em 0em;
+}
