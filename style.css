@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
 
 html {
   margin: 0px;
@@ -9,6 +10,7 @@ body {
   background-color: #252827;
   margin: 0px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /*----------------------------------------------------NAV BAR----------------------------------------------------- */
@@ -16,6 +18,10 @@ body {
 nav {
   background-color: #291211;
   height: 50%;
+
+  border-color: #f8cf2c;
+  border-style: solid;
+  border-width: 0 0 2px 0;
 }
 
 /*Grid Titre et Btn se connecter*/
@@ -204,4 +210,66 @@ img {
   border-style: solid;
   border-color: #f8cf2c;
   border-width: 2px 0;
+}
+
+/*--------------------------------LES BOUTTONS-----------------------------------*/
+.BtnContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Btn {
+  width: 230px;
+  height: 70px;
+  border-radius: 30px;
+
+  background-color: #f8cf2c;
+  color: #252827;
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 20px;
+}
+/*-------------------------------LE FOOTER--------------------------------*/
+.containerHoraire {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  background-color: #291211;
+  padding: 1em;
+  color: #f8cf2c;
+  margin: 2em 0 0 0;
+  border-style: solid;
+  border-color: #f8cf2c;
+  border-width: 2px 0 0 0;
+
+  font-family: "Lora", serif;
+  font-weight: bold;
+  font-size: 20px;
+
+  text-align: center;
+}
+
+#lundi {
+  grid-area: 1 / 1 / 2 / 2;
+}
+#mardi {
+  grid-area: 1 / 2 / 2 / 3;
+}
+#mercredi {
+  grid-area: 1 / 3 / 2 / 4;
+}
+#jeudi {
+  grid-area: 1 / 4 / 2 / 5;
+}
+#vendredi {
+  grid-area: 1 / 5 / 2 / 6;
+}
+#samedi {
+  grid-area: 1 / 6 / 2 / 7;
+}
+#dimanche {
+  grid-area: 1 / 7 / 2 / 8;
 }
