@@ -8,6 +8,7 @@ html {
 body {
   background-color: #252827;
   margin: 0px;
+  overflow-y: auto;
 }
 
 /*----------------------------------------------------NAV BAR----------------------------------------------------- */
@@ -47,8 +48,12 @@ nav {
 h1 {
   color: #f8cf2c;
   font-family: "Luxurious Script", cursive;
-  font-size: 4em;
+  font-size: 5em;
   font-weight: lighter;
+}
+h1:hover {
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 /*BTN SeConnecter*/
@@ -65,7 +70,32 @@ h1 {
   font-size: 24px;
 }
 
-/* ------------Les Caroussels------------ */
+/* ------------Les Carrousels------------ */
+
+/*Les Textes*/
+
+span {
+  position: relative;
+  display: flex;
+  width: 100%;
+  color: #f8cf2c;
+  font-family: "Luxurious Script", cursive;
+  font-size: 3em;
+}
+
+span.nos {
+  justify-content: flex-start;
+
+  top: 4em;
+  left: 5em;
+}
+
+span.title {
+  justify-content: flex-end;
+
+  bottom: 4.5em;
+  right: 5em;
+}
 
 /*Les images*/
 
@@ -77,27 +107,35 @@ img {
 
 .slider-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 290px;
-  justify-content: center;
-  margin-bottom: 10px;
+  height: auto;
+  justify-content: space-around;
+  margin: 1.5em 0;
+  background-color: #291211;
+
+  border-style: solid;
+  border-color: #f8cf2c;
+  border-width: 2px 0;
 }
 
-/*CONTAINER ENTRÉ*/
-
 .slider {
-  height: 290px;
-  padding: 20px 0;
-  margin: auto;
+  padding: 15px 0;
+  margin: 2em 0;
   overflow: hidden;
   position: relative;
-  width: 690px;
+  width: 1000px;
+  border-style: solid;
+  border-color: #f8cf2c;
+  border-width: 0 5px;
 }
 
 .slider .slide-track {
   animation: scroll 25s linear infinite;
   display: flex;
   width: calc(200px * 10);
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .slide-track:hover {
@@ -106,8 +144,8 @@ img {
 
 .slider .slide {
   height: 250px;
-  width: 200px;
-  padding: 0 10px;
+  width: 250px; /*
+  padding: 0 10px; */
   transition: 0.15s;
 }
 
@@ -116,7 +154,7 @@ img {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-920px);
+    transform: translateX(-1000px);
   }
 }
 
@@ -124,6 +162,8 @@ img {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
+  width: 230px;
+  height: 260px;
 }
 
 .HoverBox {
@@ -154,24 +194,14 @@ img {
   justify-content: center;
   text-transform: uppercase;
 }
-/*CONTAINER PLAT*/
+/* barres de séparations */
+.br {
+  width: 100%;
+  height: 1.5em;
+  background-color: #282527;
+  color: #282527;
 
-.containerPlat {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-  background-color: #291211;
-  margin: 2em 0em;
-}
-
-/*CONTAINER DESSERT*/
-
-.containerDessert {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-  background-color: #291211;
-  margin: 2em 0em;
+  border-style: solid;
+  border-color: #f8cf2c;
+  border-width: 2px 0;
 }
