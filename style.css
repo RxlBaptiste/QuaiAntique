@@ -219,19 +219,108 @@ img {
   font-weight: 800;
   font-size: 20px;
 }
-
-.Btn:active {
+.Btn:hover,
+.btnConnecter:hover {
   box-shadow: inset -2px -2px 3px #29121179, inset 2px 2px 3px #291211;
+}
+.Btn:active,
+.btnConnecter:active {
+  box-shadow: inset -2px -2px 3px #29121179, inset 2px 2px 3px #291211;
+
+  box-shadow: inset -2px -2px 3px #fffee66b, inset 2px 2px 3px #291211;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PAGE CARTE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-.fond {
+.carte {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 2em;
+}
+/*-----------CARTE GAUCHE------------------*/
+.Gauche {
+  /* 
+  border: 0.5px solid red; */
+
+  position: relative;
+  right: -20%;
+
+  display: flex;
+  height: 500px;
+  width: 20%;
+  background-color: transparent;
+
+  transform-style: preserve-3d;
+  transform-origin: 0;
+}
+.avantG {
+  z-index: 1;
+  background-color: brown;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.inteG {
+  background-color: rebeccapurple;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  backface-visibility: visible;
+}
+.Gauche:hover {
+  transform: rotateY(180deg);
+  transition-duration: 5s;
+}
+/*------------------FOND------------------------*/
+.Fond {
+  /* 
+  border: 0.5px solid blue; */
 
   height: 500px;
-  width: 50%;
+  width: 40%;
   background-color: #f8cf2c;
+}
+
+/*------------CARTE DROITE--------------------*/
+.Droite {
+  /* 
+  border: 0.5px solid red; */
+
+  position: relative;
+  right: 20%;
+
+  display: flex;
+  height: 500px;
+  width: 20%;
+  background-color: transparent;
+
+  transform-style: preserve-3d;
+  transform-origin: 100%;
+}
+.avantD {
+  z-index: 1;
+  background-color: brown;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.inteD {
+  background-color: rebeccapurple;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  backface-visibility: visible;
+}
+.Droite:hover {
+  transform: rotateY(180deg);
+  transition-duration: 5s;
 }
 
 /*-------------------------------LE FOOTER--------------------------------*/
