@@ -261,7 +261,7 @@ img {
   transform-style: preserve-3d;
   transform-origin: 0;
 
-  animation: ouverture 10s;
+  animation: ouverture 8s;
   animation-fill-mode: forwards;
 }
 #avantG {
@@ -307,7 +307,7 @@ img {
   transform-style: preserve-3d;
   transform-origin: 100%;
 
-  animation: ouverture 10s;
+  animation: ouverture 8s;
   animation-fill-mode: forwards;
 }
 
