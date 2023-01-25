@@ -81,6 +81,13 @@ h1 a {
   font-weight: 800;
   font-size: 24px;
 }
+
+/*ButtonHref*/
+
+a {
+  text-decoration: none;
+}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PAGE ACCUEIL~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* ------------Les Carrousels------------ */
 
@@ -492,6 +499,124 @@ p#Client {
 #RefInscription {
   text-decoration: none;
   color: #282527;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~PAGE RESERVATION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.FondReservation {
+  width: 90%;
+  margin: 2em auto;
+  min-height: 100%;
+
+  background-color: #291211;
+  border: solid 5px #f8cf2c;
+  border-radius: 50px;
+}
+
+.FormReservation {
+  height: 75%;
+  width: 50%;
+
+  font-family: "Hind Madurai", sans-serif;
+  font-size: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 2em 30% 2em;
+  padding: 2em;
+
+  background-color: #282527;
+  border: solid 2px #000;
+  border-radius: 50px;
+}
+
+.preambule {
+  margin: 1em 0 0;
+}
+
+.phrases {
+  color: #fffee6;
+  margin: 0;
+}
+
+#inputs {
+  display: flex;
+  justify-content: space-between;
+
+  width: 80%;
+
+  margin: 1em 0;
+}
+
+.InputReservation:hover,
+#BtnAllergies:hover {
+  background-color: #f8cf2c;
+}
+
+.InputReservation {
+  background-color: #fffee6;
+  font-family: "Hind Madurai", sans-serif;
+  border: 5px solid #291211;
+  color: #282527;
+  padding: 1em;
+}
+
+#BtnAllergies {
+  border: 5px solid #291211;
+  border-radius: 50px;
+  background-color: #fffee6;
+  padding: 1em 1.5em;
+  margin: 1em 0;
+  font-family: "Hind Madurai", sans-serif;
+}
+
+.TextHoraire {
+  color: #f8cf2c;
+  font-family: "Hind Madurai", sans-serif;
+}
+
+.HoraireMidi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.HoraireSoir {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 1em;
+}
+.ContainerHoraire {
+  border: 5px solid #291211;
+  background-color: #fffee6;
+
+  width: 5em;
+
+  padding: 0.5em 0;
+  margin: 0 1em;
+  font-family: "Hind Madurai", sans-serif;
+}
+
+.ContainerHoraire:hover {
+  background-color: #f8cf2c;
+}
+
+#BtnReservation {
+  background-color: #f8cf2c;
+  width: 50%;
+
+  border: 1px solid #282527;
+  border-radius: 50px;
+
+  font-family: "Hind Madurai", sans-serif;
+  font-size: 35px;
+
+  margin: 1em 0;
+  padding: 0.5em 1em;
 }
 
 /*-------------------------------LE FOOTER--------------------------------*/
