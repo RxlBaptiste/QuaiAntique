@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../favicon.PNG" rel="icon" type="image/png" />
     <link href="../style.css" rel="stylesheet" />
-    <title class="DocTitle">Le Quai Antique / Votre Revervation</title>
+    <title>Le Quai Antique / Connection</title>
   </head>
   <body>
     <nav class="parent">
@@ -15,11 +15,24 @@
           <a href="../index.html">Le Quai Antique</a>
         </h1>
       </div>
-      <form action="connection.html" class="BtnSeConnecter">
-        <button class="btnConnecter">Se Connecter</button>
-      </form>
     </nav>
-
+    <main>
+      <div class="FondConnection">
+        <div id="form">
+          <form methode="POST" class="Formulaire">
+            <input class="iptForm" type="text" placeholder="Votre adresse-mail"  ></input>
+            <input class="iptForm" type="text" placeholder="Votre mot de passe"></input>
+            <button id="BtnConnection" class="Btn" type="submit" >Connectez-vous</button>
+          </form>
+          <p id="Client">Vous n'êtes pas client chez nous ?</p>
+          <button class="BtnInscription Btn">
+            <a id="RefInscription" href="../creation/inscription.html" >
+              S'inscrire
+            </a>
+          </button>
+        </div>
+      </div>
+    </main>
     <footer>
       <div class="containerHoraire">
         <div class="horaires" id="lundi">
