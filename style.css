@@ -130,13 +130,16 @@ a {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PAGE ACCUEIL~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
+/*---------------Version Mobile------------------------*/
 @media screen and (max-width: 1500px) {
   span {
     font-size: 3em !important;
   }
   .slider {
     width: 550px !important;
+  }
+  .br {
+    color: #282527 !important;
   }
 }
 @media screen and (max-width: 810px) {
@@ -157,6 +160,9 @@ a {
     width: 200px !important;
     height: 200px !important;
   }
+  .br {
+    color: #282527 !important;
+  }
 }
 @media screen and (max-width: 500px) {
   span {
@@ -175,6 +181,9 @@ a {
   .HoverBox:hover {
     width: 150px !important;
     height: 150px !important;
+  }
+  .br {
+    color: #282527 !important;
   }
 }
 
