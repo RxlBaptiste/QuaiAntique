@@ -45,8 +45,11 @@ body {
 }
 @media screen and (max-width: 500px) {
   h1 {
-    font-size: 1.5em !important;
+    font-size: 2.5em !important;
     text-align: center !important;
+  }
+  .title {
+    width: 200px !important;
   }
   .btnConnecter,
   .Btn {
@@ -166,7 +169,7 @@ a {
 }
 @media screen and (max-width: 500px) {
   span {
-    font-size: 1.5em !important;
+    font-size: 1.75em !important;
   }
   img {
     position: relative !important;
@@ -720,17 +723,17 @@ p#Client {
 /*-------------------------------LE FOOTER--------------------------------*/
 @media screen and (max-width: 1500px) {
   .containerHoraire {
-    font-size: 15px !important;
+    font-size: 18px !important;
   }
 }
 @media screen and (max-width: 810px) {
   .containerHoraire {
-    font-size: 10px !important;
+    font-size: 11px !important;
   }
 }
 @media screen and (max-width: 500px) {
   .containerHoraire {
-    font-size: 6px !important;
+    font-size: 8px !important;
   }
 }
 
