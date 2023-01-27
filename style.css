@@ -60,6 +60,12 @@ body {
     font-size: 8px !important;
   }
 }
+@media (prefers-color-scheme: dark) {
+  .btnConnecter,
+  .Btn {
+    color: #282527 !important;
+  }
+}
 nav {
   background-color: #291211;
   height: 50%;
@@ -187,11 +193,6 @@ a {
   }
   .br {
     color: #282527 !important;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .Btn {
-    color: #252827;
   }
 }
 
