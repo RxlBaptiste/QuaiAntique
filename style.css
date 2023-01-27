@@ -189,6 +189,11 @@ a {
     color: #282527 !important;
   }
 }
+@media (prefers-color-scheme: dark) {
+  .Btn {
+    color: #252827;
+  }
+}
 
 /* ------------Les Carrousels------------ */
 
