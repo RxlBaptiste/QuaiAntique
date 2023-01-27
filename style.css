@@ -20,7 +20,8 @@ body {
     font-size: 4em !important;
     text-align: center !important;
   }
-  .btnConnecter {
+  .btnConnecter,
+  .Btn {
     width: 180px !important;
     height: 50px !important;
     border-radius: 30px !important;
@@ -33,12 +34,27 @@ body {
     font-size: 2.5em !important;
     text-align: center !important;
   }
-  .btnConnecter {
+  .btnConnecter,
+  .Btn {
     width: 100px !important;
     height: 25px !important;
     border-radius: 30px !important;
 
     font-size: 10px !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.5em !important;
+    text-align: center !important;
+  }
+  .btnConnecter,
+  .Btn {
+    width: 80px !important;
+    height: 25px !important;
+    border-radius: 30px !important;
+
+    font-size: 8px !important;
   }
 }
 nav {
@@ -140,6 +156,25 @@ a {
   .HoverBox:hover {
     width: 200px !important;
     height: 200px !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  span {
+    font-size: 1.5em !important;
+  }
+  img {
+    position: relative !important;
+    top: -5em !important;
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .slider {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .HoverBox:hover {
+    width: 150px !important;
+    height: 150px !important;
   }
 }
 
@@ -677,6 +712,16 @@ p#Client {
 @media screen and (max-width: 1500px) {
   .containerHoraire {
     font-size: 15px !important;
+  }
+}
+@media screen and (max-width: 810px) {
+  .containerHoraire {
+    font-size: 10px !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .containerHoraire {
+    font-size: 6px !important;
   }
 }
 
