@@ -397,7 +397,7 @@ img {
   .MGauche {
     background-color: aqua;
     width: 48%;
-    height: 730px;
+    height: 910px;
 
     border-right: 2.5px solid #f8cf2c;
     position: relative;
@@ -434,7 +434,7 @@ img {
   .MDroite {
     background-color: #f8cf2c;
     width: 48%;
-    height: 730px;
+    height: 910px;
   }
 
   .Textmobile {
@@ -476,8 +476,19 @@ img {
     display: flex;
     justify-content: space-evenly;
 
+    margin: 2em 0;
+
     font-family: luxurious script;
     font-size: 5em;
+  }
+}
+@media screen and (max-width: 300px) {
+  .TextCarte {
+    display: flex;
+    justify-content: space-evenly;
+
+    font-family: luxurious script;
+    font-size: 3em;
   }
 }
 
