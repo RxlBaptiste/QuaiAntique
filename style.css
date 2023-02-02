@@ -769,6 +769,14 @@ p#Client {
     padding-left: 3em !important;
   }
 }
+@media screen and (max-width: 450px) {
+  #BtnAllergies {
+    font-size: 12px !important;
+  }
+  .InputReservation {
+    padding: 2em !important;
+  }
+}
 
 .FondReservation {
   display: flex;
