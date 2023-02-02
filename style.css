@@ -759,8 +759,21 @@ p#Client {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~PAGE RESERVATION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media screen and (min-width: 1500px) {
+  .InputReservation {
+    padding: 1.5em 45% !important;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .TextHoraire {
+    padding-left: 3em !important;
+  }
+}
 
 .FondReservation {
+  display: flex;
+  align-items: center;
+
   width: 90%;
   margin: 2em auto;
   min-height: 100%;
@@ -800,7 +813,11 @@ p#Client {
 
 #inputs {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: stretch;
+  align-content: center;
 
   width: 80%;
 
@@ -837,13 +854,15 @@ p#Client {
 .HoraireMidi {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .HoraireSoir {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0 1em;
 }
@@ -863,6 +882,11 @@ p#Client {
 }
 
 #BtnReservation {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
   background-color: #f8cf2c;
   width: 50%;
 
@@ -870,7 +894,7 @@ p#Client {
   border-radius: 50px;
 
   font-family: "Hind Madurai", sans-serif;
-  font-size: 35px;
+  font-size: 25px;
 
   margin: 1em 0;
   padding: 0.5em 1em;
