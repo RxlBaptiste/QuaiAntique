@@ -768,6 +768,9 @@ p#Client {
   .TextHoraire {
     padding-left: 3em !important;
   }
+  .LabelToInputs {
+    font-size: 0.8em !important;
+  }
 }
 @media screen and (max-width: 450px) {
   #BtnAllergies {
@@ -834,6 +837,15 @@ p#Client {
   width: 80%;
 
   margin: 1em 0;
+}
+
+.LabelToInputs {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  color: #fffee6;
+  font-family: Lora, sans-serif;
 }
 
 .InputReservation:hover,

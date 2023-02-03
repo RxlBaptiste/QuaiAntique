@@ -34,18 +34,27 @@
             </p>
           </div>
           <div id="inputs">
+            <label class="LabelToInputs"
+              >Veuiller indiquer le nombre de personne :
+            </label>
             <input
               id="number"
               class="InputReservation"
               type="number"
               placeholder="Nombre de personnes"
+              min="1"
+              max="10"
             />
+            <br />
+            <label class="LabelToInputs">Choisissez votre date : </label>
             <input
               id="date"
               class="InputReservation"
               type="date"
               placeholder="Quel jour"
             />
+            <br />
+            <label class="LabelToInputs">Ecrivez un commentaire : </label>
             <input
               id="commentaire"
               class="InputReservation"
