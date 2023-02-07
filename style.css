@@ -396,7 +396,7 @@ img {
   /*Carte MOBILE*/
   .MGauche {
     background-color: aqua;
-    width: 48%;
+    width: 49%;
     height: 910px;
 
     border-right: 2.5px solid #f8cf2c;
@@ -429,7 +429,7 @@ img {
     height: 100%;
     transform: rotateY(180deg);
     backface-visibility: visible;
-    padding: 2em 0;
+    padding: 0;
   }
 
   .MDroite {
