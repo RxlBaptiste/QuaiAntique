@@ -19,14 +19,14 @@
     <main>
       <div class="FondConnection">
         <div id="form">
-          <form methode="POST" class="Formulaire">
-            <input class="iptForm" type="text" placeholder="Votre adresse-mail"></input>
-            <input class="iptForm" type="text" placeholder="Votre mot de passe"></input>
+          <form class="Formulaire" action="../session/connection.php" method="POST" >
+            <input class="iptForm" name="mail" type="text" placeholder="Votre adresse-mail"></input>
+            <input class="iptForm" name="pass" type="password" placeholder="Votre mot de passe"></input>
             <button id="BtnConnection" class="Btn" type="submit" >Connectez-vous</button>
           </form>
           <p id="Client">Vous n'êtes pas client chez nous ?</p>
           <button class="BtnInscription Btn">
-            <a id="RefInscription" href="../creation/inscription.html" >
+            <a id="RefInscription" href="creation/inscription.html" >
               S'inscrire
             </a>
           </button>
