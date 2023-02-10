@@ -21,6 +21,9 @@
           type="password"
           name="pass"
           placeholder="Votre mot de passe"
+          title="Au moins 8 caractères, un chiffre, une lettre majuscule et une minuscule"
+          pattern="(?=^.{8,}$)(?=.*[A-Z])(?=.*[a-z]).*"
+          minlength="8"
           required
         />
       </section>

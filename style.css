@@ -121,9 +121,10 @@ h1 a {
 /*BTN SeConnecter*/
 
 .btnConnecter {
-  width: 230px;
+  width: auto;
   height: 70px;
   border-radius: 30px;
+  padding: 0 1em;
 
   background-color: #f8cf2c;
   color: #252827;

@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../favicon.PNG" rel="icon" type="image/png" />
     <link href="../style.css" rel="stylesheet" />
     <title>Le Quai Antique / Connection</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <nav class="parent">
-      <div class="title">
-        <h1>
-          <a href="../index.html">Le Quai Antique</a>
-        </h1>
-      </div>
+        <div class="title">
+            <h1>
+                <a href="../index.html">Le Quai Antique</a>
+            </h1>
+        </div>
     </nav>
     <main>
-      <div class="FondConnection">
-        <div id="form">
-          <form class="Formulaire" action="../session/connection.php" method="POST" >
-            <input class="iptForm" name="mail" type="text" placeholder="Votre adresse-mail"></input>
-            <input class="iptForm" name="pass" type="password" placeholder="Votre mot de passe"></input>
-            <button id="BtnConnection" class="Btn" type="submit" >Connectez-vous</button>
-          </form>
-          <p id="Client">Vous n'êtes pas client chez nous ?</p>
-          <button class="BtnInscription Btn">
-            <a id="RefInscription" href="creation/inscription.html" >
-              S'inscrire
-            </a>
-          </button>
+        <div class="FondConnection">
+            <div id="form">
+                <form class="Formulaire" action="../Connect/connection.php" method="POST">
+                    <input class="iptForm" name="email" type="mail" placeholder="Votre adresse-mail" required></input>
+                    <input class="iptForm" name="password" type="password" placeholder="Votre mot de passe"
+                        title="Au moins 8 caractères, un chiffre, une lettre majuscule et une minuscule"
+                        pattern="(?=^.{8,}$)(?=.*[A-Z])(?=.*[a-z]).*" minlength="8"></input>
+                    <button id="BtnConnection" class="Btn" name="submit" type="submit">Connectez-vous</button>
+                </form>
+                <p id="Client">Vous n'êtes pas client chez nous ?</p>
+                <button class="BtnInscription Btn">
+                    <a id="RefInscription" href="creation/inscription.html">
+                        S'inscrire
+                    </a>
+                </button>
+            </div>
         </div>
-      </div>
     </main>
     <footer id="footerCarte">
-      <div class="containerHoraire">
-        <div class="horaires" id="lundi">
-          LUNDI <br /><br />12:00 - 14:00<br />19:00 - 22:00
+        <div class="containerHoraire">
+            <div class="horaires" id="lundi">
+                LUNDI <br /><br />12:00 - 14:00<br />19:00 - 22:00
+            </div>
+            <div class="horaires" id="mardi">
+                MARDI <br /><br />12:00 - 14:00<br />19:00 - 22:00
+            </div>
+            <div class="horaires" id="mercredi">MERCREDI <br /><br />FERMÉ</div>
+            <div class="horaires" id="jeudi">
+                JEUDI <br /><br />12:00 - 14:00<br />19:00 - 22:00
+            </div>
+            <div class="horaires" id="vendredi">
+                VENDREDI <br /><br />12:00 - 14:00<br />19:00 - 22:00
+            </div>
+            <div class="horaires" id="samedi">SAMEDI <br /><br />19:00 - 23:00</div>
+            <div class="horaires" id="dimanche">
+                DIMANCHE<br /><br />12:00 - 14:00
+            </div>
         </div>
-        <div class="horaires" id="mardi">
-          MARDI <br /><br />12:00 - 14:00<br />19:00 - 22:00
-        </div>
-        <div class="horaires" id="mercredi">MERCREDI <br /><br />FERMÉ</div>
-        <div class="horaires" id="jeudi">
-          JEUDI <br /><br />12:00 - 14:00<br />19:00 - 22:00
-        </div>
-        <div class="horaires" id="vendredi">
-          VENDREDI <br /><br />12:00 - 14:00<br />19:00 - 22:00
-        </div>
-        <div class="horaires" id="samedi">SAMEDI <br /><br />19:00 - 23:00</div>
-        <div class="horaires" id="dimanche">
-          DIMANCHE<br /><br />12:00 - 14:00
-        </div>
-      </div>
     </footer>
-  </body>
+</body>
+
 </html>
