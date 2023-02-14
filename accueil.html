@@ -7,97 +7,13 @@
     <link href="favicon.PNG" rel="icon" type="image/png" />
     <link href="style.css" rel="stylesheet" />
     <title class="DocTitle">Le Quai Antique</title>
-    <style>
-      section.popup{
-        z-index: 1;
-        background-color: #f8cf2c;
-
-        position: absolute;
-        top: 25%;
-        left: 35%;
-
-        height: auto;
-        width: auto;
-
-      }
-      .popupText{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-        padding: 50px;
-
-        position: fixed;
-        background-color: #291211;
-        border: solid #f8cf2c 10px;
-        color: #f8cf2c;
-        height: auto;
-        width: 500px;
-      }
-      .popupTitle{
-        font-size: 30px;
-        font-family: "Montserrat";
-        text-decoration: underline;
-      }
-      .spanPopup{
-        font-size: 14px;
-        font-family: "lora", sans-serif;
-      }
-      .formPopup{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      #BtnPopup{
-        border-radius: 20px;
-        border: #f8cf2c solid 5px;
-        background-color: #291211;
-        color: #f8cf2c;
-
-        padding: 10px;
-
-        font-size: 20px;
-        font-family: "lora", sans-serif;
-      }
-      #BtnPopup:hover{
-        border: #f8cf2c solid 5px;
-        color: #291211;
-        background-color: #f8cf2c;
-      }
-    </style>
   </head>
   <body>
-    <section class="popup">
-      <div class="popupText">
-        <h1 class="popupTitle">Information importante</h1>
-        <br>
-        <span class="spanPopup">Chers clients,</span><br>
-        <span class="spanPopup">
-          Nous tenons à vous informer que notre site web est un site fictif créé à des fins d'évaluation.
-          Nous n'offrons aucun produit ou service réel.
-        </span><br>
-        <span class="spanPopup">
-          Notre objectif est d'utiliser cette simulation pour améliorer la qualité de nos services et mieux comprendre les besoins et les attentes de nos utilisateurs.
-          Nous sommes désolés si cela a causé de la confusion ou de l'inconfort.
-        </span>
-        <br>
-        <br>
-        <div>
-          <form action="accueil.html" class="formPopup">
-            <div>
-              <input type="checkbox" required>Lu et accepté
-            </div>
-            <br>
-            <button id="BtnPopup" type="submit">Validé</button>
-          </form>
-        </div>
-      </div>
-    </section>
     <nav class="parent">
       <div class="title">
         <h1>Le Quai Antique</h1>
       </div>
-        <form class="BtnSeConnecter">
+        <form action="acces/connection.html" class="BtnSeConnecter">
           <button class="btnConnecter">
             Se Connecter
           </button>
@@ -372,12 +288,12 @@
       </div>
       <div>
         <div class="BtnContainer">
-          <form>
+          <form action="Pages/carte.html">
             <button class="Btn">
               Notre Carte
             </button>
           </form>
-          <form>
+          <form action="Pages/reservation.html">
             <button class="Btn">
               Réservations
             </button>
