@@ -8,13 +8,47 @@
     <link href="style.css" rel="stylesheet" />
     <title class="DocTitle">Le Quai Antique</title>
     <style>
+      @media screen and (max-width: 1500px) {
+        .popupText{
+          font-size: 8px;
+          top: 200px
+        }
+        .formPopup{
+          font-size: 20px;
+        }
+      }
+      @media screen and (max-width: 630px) {
+        .popupText{
+          font-size: 8px !important;
+          top: 200px !important;
+          padding: 5px !important;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .popupText{
+          font-size: 5px !important;
+          top: 200px !important;
+          width:auto !important;
+        }
+        .formPopup{
+          font-size: 12px;
+          padding: 0 50px !important;
+        }
+        #BtnPopup{
+          padding: 5px !important;
+
+          font-size: 8px !important;
+        }
+      }
       section.popup{
+        display: flex;
+        justify-content: center;
+
         z-index: 1;
         background-color: #f8cf2c;
 
-        position: absolute;
-        top: 25%;
-        left: 35%;
+        position: relative;
+        top: 250px;
 
         height: auto;
         width: auto;
