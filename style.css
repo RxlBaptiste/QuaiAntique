@@ -521,7 +521,7 @@ img {
   right: -20%;
 
   display: flex;
-  height: 600px;
+  height: 1200px;
   width: 20%;
   background-color: transparent;
   transform-style: preserve-3d;
@@ -549,7 +549,7 @@ img {
 
 /*------------------FOND------------------------*/
 .Fond {
-  height: 600px;
+  height: 1200px;
   width: 40%;
   background-color: #f8cf2c;
 
@@ -566,7 +566,7 @@ img {
   right: 20%;
 
   display: flex;
-  height: 600px;
+  height: 1200px;
   width: 20%;
   background-color: transparent;
 
@@ -669,7 +669,7 @@ li {
 
 #PlatD {
   border-left: 5px solid #291211;
-  margin-left: 37.5%;
+  margin-left: 5em !important;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~PAGE CONNECTION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
