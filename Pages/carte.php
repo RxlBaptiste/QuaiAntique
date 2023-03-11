@@ -8,11 +8,11 @@
     <link href="../favicon.PNG" rel="icon" type="image/png" />
     <link href="../style.css" rel="stylesheet" />
     <title class="DocTitle">Le Quai Antique / La Carte</title>
-    <style>
+    <!-- <style>
     .BtnMenu {
         color: blue;
     }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -92,8 +92,7 @@
                             <p class="MTitleD">Plats</p>
                             <ul class="Mplat">
                                 <li>Plat N°:</li>
-                                <li> fhgdfgfdg
-                                </li>
+                                <li>fhgdfgfdg</li>
                                 <li>Plat N°:</li>
                                 <li>Plat N°:</li>
                                 <li>Plat N°:</li>
@@ -126,16 +125,81 @@
                     <p id="TitleG">Nos Entrées</p>
                     <div class="liPanneau">
                         <ul>
-                            <li>Entré N° :</li>
-                            <li>Entré N° :</li>
-                            <li>Entré N° :</li>
-                            <li>Entré N° :</li>
-                            <li>Entré N° :</li>
-                            <li>Entré N° :</li>
-                            <li>Entré N° :</li>
-                            <li>Entré N° :</li>
-                            <li>Entré N° :</li>
-                            <li>Entré N° :</li>
+                            <li>
+                                <?php
+                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 1");
+                                    while ($carte = $recupPlat->fetch()){
+                                    echo($carte['name']);
+                                    echo'&nbsp';
+                                    echo($carte['price']);
+                                    echo'€';
+                                    echo '<br>';
+                                    echo '<i>';
+                                    echo($carte['description']);}
+                                    echo '</i>';
+                                    ?>
+                            </li>
+                            <li>
+                                <?php
+                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 2");
+                                    while ($carte = $recupPlat->fetch()){
+                                    echo($carte['name']);
+                                    echo'&nbsp';
+                                    echo($carte['price']);
+                                    echo'€';
+                                    echo '<br>';
+                                    echo '<i>';
+                                    echo($carte['description']);}
+                                    echo '</i>';
+                                    ?>
+                            </li>
+                            <li>
+                                <?php
+                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 3");
+                                    while ($carte = $recupPlat->fetch()){
+                                    echo($carte['name']);
+                                    echo'&nbsp';
+                                    echo($carte['price']);
+                                    echo'€';
+                                    echo '<br>';
+                                    echo '<i>';
+                                    echo($carte['description']);}
+                                    echo '</i>';
+                                    ?>
+                            </li>
+                            <li>
+                                <?php
+                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 4");
+                                    while ($carte = $recupPlat->fetch()){
+                                    echo($carte['name']);
+                                    echo'&nbsp';
+                                    echo($carte['price']);
+                                    echo'€';
+                                    echo '<br>';
+                                    echo '<i>';
+                                    echo($carte['description']);}
+                                    echo '</i>';
+                                    ?>
+                            </li>
+                            <li>
+                                <?php
+                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 5");
+                                    while ($carte = $recupPlat->fetch()){
+                                    echo($carte['name']);
+                                    echo'&nbsp';
+                                    echo($carte['price']);
+                                    echo'€';
+                                    echo '<br>';
+                                    echo '<i>';
+                                    echo($carte['description']);}
+                                    echo '</i>';
+                                    ?>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -148,32 +212,27 @@
                             <ul>
                                 <li>Plat N° :</li>
                                 <li>Plat N° :</li>
-                                <li><?php
-                      $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                      $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 3");
-                      while ($carte = $recupPlat->fetch()){
-                      echo($carte['name']);
-                      echo'&nbsp';
-                      echo($carte['price']);
-                      echo'€';
-                      echo '<br>';
-                      echo($carte['description']);
-/*                       echo '&nbsp <a name="action" href="cartechange.php?action=change&id='.$carte['id'].'" style="background-color:red; color:white; text-decoration:none;"> Change</a>';
- */}
-
-
-                    ?>
-                                    <!-- <input type="button" value="Changer de nom" /> -->
+                                <li>
+                                    <?php
+                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 3");
+                                    while ($carte = $recupPlat->fetch()){
+                                    echo($carte['name']);
+                                    echo'&nbsp';
+                                    echo($carte['price']);
+                                    echo'€';
+                                    echo '<br>';
+                                    echo($carte['description']);}
+                                    ?>
                                 </li>
-
-
                                 <li>Plat N° :</li>
                                 <li>Plat N° :</li>
                                 <li>Plat N° :</li>
                                 <li>Plat N° :</li>
                                 <li>Plat N° :</li>
                                 <li>Plat N° :</li>
-                                <li>Plat N° :</li>
+                                <!-- 
+                                <li>Plat N° :</li> -->
                             </ul>
                         </div>
                         <div id="PlatD">
