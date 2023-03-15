@@ -8,6 +8,7 @@
     <link href="../style.css" rel="stylesheet" />
     <title class="DocTitle">Le Quai Antique / Votre Revervation</title>
   </head>
+
   <body>
     <nav class="parent">
       <div class="title">
@@ -21,7 +22,7 @@
     </nav>
     <main>
       <div class="FondReservation">
-        <form methode="POST" class="FormReservation">
+        <form method="POST" action="bonDeResa.php" class="FormReservation">
           <div class="preambule">
             <p class="phrases">
               Merci d'avance de préciser en commentaire le nombre d'enfants
@@ -39,6 +40,7 @@
             </label>
             <input
               id="number"
+              name="nbPers"
               class="InputReservation"
               type="number"
               placeholder="Nombre de personnes"
@@ -49,6 +51,7 @@
             <label class="LabelToInputs">Choisissez votre date : </label>
             <input
               id="date"
+              name="date"
               class="InputReservation"
               type="date"
               placeholder="Quel jour"
@@ -57,6 +60,7 @@
             <label class="LabelToInputs">Ecrivez un commentaire : </label>
             <input
               id="commentaire"
+              name="commentaire"
               class="InputReservation"
               type="text"
               placeholder="Commentaire"
@@ -76,6 +80,7 @@
                   class="BtnRadio"
                   type="radio"
                   name="horaires"
+                  value="12:00:00"
                   onclick="horaire()"
                 />
                 <label for="12:00">12:00</label>
@@ -86,6 +91,7 @@
                   class="BtnRadio"
                   type="radio"
                   name="horaires"
+                  value="12:15:00"
                   onclick="horaire()"
                 />
                 <label for="12:15">12:15</label>
@@ -95,6 +101,7 @@
                   id="horaires3"
                   class="BtnRadio"
                   type="radio"
+                  value="12:30:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -105,6 +112,7 @@
                   id="horaires4"
                   class="BtnRadio"
                   type="radio"
+                  value="12:45:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -115,6 +123,7 @@
                   id="horaires5"
                   class="BtnRadio"
                   type="radio"
+                  value="13:00:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -128,6 +137,7 @@
                   id="horaires6"
                   class="BtnRadio"
                   type="radio"
+                  value="19:00:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -138,6 +148,7 @@
                   id="horaires7"
                   class="BtnRadio"
                   type="radio"
+                  value="19:15:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -148,6 +159,7 @@
                   id="horaires8"
                   class="BtnRadio"
                   type="radio"
+                  value="19:30:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -158,6 +170,7 @@
                   id="horaires9"
                   class="BtnRadio"
                   type="radio"
+                  value="19:45:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -168,6 +181,7 @@
                   id="horaires10"
                   class="BtnRadio"
                   type="radio"
+                  value="20:00:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -178,6 +192,7 @@
                   id="horaires11"
                   class="BtnRadio"
                   type="radio"
+                  value="20:15:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -188,6 +203,7 @@
                   id="horaires12"
                   class="BtnRadio"
                   type="radio"
+                  value="20:30:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -198,6 +214,7 @@
                   id="horaires13"
                   class="BtnRadio"
                   type="radio"
+                  value="20:45:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -208,6 +225,7 @@
                   id="horaires14"
                   class="BtnRadio"
                   type="radio"
+                  value="21:00:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -218,6 +236,7 @@
                   id="horaires15"
                   class="BtnRadio"
                   type="radio"
+                  value="21:15:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -228,6 +247,7 @@
                   id="horaires16"
                   class="BtnRadio"
                   type="radio"
+                  value="21:30:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -238,6 +258,7 @@
                   id="horaires17"
                   class="BtnRadio"
                   type="radio"
+                  value="21:45:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -248,6 +269,7 @@
                   id="horaires18"
                   class="BtnRadio"
                   type="radio"
+                  value="22:00:00"
                   name="horaires"
                   onclick="horaire()"
                 />
@@ -255,7 +277,12 @@
               </div>
             </div>
           </div>
-          <button class="btnConnecter" id="BtnReservation" type="submit">
+          <button
+            name="submit"
+            class="btnConnecter"
+            id="BtnReservation"
+            type="submit"
+          >
             Reserver votre table
           </button>
         </form>

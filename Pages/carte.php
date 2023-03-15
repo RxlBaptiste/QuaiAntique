@@ -8,11 +8,6 @@
     <link href="../favicon.PNG" rel="icon" type="image/png" />
     <link href="../style.css" rel="stylesheet" />
     <title class="DocTitle">Le Quai Antique / La Carte</title>
-    <!-- <style>
-    .BtnMenu {
-        color: blue;
-    }
-    </style> -->
 </head>
 
 <body>
@@ -138,7 +133,7 @@
                             <p class="MTitleD">Plats</p>
                             <ul class="Mplat">
                                 <li>Plat N°:</li>
-                                <li>fhgdfgfdg</li>
+                                <li>Plat N°:</li>
                                 <li>Plat N°:</li>
                                 <li>Plat N°:</li>
                                 <li>Plat N°:</li>
@@ -160,7 +155,6 @@
                     </div>
                 </div>
             </div>
-
             <!--Carte Version Desktop-->
             <div id="Gauche">
                 <div id="avantG">
@@ -305,7 +299,7 @@
                                 <li>Plat N° :</li> -->
                             </ul>
                         </div>
-                        <div id="PlatD">
+                        <div class="PlatD">
                             <ul>
                                 <li>
                                     <?php
@@ -365,16 +359,66 @@
                     <p id="TitleD">Nos Desserts</p>
                     <div class="liPanneau">
                         <ul>
-                            <li>Dessert N° :</li>
-                            <li>Dessert N° :</li>
-                            <li>Dessert N° :</li>
-                            <li>Dessert N° :</li>
-                            <li>Dessert N° :</li>
-                            <li>Dessert N° :</li>
-                            <li>Dessert N° :</li>
-                            <li>Dessert N° :</li>
-                            <li>Dessert N° :</li>
-                            <li>Dessert N° :</li>
+                            <li>
+                                <?php
+                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 15");
+                                    while ($carte = $recupPlat->fetch()){
+                                    echo '<u>'.$carte['name'].'</u>';
+                                    echo'&nbsp';
+                                    echo '<b>'.$carte['price'].'€ </b>';
+                                    echo '<br>';
+                                    echo '<i>'.$carte['description'].'</i>';}
+                                    ?>
+                            </li>
+                            <li>
+                                <?php
+                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 16");
+                                    while ($carte = $recupPlat->fetch()){
+                                    echo '<u>'.$carte['name'].'</u>';
+                                    echo'&nbsp';
+                                    echo '<b>'.$carte['price'].'€ </b>';
+                                    echo '<br>';
+                                    echo '<i>'.$carte['description'].'</i>';}
+                                    ?>
+                            </li>
+                            <li>
+                                <?php
+                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 17");
+                                    while ($carte = $recupPlat->fetch()){
+                                    echo '<u>'.$carte['name'].'</u>';
+                                    echo'&nbsp';
+                                    echo '<b>'.$carte['price'].'€ </b>';
+                                    echo '<br>';
+                                    echo '<i>'.$carte['description'].'</i>';}
+                                    ?>
+                            </li>
+                            <li>
+                                <?php
+                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 18");
+                                    while ($carte = $recupPlat->fetch()){
+                                    echo '<u>'.$carte['name'].'</u>';
+                                    echo'&nbsp';
+                                    echo '<b>'.$carte['price'].'€ </b>';
+                                    echo '<br>';
+                                    echo '<i>'.$carte['description'].'</i>';}
+                                    ?>
+                            </li>
+                            <li>
+                                <?php
+                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 19");
+                                    while ($carte = $recupPlat->fetch()){
+                                    echo '<u>'.$carte['name'].'</u>';
+                                    echo'&nbsp';
+                                    echo '<b>'.$carte['price'].'€ </b>';
+                                    echo '<br>';
+                                    echo '<i>'.$carte['description'].'</i>';}
+                                    ?>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -384,11 +428,6 @@
                 </div>
             </div>
         </div>
-        <form action="menu.html">
-            <button type="submit">
-                <p class="BtnMenu">VOIR LES MENUS</p>
-            </button>
-        </form>
     </main>
     <footer id="footerCarte">
         <div class="containerHoraire">
@@ -412,5 +451,197 @@
         </div>
     </footer>
 </body>
+<style>
+.PlatD {
+    border-left: 5px solid #291211;
+}
+
+@media screen and (max-width: 970px) {
+    .Textmobile {
+        display: block !important;
+    }
+
+    #Gauche {
+        display: none !important;
+    }
+
+    .Fond {
+        display: none !important;
+    }
+
+    #Droite {
+        display: none !important;
+    }
+
+    .ContainerEntré {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 0px;
+    }
+
+    .Entre1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .Entre2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .Entre3 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .Entre4 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .Entre5 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .ContainerPlats {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 0px;
+    }
+
+
+    .Plat1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .Plat2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .Plat3 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .Plat4 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .Plat5 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .Plat6 {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
+    .Plat7 {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    .Plat8 {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+
+    .Plat9 {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+
+    /*Carte MOBILE*/
+
+    .MGauche {
+        background-color: aqua;
+        width: 48%;
+        height: 910px;
+
+        border-right: 2.5px solid #f8cf2c;
+        position: relative;
+        right: -48%;
+        display: flex;
+        background-color: transparent;
+        transform-style: preserve-3d;
+        transform-origin: 0;
+
+        animation: ouverture 8s;
+        animation-fill-mode: forwards;
+    }
+
+    .TextCarte,
+    #TextMenu {
+        color: #f8cf2c;
+    }
+
+    #MavantG {
+        z-index: 1;
+        background-color: #291211;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    #MinteG {
+        background-color: #f8cf2c;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(180deg);
+        backface-visibility: visible;
+        padding: 0;
+    }
+
+    .MDroite {
+        background-color: #f8cf2c;
+        width: 48%;
+        height: 910px;
+    }
+
+    .Textmobile {
+        color: #282527;
+    }
+
+    .MTitleG,
+    .MTitleD {
+        display: flex;
+        justify-content: flex-end;
+
+        margin: 1em 1.5em;
+        font-size: 1.5em;
+    }
+
+    .MTitleG {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .MTitleD {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .Mplat {
+        font-size: 1em !important;
+    }
+
+    #TextMenu {
+        display: flex !important;
+        justify-content: center;
+
+        margin-top: 3em;
+
+        font-family: "Lora", sans-serif;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .TextCarte {
+        display: flex;
+        justify-content: space-evenly;
+
+        font-family: luxurious script;
+        font-size: 5em;
+    }
+}
+</style>
 
 </html>

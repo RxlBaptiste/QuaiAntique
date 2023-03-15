@@ -359,11 +359,11 @@ img {
   }
   #TitleD {
     font-size: 25px !important;
-  } /*
-  #PlatD { 
-    margin-left: 30% !important; 
-  }*/
-}
+  }
+  .PlatD {
+    font-size: 20px !important;
+  }
+} /* 
 @media screen and (max-width: 810px) {
   #TitleG {
     font-size: 25px !important;
@@ -376,13 +376,13 @@ img {
   }
   ul {
     font-size: 18px !important;
-  } /* 
+  }
   #PlatD {
     
     margin-left: 30% !important; 
-  }*/
-}
-@media screen and (max-width: 780px) {
+  }
+}*/ /* 
+@media screen and (max-width: 970px) {
   .Textmobile {
     display: block !important;
   }
@@ -395,7 +395,7 @@ img {
   #Droite {
     display: none !important;
   }
-  /*Carte MOBILE*/
+  /*Carte MOBILE
   .MGauche {
     background-color: aqua;
     width: 48%;
@@ -482,7 +482,7 @@ img {
     font-family: luxurious script;
     font-size: 5em;
   }
-}
+} */
 @media screen and (max-width: 300px) {
   .TextCarte {
     display: flex;
@@ -667,10 +667,11 @@ li {
   display: flex;
   flex-direction: row;
 }
-
-#PlatD {
+/*
+.PlatD {
   border-left: 5px solid #291211;
-}
+    margin-left: 0 !important;
+}*/
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~PAGE CONNECTION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 @media screen and (max-width: 1500px) {
