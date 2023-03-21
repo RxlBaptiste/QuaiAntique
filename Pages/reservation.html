@@ -67,7 +67,7 @@
             />
           </div>
           <button id="BtnAllergies">
-            <a href="../Allergies/allergies.html">
+            <a href="../acces/Allergies/allergies.html">
               Des allergies ? Cliquer ici.
             </a>
           </button>
@@ -264,7 +264,7 @@
                 />
                 <label>21:45</label>
               </div>
-              <div class="ContainerHoraire">
+              <div id="boxhoraire" class="ContainerHoraire">
                 <input
                   id="horaires18"
                   class="BtnRadio"
@@ -309,6 +309,292 @@
         </div>
       </div>
     </footer>
-    <script src="../script.js"></script>
+    <script>
+      const checkbox1 = document.getElementById("horaires1");
+      const checkbox2 = document.getElementById("horaires2");
+      const checkbox3 = document.getElementById("horaires3");
+      const checkbox4 = document.getElementById("horaires4");
+      const checkbox5 = document.getElementById("horaires5");
+      const checkbox6 = document.getElementById("horaires6");
+      const checkbox7 = document.getElementById("horaires7");
+      const checkbox8 = document.getElementById("horaires8");
+      const checkbox9 = document.getElementById("horaires9");
+      const checkbox10 = document.getElementById("horaires10");
+      const checkbox11 = document.getElementById("horaires11");
+      const checkbox12 = document.getElementById("horaires12");
+      const checkbox13 = document.getElementById("horaires13");
+      const checkbox14 = document.getElementById("horaires14");
+      const checkbox15 = document.getElementById("horaires15");
+      const checkbox16 = document.getElementById("horaires16");
+      const checkbox17 = document.getElementById("horaires17");
+      const checkbox18 = document.getElementById("horaires18");
+      const divParent1 = checkbox1.parentNode;
+      const divParent2 = checkbox2.parentNode;
+      const divParent3 = checkbox3.parentNode;
+      const divParent4 = checkbox4.parentNode;
+      const divParent5 = checkbox5.parentNode;
+      const divParent6 = checkbox6.parentNode;
+      const divParent7 = checkbox7.parentNode;
+      const divParent8 = checkbox8.parentNode;
+      const divParent9 = checkbox9.parentNode;
+      const divParent10 = checkbox10.parentNode;
+      const divParent11 = checkbox11.parentNode;
+      const divParent12 = checkbox12.parentNode;
+      const divParent13 = checkbox13.parentNode;
+      const divParent14 = checkbox14.parentNode;
+      const divParent15 = checkbox15.parentNode;
+      const divParent16 = checkbox16.parentNode;
+      const divParent17 = checkbox17.parentNode;
+      const divParent18 = checkbox18.parentNode;
+
+      function horaire() {
+        if (checkbox1.checked) {
+          divParent1.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox1.checked) {
+          divParent1.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox2.checked) {
+          divParent2.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox2.checked) {
+          divParent2.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox3.checked) {
+          divParent3.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox3.checked) {
+          divParent3.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox4.checked) {
+          divParent4.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox4.checked) {
+          divParent4.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox5.checked) {
+          divParent5.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox5.checked) {
+          divParent5.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox6.checked) {
+          divParent6.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox6.checked) {
+          divParent6.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox7.checked) {
+          divParent7.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox7.checked) {
+          divParent7.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox8.checked) {
+          divParent8.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox8.checked) {
+          divParent8.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox9.checked) {
+          divParent9.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox9.checked) {
+          divParent9.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox10.checked) {
+          divParent10.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox10.checked) {
+          divParent10.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox11.checked) {
+          divParent11.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox11.checked) {
+          divParent11.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox12.checked) {
+          divParent12.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox12.checked) {
+          divParent12.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox13.checked) {
+          divParent13.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox13.checked) {
+          divParent13.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox14.checked) {
+          divParent14.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox14.checked) {
+          divParent14.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox15.checked) {
+          divParent15.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox15.checked) {
+          divParent15.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox16.checked) {
+          divParent16.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox16.checked) {
+          divParent16.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox17.checked) {
+          divParent17.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox17.checked) {
+          divParent17.style.backgroundColor = "#fffee6";
+        }
+        if (checkbox18.checked) {
+          divParent18.style.backgroundColor = "#f8cf2c";
+        }
+        if (!checkbox18.checked) {
+          divParent18.style.backgroundColor = "#fffee6";
+        }
+      }
+
+      const inputDate = document.getElementById("date"); /*
+      const heureInput = document.getElementById("heure"); */
+      const box = document.getElementById("boxhoraire");
+      const elements = document.getElementsByClassName("ContainerHoraire");
+
+      inputDate.addEventListener("change", function () {
+        const dateValue = inputDate.value;
+        const date = new Date(dateValue);
+        const jourSemaine = date.toLocaleDateString("fr-FR", {
+          weekday: "long",
+        });
+        console.log("Jour de la semaine :", jourSemaine);
+
+        if ((jourSemaine == "lundi", "mardi", "jeudi", "vendredi")) {
+          //Enleve la color red & input disable
+          checkbox1.removeAttribute("disabled");
+          checkbox2.removeAttribute("disabled");
+          checkbox3.removeAttribute("disabled");
+          checkbox4.removeAttribute("disabled");
+          checkbox5.removeAttribute("disabled");
+          checkbox6.removeAttribute("disabled");
+          checkbox7.removeAttribute("disabled");
+          checkbox8.removeAttribute("disabled");
+          checkbox9.removeAttribute("disabled");
+          checkbox10.removeAttribute("disabled");
+          checkbox11.removeAttribute("disabled");
+          checkbox12.removeAttribute("disabled");
+          checkbox13.removeAttribute("disabled");
+          checkbox14.removeAttribute("disabled");
+          checkbox15.removeAttribute("disabled");
+          checkbox16.removeAttribute("disabled");
+          checkbox17.removeAttribute("disabled");
+          checkbox18.removeAttribute("disabled");
+
+          for (let i = 0; i < elements.length; i++) {
+            elements[i].style.backgroundColor = "";
+          }
+          //Ajoute la color red & input disable
+          checkbox15.setAttribute("disabled", true);
+          checkbox16.setAttribute("disabled", true);
+          checkbox17.setAttribute("disabled", true);
+          checkbox18.setAttribute("disabled", true);
+          for (let i = 14; i < elements.length; i++) {
+            elements[i].style.backgroundColor = "red";
+          }
+        }
+        if (jourSemaine == "mercredi") {
+          //Enleve la color red & input disable
+          checkbox1.removeAttribute("disabled");
+          checkbox2.removeAttribute("disabled");
+          checkbox3.removeAttribute("disabled");
+          checkbox4.removeAttribute("disabled");
+          checkbox5.removeAttribute("disabled");
+          checkbox15.removeAttribute("disabled");
+          checkbox16.removeAttribute("disabled");
+          checkbox17.removeAttribute("disabled");
+          checkbox18.removeAttribute("disabled");
+          for (let i = 0; i < 5; i++) {
+            elements[i].style.backgroundColor = "";
+          }
+          for (let i = 14; i < elements.length; i++) {
+            elements[i].style.backgroundColor = "";
+          }
+          alert(
+            "Nous sommes fermé le " +
+              jourSemaine +
+              ". Veuillez choisir un autre jour"
+          );
+          document.getElementById("date").value = "";
+        }
+        if (jourSemaine == "samedi") {
+          //Enleve la color red & input disable
+          checkbox6.removeAttribute("disabled");
+          checkbox7.removeAttribute("disabled");
+          checkbox8.removeAttribute("disabled");
+          checkbox9.removeAttribute("disabled");
+          checkbox10.removeAttribute("disabled");
+          checkbox11.removeAttribute("disabled");
+          checkbox12.removeAttribute("disabled");
+          checkbox13.removeAttribute("disabled");
+          checkbox14.removeAttribute("disabled");
+          checkbox15.removeAttribute("disabled");
+          checkbox16.removeAttribute("disabled");
+          checkbox17.removeAttribute("disabled");
+          checkbox18.removeAttribute("disabled");
+          for (let i = 5; i < elements.length; i++) {
+            elements[i].style.backgroundColor = "";
+          }
+          for (let i = 14; i < elements.length; i++) {
+            elements[i].style.backgroundColor = "";
+          }
+          //Ajoute la color red & input disable
+          checkbox1.setAttribute("disabled", true);
+          checkbox2.setAttribute("disabled", true);
+          checkbox3.setAttribute("disabled", true);
+          checkbox4.setAttribute("disabled", true);
+          checkbox5.setAttribute("disabled", true);
+          for (let i = 0; i < 5; i++) {
+            elements[i].style.backgroundColor = "red";
+          }
+        }
+        if (jourSemaine == "dimanche") {
+          //Enleve la color red & input disable
+          checkbox1.removeAttribute("disabled");
+          checkbox2.removeAttribute("disabled");
+          checkbox3.removeAttribute("disabled");
+          checkbox4.removeAttribute("disabled");
+          checkbox5.removeAttribute("disabled");
+          checkbox15.removeAttribute("disabled");
+          checkbox16.removeAttribute("disabled");
+          checkbox17.removeAttribute("disabled");
+          checkbox18.removeAttribute("disabled");
+          for (let i = 0; i < 5; i++) {
+            elements[i].style.backgroundColor = "";
+          }
+          for (let i = 14; i < elements.length; i++) {
+            elements[i].style.backgroundColor = "";
+          }
+          //Ajoute la color red & input disable
+          checkbox6.setAttribute("disabled", true);
+          checkbox7.setAttribute("disabled", true);
+          checkbox8.setAttribute("disabled", true);
+          checkbox9.setAttribute("disabled", true);
+          checkbox10.setAttribute("disabled", true);
+          checkbox11.setAttribute("disabled", true);
+          checkbox12.setAttribute("disabled", true);
+          checkbox13.setAttribute("disabled", true);
+          checkbox14.setAttribute("disabled", true);
+          checkbox15.setAttribute("disabled", true);
+          checkbox16.setAttribute("disabled", true);
+          checkbox17.setAttribute("disabled", true);
+          checkbox18.setAttribute("disabled", true);
+          for (let i = 5; i < elements.length; i++) {
+            elements[i].style.backgroundColor = "red";
+          }
+        }
+      });
+    </script>
   </body>
 </html>

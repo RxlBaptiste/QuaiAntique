@@ -935,6 +935,8 @@ p#Client {
 .ContainerHoraire {
   border: 5px solid #291211;
   background-color: #fffee6;
+  /* 
+  color: blue; */
 
   width: 5em;
 
