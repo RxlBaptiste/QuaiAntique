@@ -1,4 +1,4 @@
-const checkbox1 = document.getElementById("horaires1");
+/* const checkbox1 = document.getElementById("horaires1");
 const checkbox2 = document.getElementById("horaires2");
 const checkbox3 = document.getElementById("horaires3");
 const checkbox4 = document.getElementById("horaires4");
@@ -145,3 +145,4 @@ function horaire() {
     divParent18.style.backgroundColor = "#fffee6";
   }
 }
+ */
