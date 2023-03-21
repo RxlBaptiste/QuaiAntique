@@ -945,7 +945,6 @@ p#Client {
   margin: 0 1em;
   font-family: "Hind Madurai", sans-serif;
 }
-
 .ContainerHoraire:hover {
   background-color: #f8cf2c;
 }
@@ -967,6 +966,19 @@ p#Client {
 
   margin: 1em 0;
   padding: 0.5em 1em;
+}
+#BtnReservation:hover {
+  box-shadow: inset -2px -2px 3px #29121179, inset 2px 2px 3px #291211;
+}
+#BtnReservation:active {
+  box-shadow: inset -2px -2px 3px #29121179, inset 2px 2px 3px #291211;
+
+  box-shadow: inset -2px -2px 3px #fffee66b, inset 2px 2px 3px #291211;
+}
+#containerBtnReservation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*-------------------------------LE FOOTER--------------------------------*/

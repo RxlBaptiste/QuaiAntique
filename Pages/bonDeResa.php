@@ -4,9 +4,14 @@ if ( isset( $_POST['submit'] ) ) {
         $date = $_POST['date'];
         $commentaire = $_POST['commentaire'];
         $horaire = $_POST['horaires'];
-        
+        $allergies = $_POST["allergies"];
 
-        $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+        echo "Allergies sélectionnées : ";
+        foreach ($allergies as $allergie) {
+            echo "<br>" . "- " . $allergie;
+        }
+
+        /* $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
     
         $sqlInsert = "INSERT INTO reservation 
         (
@@ -14,16 +19,19 @@ if ( isset( $_POST['submit'] ) ) {
             Date,
             Commentaire,
             Horaire
+            Allergies
+
         ) 
         VALUES
         (
             '$nbPers',
             '$date',
             '$commentaire',
-            '$horaire'
+            '$horaire',
+            '$allergies'
         )";
         $sqlPrepareInsert = $dbClient->prepare($sqlInsert);
-        $sqlPrepareInsert->execute();
+        $sqlPrepareInsert->execute(); */
          
 }
 
