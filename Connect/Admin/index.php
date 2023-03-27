@@ -50,7 +50,7 @@ if(session_status() == '1'){
             <!-- --------------------Modification Carte---------------------------------------------- -->
             <section>
                 <p>
-                    <a class="section" href="Modifications/carte.html">Modification de la carte</a>
+                    <a class="section" href="Modifications/carte.php">Modification de la carte</a>
                 </p>
             </section>
             <div class="br"></div>

@@ -19,6 +19,7 @@ if(isset($_POST['submit'])){/*
         if($pseudoSaisi == $pseudoParDefaut AND $mdpSaisi == $mdpParDefaut){
             $_SESSION['Admin'] = $mdpSaisi;
             $_SESSION['AdminName'] = $pseudoSaisi;
+            $_SESSION['mdp'] = $mdpSaisi;
             header('location: Admin/index.php');
         } else{
             /*echo "Mot de passe ou pseudo incorrect";
