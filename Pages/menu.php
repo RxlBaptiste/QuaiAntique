@@ -316,7 +316,7 @@
                     <p class="textCarte">Q</p>
                 </div>
                 <div id="inteG">
-                    <p id="TitleG">Nos Entrées</p>
+                    <p id="TitleG">Menu pour les Petits Gourmets (17€)</p>
                     <div class="liPanneau">
                         <ul>
                             <li>
@@ -385,7 +385,10 @@
             </div>
             <div class="Fond">
                 <div class="fond">
-                    <p id="TitleP">Nos Plats</p>
+                    <div class="SpanMenu">
+                        <p id="TitleL">Menu Découverte (44€)</p>
+                        <p id="TitleR">Menu du Terroir (52€)</p>
+                    </div>
                     <div class="TextPlats">
                         <div id="PlatG">
                             <ul>
@@ -508,12 +511,12 @@
                     </div>
                 </div>
                 <div class="BtnMenu">
-                    <a href="menu.php"><input id="BtnMenu" type="button" value="Voir les menus" /></a>
+                    <a href="carte.php"><input id="BtnMenu" type="button" value="Voir la carte" /></a>
                 </div>
             </div>
             <div id="Droite">
                 <div id="inteD">
-                    <p id="TitleD">Nos Desserts</p>
+                    <p id="TitleD">Menu Gourmet (77€)</p>
                     <div class="liPanneau">
                         <ul>
                             <li>
@@ -609,6 +612,41 @@
     </footer>
 </body>
 <style>
+.SpanMenu {
+    display: flex;
+    justify-content: space-around;
+}
+
+#TitleD,
+#TitleG {
+    text-align: center;
+}
+
+#TitleL,
+#TitleR {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    font-family: "Lora", serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 
+#TitleL {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 15%;
+}
+
+#TitleR {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 15%;
+} */
+
 .PlatD {
     border-left: 5px solid #291211;
 }
