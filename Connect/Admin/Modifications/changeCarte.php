@@ -84,9 +84,9 @@ $id = $_GET['id'];
                 <input name="price" type="number" placeholder="Prix en €" />
                 <label for="categories-select">Catégorie du plat</label>
                 <select name="categories" id="categories-select">
-                    <option>Entrée</option>
-                    <option>Plat</option>
-                    <option>Déssert</option>
+                    <option>entrée</option>
+                    <option>plat</option>
+                    <option>déssert</option>
                 </select>
                 <input type="submit" name="submit" value="Valider les changements" />
             </form>

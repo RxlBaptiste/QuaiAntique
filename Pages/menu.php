@@ -316,7 +316,7 @@
                     <p class="textCarte">Q</p>
                 </div>
                 <div id="inteG">
-                    <p id="TitleG">Menu pour les Petits Gourmets (17€)</p>
+                    <p id="TitleG">Menu pour les Petits Gourmets (14€)</p>
                     <div class="liPanneau">
                         <ul>
                             <li>
@@ -386,8 +386,8 @@
             <div class="Fond">
                 <div class="fond">
                     <div class="SpanMenu">
-                        <p id="TitleL">Menu Découverte (44€)</p>
-                        <p id="TitleR">Menu du Terroir (52€)</p>
+                        <p id="TitleL">Menu Découverte (37€)</p>
+                        <p id="TitleR">Menu du Terroir (44€)</p>
                     </div>
                     <div class="TextPlats">
                         <div id="PlatG">
@@ -516,7 +516,7 @@
             </div>
             <div id="Droite">
                 <div id="inteD">
-                    <p id="TitleD">Menu Gourmet (77€)</p>
+                    <p id="TitleD">Menu Gourmet <br> (65€)</p>
                     <div class="liPanneau">
                         <ul>
                             <li>
