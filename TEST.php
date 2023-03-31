@@ -10,8 +10,12 @@
 
 <body>
     <button onclick="addForm()">Ajouter un formulaire</button>
+    <button onclick="removeForm()">Supprimer un formulaire</button>
 
     <input onclick="envoyer()" type="submit" value="Valider les menus">
+
+    <!--  FORMULAIRE N°1  -->
+
     <form id="form-0" action="test2.php" method="POST">
         <?php
     
@@ -75,28 +79,13 @@
     }
     ?>
         </select>
-        <button onclick="removeForm()">Supprimer un formulaire</button>
     </form>
 
+    <!--  FORMULAIRE N°2  -->
 
-    <div id="container">
-    </div>
-
-
-    <button onclick="envoyerVariable()">Envoyer variable</button>
-    <div id="resultat"></div>
-</body>
-
-<script>
-let formCount = 1;
-
-function addForm() {
-    if (formCount < 3) {
-        // Crée un nouvel élément de formulaire
-        const newForm = document.createElement("div");
-        newForm.innerHTML = `
-    <form id="form-${formCount}" action="test2.php" method="POST">
+    <form id="form-1" action="test2.php" method="POST" class="hidden">
         <?php
+    
     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
 
     //Recupération des Entrées
@@ -107,8 +96,8 @@ function addForm() {
         }
     }
 
-    ?>
-        <select id="entre${formCount}" name="entrée-${formCount}">
+?>
+        <select id="entre1" name="entrée-1">
             <?php
             foreach ($entrées as $entrée) {
         ?>
@@ -129,8 +118,8 @@ function addForm() {
         }
     }
 
-    ?>
-        <select id="plat${formCount}" name="plat-${formCount}">
+?>
+        <select id="plat1" name="plat-1">
             <?php
             foreach ($plats as $plat) {
         ?>
@@ -150,8 +139,8 @@ function addForm() {
             $desserts[] = $carte['name'];
         }
     }
-    ?>
-        <select id="dessert${formCount}" name="dessert-${formCount}">
+?>
+        <select id="dessert1" name="dessert-1">
             <?php
             foreach ($desserts as $dessert) {
         ?>
@@ -163,31 +152,90 @@ function addForm() {
     }
     ?>
         </select>
-      <button onclick="removeForm(this)">Supprimer ce formulaire</button>
     </form>
-    `;
 
-        // Ajoute le nouvel élément de formulaire au conteneur de formulaire
-        const formContainer = document.getElementById("container");
-        formContainer.appendChild(newForm);
+    <!--  FORMULAIRE N°3  -->
 
-        // Incrémente le compteur de formulaire
+    <form id="form-2" action="test2.php" method="POST" class="hidden">
+        <?php
+    
+    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
 
-        formCount++;
-    } else {
-        alert("Imposible de rajouter un autre formulaire");
+    //Recupération des Entrées
+    $recupPlat = $dbCarte->query("SELECT name FROM carte WHERE categories = 'entrée'");
+    while ($carte = $recupPlat->fetch()){
+        if (!in_array($carte['name'], $entrées)) {
+            $entrées[] = $carte['name'];
+        }
     }
-}
 
-function removeForm(button) {
-    // Trouve l'élément parent (qui contient le formulaire) du bouton cliqué
-    const form = button.parentElement;
+?>
+        <select id="entre2" name="entrée-2">
+            <?php
+            foreach ($entrées as $entrée) {
+        ?>
+            <option value="<?php echo $entrée; ?>">
+                <?php  
+                echo $entrée;
+                ?>
+            </option><?php
+    }
+    ?>
+        </select>
+        <?php
+    //Recupération des Plats
+    $recupPlat = $dbCarte->query("SELECT name FROM carte WHERE categories = 'plat'");
+    while ($carte = $recupPlat->fetch()){
+        if (!in_array($carte['name'], $plats)) {
+            $plats[] = $carte['name'];
+        }
+    }
 
-    formCount--;
-    // Supprime l'élément parent du formulaire
-    form.remove();
-}
+?>
+        <select id="plat2" name="plat-2">
+            <?php
+            foreach ($plats as $plat) {
+        ?>
+            <option value="<?php echo $plat; ?>">
+                <?php  
+                echo $plat;
+                ?>
+            </option><?php
+    }
+    ?>
+        </select>
+        <?php
+    //Recupération des Désserts
+    $recupPlat = $dbCarte->query("SELECT name FROM carte WHERE categories = 'dessert'");
+    while ($carte = $recupPlat->fetch()){
+        if (!in_array($carte['name'], $desserts)) {
+            $desserts[] = $carte['name'];
+        }
+    }
+?>
+        <select id="dessert2" name="dessert-2">
+            <?php
+            foreach ($desserts as $dessert) {
+        ?>
+            <option value="<?php echo $dessert; ?>">
+                <?php  
+                echo $dessert;
+                ?>
+            </option><?php
+    }
+    ?>
+        </select>
+    </form>
+    <form action="test2.php" method="POST">
+        <input id="name" name="name" type="text" placeholder="Nom du menu">
+        <input id="price" name="price" type="number" placeholder="Prix du menu">
+    </form>
+    <button onclick="envoyerVariable()">Envoyer variable</button>
+    <div id="resultat"></div>
+</body>
 
+<script>
+let formCount = 1;
 // récupérer les formulaires
 const form1 = document.getElementById('form-0');
 const form2 = document.getElementById('form-1');
@@ -205,18 +253,55 @@ const entre2 = document.getElementById('entre2');
 const plat2 = document.getElementById('plat2');
 const dessert2 = document.getElementById('dessert2');
 
+const name = document.getElementById('name');
+const price = document.getElementById('price');
+
+let form2visible = 0;
+let form3visible = 0;
+
+function addForm() {
+
+    if (form3visible == 0 && form2visible == 1) {
+        form3.classList.toggle('hidden');
+        form3visible = 1;
+    } else if (form2visible == 0 && form3visible == 0) {
+        form2.classList.toggle('hidden');
+        form2visible = 1;
+    } else if (form2visible == 1 && form3visible == 1) {
+        alert('Vous avez afficher le maximum de formulaire sur une carte.')
+    }
+    formCount++;
+    console.log("Add Count : " + formCount);
+}
+
+function removeForm() {
+
+    if (form3visible == 1 && form2visible == 1) {
+        form3.classList.toggle('hidden');
+        form3visible = 0;
+    } else if (form2visible == 1 && form3visible == 0) {
+        form2.classList.toggle('hidden');
+        form2visible = 0;
+    } else if (form2visible == 0 && form3visible == 0) {
+        alert('Vous avez afficher le minimum de formulaire sur une carte.')
+    }
+    formCount--;
+    console.log("Remove Count : " + formCount);
+}
+
+/* 
 function envoyer() {
     /* 
         console.log(entre0.value);
         console.log(plat1.value);
         console.log(dessert2.value); */
 
-    /* 
-        // envoyer les formulaires
-        form1.submit();
-        form2.submit();
-        form3.submit(); */
-}
+/* 
+    // envoyer les formulaires
+    form1.submit();
+    form2.submit();
+    form3.submit(); 
+}*/
 
 function envoyerVariable() {
 
@@ -245,23 +330,49 @@ function envoyerVariable() {
 
     // Envoi de la requête avec les données de la variable
 
-    /* 
-        xhr.send("maVariable=" + maVariable); */
-
-    xhr.send(
-        "entre0=" + entre0.value +
-        "&plat0=" + plat0.value +
-        "&dessert0=" + dessert0.value
-    );
-    xhr.send("entre1=" + entre1.value);
-    xhr.send("plat1=" + plat1.value);
-    xhr.send("dessert1=" + dessert1.value1);
-    xhr.send(
-        "entre2=" + entre2.value +
-        "&plat2=" + plat2.value +
-        "&dessert2=" + dessert2.value
-    );
+    if (formCount == 1) {
+        xhr.send(
+            "entre0=" + entre0.value +
+            "&plat0=" + plat0.value +
+            "&dessert0=" + dessert0.value +
+            "&name=" + name.value +
+            "&price=" + price.value +
+            "&formCount=" + formCount
+        );
+    } else if (formCount == 2) {
+        xhr.send(
+            "entre0=" + entre0.value +
+            "&plat0=" + plat0.value +
+            "&dessert0=" + dessert0.value +
+            "&entre1=" + entre1.value +
+            "&plat1=" + plat1.value +
+            "&dessert1=" + dessert1.value +
+            "&name=" + name.value +
+            "&price=" + price.value +
+            "&formCount=" + formCount
+        );
+    } else if (formCount == 3) {
+        xhr.send(
+            "entre0=" + entre0.value +
+            "&plat0=" + plat0.value +
+            "&dessert0=" + dessert0.value +
+            "&entre1=" + entre1.value +
+            "&plat1=" + plat1.value +
+            "&dessert1=" + dessert1.value +
+            "&entre2=" + entre2.value +
+            "&plat2=" + plat2.value +
+            "&dessert2=" + dessert2.value +
+            "&name=" + name.value +
+            "&price=" + price.value +
+            "&formCount=" + formCount
+        );
+    }
 }
 </script>
 
 </html>
+<style>
+.hidden {
+    display: none;
+}
+</style>

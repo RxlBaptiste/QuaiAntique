@@ -1,17 +1,22 @@
 <?php
 // Connexion à la base de données
-$dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+$dbMenu = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
 /* 
 if (isset($_POST["entre0"])) { */
-	$entre0 = $_POST["entre0"];
-	$plat0 = $_POST["plat0"];
-	$dessert0 = $_POST["dessert0"];
-	$entre1 = $_POST["entre1"];
-	$plat1 = $_POST["plat1"];
-	$dessert1 = $_POST["dessert1"];
-	$entre2 = $_POST["entre2"];
-	$plat2 = $_POST["plat2"];
-	$dessert2 = $_POST["dessert2"];
+	$entre1 = $_POST["entre0"];
+	$plat1 = $_POST["plat0"];
+	$dessert1 = $_POST["dessert0"];
+	$entre2 = $_POST["entre1"];
+	$plat2 = $_POST["plat1"];
+	$dessert2 = $_POST["dessert1"];
+	$entre3 = $_POST["entre2"];
+	$plat3 = $_POST["plat2"];
+	$dessert3 = $_POST["dessert2"];
+
+	$name = $_POST["name"];
+	$price = $_POST["price"];
+	$formCount = $_POST["formCount"];
+	
 	echo "Variable 1 reçue : " . $entre0. "<br>";
 	echo "Variable 2 reçue : " . $plat0. "<br>";
 	echo "Variable 3 reçue : " . $dessert0. "<br>";
@@ -21,62 +26,32 @@ if (isset($_POST["entre0"])) { */
 	echo "Variable 7 reçue : " . $entre2. "<br>";
 	echo "Variable 8 reçue : " . $plat2. "<br>";
 	echo "Variable 9 reçue : " . $dessert2. "<br>";
-/*} else {
-	echo "Aucune variable reçue.";
-} 
-if (isset($_POST["plat0"])) {
-	$plat0 = $_POST["plat0"];
-	echo "Variable reçue : " . $plat0;
-} else {
-	echo "Aucune variable reçue.";
-}*//* 
-	$dessert0 = $_POST["dessert0"];
-	$entre1 = $_POST["entre1"];
-	$plat1 = $_POST["plat1"];
-	$dessert1 = $_POST["dessert1"];
-	$entre2 = $_POST["entre2"];
-	$plat2 = $_POST["plat2"];
-	$dessert2 = $_POST["dessert2"];
-	echo "Variable reçue : " . $dessert0;
-	echo "Variable reçue : " . $entre1;
-	echo "Variable reçue : " . $plat1;
-	echo "Variable reçue : " . $dessert1;
-	echo "Variable reçue : " . $entre2;
-	echo "Variable reçue : " . $plat2;
-	echo "Variable reçue : " . $dessert2; */
+	echo "<br>";
+	echo "Variable name reçue : " . $name. "<br>";
+	echo "Variable price reçue : " . $price. "<br>";
+	echo "<br>";
+	echo "Variable formCount reçue : " . $formCount. "<br>";
 
-/* 
-// Récupération des valeurs sélectionnées
-    $E0 = $_POST["entrée-0"];
-    $P0 = $_POST["plat-0"];
-    $D0 = $_POST["dessert-0"];
-    
-    $E1 = $_POST["entrée-1"];
-    $P1 = $_POST["plat-1"];
-    $D1 = $_POST["dessert-1"];
-    
-    $E2 = $_POST["entrée-2"];
-    $P2 = $_POST["plat-2"];
-    $D2 = $_POST["dessert-2"]; */
-/* 
-// Affichage des valeurs sélectionnées
-echo "Premier Form :". "<br>";
-echo $E0 . "<br>";
-echo $P0 . "<br>";
-echo $D0 . "<br>";
 
-echo "<br>";
+	if($formCount == 1){
+    	$sqlInsert = "INSERT INTO menus 
+			( name, entre1, plat1, dessert1, price ) VALUES 
+			( '$name', '$entre1', '$plat1', '$dessert1', '$price')";
+    	$sqlPrepareInsert = $dbMenu->prepare($sqlInsert);
+    	$sqlPrepareInsert->execute(); 
+	} else if($formCount == 2){
+    	$sqlInsert = "INSERT INTO menus 
+			( name, entre1, plat1, dessert1, entre2, plat2, dessert2, price ) VALUES 
+			( '$name', '$entre1', '$plat1', '$dessert1', '$entre2', '$plat2', '$dessert2', '$price')";
+    	$sqlPrepareInsert = $dbMenu->prepare($sqlInsert);
+    	$sqlPrepareInsert->execute(); 
+	}else if($formCount == 3){
+    	$sqlInsert = "INSERT INTO menus 
+			( name, entre1, plat1, dessert1, entre2, plat2, dessert2, entre3, plat3, dessert3, price ) VALUES 
+			( '$name', '$entre1', '$plat1', '$dessert1', '$entre2', '$plat2', '$dessert2', '$entre3', '$plat3', '$dessert3', '$price')";
+    	$sqlPrepareInsert = $dbMenu->prepare($sqlInsert);
+    	$sqlPrepareInsert->execute(); 
+	}
 
-echo "Deuxieme Form :". "<br>";
-echo $E1 . "<br>";
-echo $P1 . "<br>";
-echo $D1 . "<br>";
-
-echo "<br>";
-
-echo "Troisieme Form :". "<br>";
-echo $E2 . "<br>";
-echo $P2 . "<br>";
-echo $D2 . "<br>"; */
 
 ?>
