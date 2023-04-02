@@ -796,6 +796,9 @@ session_start();
                         </div>
                     </div>
                 </div>
+                <div class="BtnMenu">
+                    <a href="menu.php"><input id="BtnMenu" type="button" value="Modifier les menus" /></a>
+                </div>
             </div>
             <div id="Droite">
                 <div id="inteD">
@@ -936,3 +939,27 @@ session_start();
 </body>
 
 </html>
+<style>
+.BtnMenu {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+#BtnMenu:hover {
+    background-color: #252827;
+    color: #f8cf2c;
+}
+
+#BtnMenu {
+    width: auto;
+    height: 70px;
+    border-radius: 30px;
+    padding: 0 1em;
+    background-color: #f8cf2c;
+    color: #252827;
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 24px;
+}
+</style>

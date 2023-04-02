@@ -1,4 +1,6 @@
 <?php
+session_start();
+$ID = $_SESSION['id'];
 // Connexion à la base de données
 $dbMenu = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
 /* 
@@ -31,27 +33,47 @@ if (isset($_POST["entre0"])) { */
 	echo "Variable price reçue : " . $price. "<br>";
 	echo "<br>";
 	echo "Variable formCount reçue : " . $formCount. "<br>";
-
+	echo "Variable ID reçue : " . $_SESSION['id']. "<br>";
 
 	if($formCount == 1){
-    	$sqlInsert = "INSERT INTO menus 
-			( name, entre1, plat1, dessert1, price ) VALUES 
-			( '$name', '$entre1', '$plat1', '$dessert1', '$price')";
+    	$sqlInsert = "UPDATE menus SET
+			name ='$name',
+			entre1 = '$entre1',
+			plat1 = '$plat1',
+			dessert1 = '$dessert1',
+			price = '$price'
+			WHERE id = $ID";
     	$sqlPrepareInsert = $dbMenu->prepare($sqlInsert);
     	$sqlPrepareInsert->execute(); 
 	} else if($formCount == 2){
-    	$sqlInsert = "INSERT INTO menus 
-			( name, entre1, plat1, dessert1, entre2, plat2, dessert2, price ) VALUES 
-			( '$name', '$entre1', '$plat1', '$dessert1', '$entre2', '$plat2', '$dessert2', '$price')";
+    	$sqlInsert = "UPDATE menus SET
+			name ='$name',
+			entre1 = '$entre1',
+			plat1 = '$plat1',
+			dessert1 = '$dessert1',
+			entre2 = '$entre2',
+			plat2 = '$plat2',
+			dessert2 = '$dessert2',
+			price = '$price'
+			WHERE id = $ID";
     	$sqlPrepareInsert = $dbMenu->prepare($sqlInsert);
     	$sqlPrepareInsert->execute(); 
 	}else if($formCount == 3){
-    	$sqlInsert = "INSERT INTO menus 
-			( name, entre1, plat1, dessert1, entre2, plat2, dessert2, entre3, plat3, dessert3, price ) VALUES 
-			( '$name', '$entre1', '$plat1', '$dessert1', '$entre2', '$plat2', '$dessert2', '$entre3', '$plat3', '$dessert3', '$price')";
+    	$sqlInsert = "UPDATE menus SET
+			name ='$name',
+			entre1 = '$entre1',
+			plat1 = '$plat1',
+			dessert1 = '$dessert1',
+			entre2 = '$entre2',
+			plat2 = '$plat2',
+			dessert2 = '$dessert2',
+			entre3 = '$entre3',
+			plat3 = '$plat3',
+			dessert3 = '$dessert3',
+			price = '$price'
+			WHERE id = $ID";
     	$sqlPrepareInsert = $dbMenu->prepare($sqlInsert);
     	$sqlPrepareInsert->execute(); 
 	}
-
 
 ?>

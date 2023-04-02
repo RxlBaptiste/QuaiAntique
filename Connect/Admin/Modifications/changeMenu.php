@@ -1,3 +1,8 @@
+<?php
+session_start();
+    $id = $_GET['id'];
+    $_SESSION['id'] = $id;
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -5,21 +10,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><?php echo $id; ?></title>
 </head>
 
 <body>
-    <button onclick="addForm()">Ajouter un formulaire</button>
-    <button onclick="removeForm()">Supprimer un formulaire</button>
-
-    <input onclick="envoyer()" type="submit" value="Valider les menus">
-
-    <!--  FORMULAIRE N°1  -->
-
-    <form id="form-0" action="test2.php" method="POST">
-        <?php
+    <p>Changer le menu <?php  
+                        $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                        $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = $id"); 
+                        while ($menu = $recupMenu->fetch()){ 
+                          echo"<b class='Cap'>" . $menu['name']."</b>";
+                        } ?></p>
+    <section class="Page">
+        <!--  FORMULAIRE N°1  -->
+        <section class="Form">
+            <form id="form-0" action="validationChangement.php" method="POST">
+                <?php
     
     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+
 
     //Recupération des Entrées
     $recupPlat = $dbCarte->query("SELECT name FROM carte WHERE categories = 'entrée'");
@@ -28,19 +36,19 @@
     }
 
 ?>
-        <select id="entre0" name="entrée-0">
-            <?php
+                <select id="entre0" name="entrée-0">
+                    <?php
             foreach ($entrées as $entrée) {
         ?>
-            <option value="<?php echo $entrée; ?>">
-                <?php  
+                    <option value="<?php echo $entrée; ?>">
+                        <?php  
                 echo $entrée;
                 ?>
-            </option><?php
+                    </option><?php
     }
     ?>
-        </select>
-        <?php
+                </select>
+                <?php
     //Recupération des Plats
     $recupPlat = $dbCarte->query("SELECT name FROM carte WHERE categories = 'plat'");
     while ($carte = $recupPlat->fetch()){
@@ -48,43 +56,43 @@
     }
 
 ?>
-        <select id="plat0" name="plat-0">
-            <?php
+                <select id="plat0" name="plat-0">
+                    <?php
             foreach ($plats as $plat) {
         ?>
-            <option value="<?php echo $plat; ?>">
-                <?php  
+                    <option value="<?php echo $plat; ?>">
+                        <?php  
                 echo $plat;
                 ?>
-            </option><?php
+                    </option><?php
     }
     ?>
-        </select>
-        <?php
+                </select>
+                <?php
     //Recupération des Désserts
     $recupPlat = $dbCarte->query("SELECT name FROM carte WHERE categories = 'dessert'");
     while ($carte = $recupPlat->fetch()){
         $desserts[] = $carte['name'];
     }
 ?>
-        <select id="dessert0" name="dessert-0">
-            <?php
+                <select id="dessert0" name="dessert-0">
+                    <?php
             foreach ($desserts as $dessert) {
         ?>
-            <option value="<?php echo $dessert; ?>">
-                <?php  
+                    <option value="<?php echo $dessert; ?>">
+                        <?php  
                 echo $dessert;
                 ?>
-            </option><?php
+                    </option><?php
     }
     ?>
-        </select>
-    </form>
+                </select>
+            </form>
 
-    <!--  FORMULAIRE N°2  -->
+            <!--  FORMULAIRE N°2  -->
 
-    <form id="form-1" action="test2.php" method="POST" class="hidden">
-        <?php
+            <form id="form-1" action="validationChangement.php" method="POST" class="hidden">
+                <?php
     
     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
 
@@ -97,19 +105,19 @@
     }
 
 ?>
-        <select id="entre1" name="entrée-1">
-            <?php
+                <select id="entre1" name="entrée-1">
+                    <?php
             foreach ($entrées as $entrée) {
         ?>
-            <option value="<?php echo $entrée; ?>">
-                <?php  
+                    <option value="<?php echo $entrée; ?>">
+                        <?php  
                 echo $entrée;
                 ?>
-            </option><?php
+                    </option><?php
     }
     ?>
-        </select>
-        <?php
+                </select>
+                <?php
     //Recupération des Plats
     $recupPlat = $dbCarte->query("SELECT name FROM carte WHERE categories = 'plat'");
     while ($carte = $recupPlat->fetch()){
@@ -119,19 +127,19 @@
     }
 
 ?>
-        <select id="plat1" name="plat-1">
-            <?php
+                <select id="plat1" name="plat-1">
+                    <?php
             foreach ($plats as $plat) {
         ?>
-            <option value="<?php echo $plat; ?>">
-                <?php  
+                    <option value="<?php echo $plat; ?>">
+                        <?php  
                 echo $plat;
                 ?>
-            </option><?php
+                    </option><?php
     }
     ?>
-        </select>
-        <?php
+                </select>
+                <?php
     //Recupération des Désserts
     $recupPlat = $dbCarte->query("SELECT name FROM carte WHERE categories = 'dessert'");
     while ($carte = $recupPlat->fetch()){
@@ -140,24 +148,24 @@
         }
     }
 ?>
-        <select id="dessert1" name="dessert-1">
-            <?php
+                <select id="dessert1" name="dessert-1">
+                    <?php
             foreach ($desserts as $dessert) {
         ?>
-            <option value="<?php echo $dessert; ?>">
-                <?php  
+                    <option value="<?php echo $dessert; ?>">
+                        <?php  
                 echo $dessert;
                 ?>
-            </option><?php
+                    </option><?php
     }
     ?>
-        </select>
-    </form>
+                </select>
+            </form>
 
-    <!--  FORMULAIRE N°3  -->
+            <!--  FORMULAIRE N°3  -->
 
-    <form id="form-2" action="test2.php" method="POST" class="hidden">
-        <?php
+            <form id="form-2" action="validationChangement.php" method="POST" class="hidden">
+                <?php
     
     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
 
@@ -170,19 +178,19 @@
     }
 
 ?>
-        <select id="entre2" name="entrée-2">
-            <?php
+                <select id="entre2" name="entrée-2">
+                    <?php
             foreach ($entrées as $entrée) {
         ?>
-            <option value="<?php echo $entrée; ?>">
-                <?php  
+                    <option value="<?php echo $entrée; ?>">
+                        <?php  
                 echo $entrée;
                 ?>
-            </option><?php
+                    </option><?php
     }
     ?>
-        </select>
-        <?php
+                </select>
+                <?php
     //Recupération des Plats
     $recupPlat = $dbCarte->query("SELECT name FROM carte WHERE categories = 'plat'");
     while ($carte = $recupPlat->fetch()){
@@ -192,19 +200,19 @@
     }
 
 ?>
-        <select id="plat2" name="plat-2">
-            <?php
+                <select id="plat2" name="plat-2">
+                    <?php
             foreach ($plats as $plat) {
         ?>
-            <option value="<?php echo $plat; ?>">
-                <?php  
+                    <option value="<?php echo $plat; ?>">
+                        <?php  
                 echo $plat;
                 ?>
-            </option><?php
+                    </option><?php
     }
     ?>
-        </select>
-        <?php
+                </select>
+                <?php
     //Recupération des Désserts
     $recupPlat = $dbCarte->query("SELECT name FROM carte WHERE categories = 'dessert'");
     while ($carte = $recupPlat->fetch()){
@@ -213,25 +221,36 @@
         }
     }
 ?>
-        <select id="dessert2" name="dessert-2">
-            <?php
+                <select id="dessert2" name="dessert-2">
+                    <?php
             foreach ($desserts as $dessert) {
         ?>
-            <option value="<?php echo $dessert; ?>">
-                <?php  
+                    <option value="<?php echo $dessert; ?>">
+                        <?php  
                 echo $dessert;
                 ?>
-            </option><?php
+                    </option><?php
     }
     ?>
-        </select>
-    </form>
-    <form action="test2.php" method="POST">
-        <input id="name" name="name" type="text" placeholder="Nom du menu">
-        <input id="price" name="price" type="number" placeholder="Prix du menu">
-    </form>
-    <button onclick="envoyerVariable()">Envoyer variable</button>
-    <div id="resultat"></div>
+                </select>
+            </form>
+            <div class="btnAddRe">
+                <button class="btn-AddRemove" onclick="addForm()">Ajouter un formulaire</button>
+                <button class="btn-AddRemove" onclick="removeForm()">Supprimer un formulaire</button>
+            </div>
+        </section>
+        <form action="validationChangement.php" method="POST">
+            <input id="name" name="name" type="text" placeholder="Nom du menu">
+            <input id="price" name="price" type="number" placeholder="Prix du menu">
+        </form>
+        <button onclick="envoyerVariable()">Changer le menu <?php 
+                        $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                        $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = $id"); 
+                        while ($menu = $recupMenu->fetch()){ 
+                          echo"<u>" . $menu['name']."</u>";
+                        } ?></button>
+        <div id="resultat"></div>
+    </section>
 </body>
 
 <script>
@@ -289,20 +308,6 @@ function removeForm() {
     console.log("Remove Count : " + formCount);
 }
 
-/* 
-function envoyer() {
-    /* 
-        console.log(entre0.value);
-        console.log(plat1.value);
-        console.log(dessert2.value); */
-
-/* 
-    // envoyer les formulaires
-    form1.submit();
-    form2.submit();
-    form3.submit(); 
-}*/
-
 function envoyerVariable() {
 
     // Création d'une variable
@@ -312,7 +317,7 @@ function envoyerVariable() {
     var xhr = new XMLHttpRequest();
 
     // Définition de la méthode d'envoi et de l'URL de la requête
-    xhr.open("POST", "test2.php", true);
+    xhr.open("POST", "validationChangement.php", true);
 
     // Définition de l'en-tête de la requête
     xhr.setRequestHeader(
@@ -374,5 +379,62 @@ function envoyerVariable() {
 <style>
 .hidden {
     display: none;
+}
+
+body {
+    background-color: #282527;
+}
+
+.Page {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 2em;
+    border: solid black 2px;
+    border-radius: 20px
+}
+
+#form-0,
+#form-1,
+#form-2 {
+    margin: 0.25em 0;
+}
+
+#entre0,
+#plat0,
+#dessert0,
+#entre1,
+#plat1,
+#dessert1,
+#entre2,
+#plat2,
+#dessert2 {
+    padding: 1em;
+    border-radius: 20px;
+}
+
+Section.btnAddRe {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 2em;
+}
+
+.btn-AddRemove {
+    border: solid black 1px;
+    border-radius: 20px;
+    padding: 0.5em;
+    background-color: #fffee6;
+}
+
+.Cap {
+    text-transform: uppercase;
 }
 </style>
