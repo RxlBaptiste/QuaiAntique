@@ -58,7 +58,7 @@ if(session_status() == '1'){
             <!-- ---------------------Modification Menu------------------------------------ -->
             <section>
                 <p>
-                    <a class="section" href="Modifications/menu.html">Modification des menus</a>
+                    <a class="section" href="Modifications/menu.php">Modification des menus</a>
                 </p>
             </section>
 
@@ -72,10 +72,20 @@ if(session_status() == '1'){
             </section>
         </div>
     </main>
+    <br>
     <footer>
         <div class="containerHoraire">
             <div class="horaires" id="lundi">
-                LUNDI <br /><br />12:00 - 14:00<br />19:00 - 22:00
+                LUNDI <br /><br />
+                <?php
+                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
+                    while ($horaire = $recupHoraire->fetch()){
+                        echo $lundiM0 = $horaire['lundiM'];
+                    }
+                    
+                 ?>
+                <br />19:00 - 22:00
             </div>
             <div class="horaires" id="mardi">
                 MARDI <br /><br />12:00 - 14:00<br />19:00 - 22:00

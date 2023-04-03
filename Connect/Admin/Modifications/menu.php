@@ -1,3 +1,12 @@
+<?php
+if(session_status() == '1'){
+session_start();
+
+
+  if(!$_SESSION['Admin']){
+    header('location: ../Logout.php');
+  }}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -7,18 +16,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../favicon.PNG" rel="icon" type="image/png" />
     <link href="../../../css/style.css" rel="stylesheet" />
-    <title class="DocTitle">Le Quai Antique / La Carte</title>
+    <title class="DocTitle">Le Quai Antique / Le menu</title>
 </head>
 
 <body>
     <nav class="parent">
         <div class="title">
             <h1>
-                <a href="../index.html">Le Quai Antique</a>
+                <a href="../index.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="connection.html" class="BtnSeConnecter">
-            <button class="btnConnecter">Se Connecter</button>
+        <form action="../Logout.php" class="BtnSeConnecter">
+            <button class="btnConnecter" style="width: auto; padding: 0 1em">
+                <?php
+                    echo $_SESSION['AdminName'];
+                ?>
+            </button>
         </form>
     </nav>
     <main>

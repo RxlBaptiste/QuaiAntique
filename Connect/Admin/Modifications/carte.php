@@ -16,7 +16,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../favicon.PNG" rel="icon" type="image/png" />
     <link href="../../../css/style.css" rel="stylesheet" />
-    <title class="DocTitle">Le Quai Antique / Modification carte</title>
+    <title class="DocTitle">Le Quai Antique / La carte</title>
 </head>
 
 <body>
@@ -26,10 +26,13 @@ session_start();
                 <a href="../index.php">Le Quai Antique</a>
             </h1>
         </div>
-        <!-- 
-      <form action="connection.html" class="BtnSeConnecter">
-        <button class="btnConnecter">Se Connecter</button>
-      </form> -->
+        <form action="../Logout.php" class="BtnSeConnecter">
+            <button class="btnConnecter" style="width: auto; padding: 0 1em">
+                <?php
+                    echo $_SESSION['AdminName'];
+                ?>
+            </button>
+        </form>
     </nav>
     <main>
         <div class="carte">
