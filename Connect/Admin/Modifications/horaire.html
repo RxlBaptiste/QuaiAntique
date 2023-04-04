@@ -8,121 +8,305 @@
   </head>
   <body>
     <form action="changeHoraires.php" method="POST">
-      <!--Horaire du midi-->
-      <p>Horaire du midi</p>
-      <div id="lundi">
-        Horaire d'ouverture :
-        <label>Lundi</label>
-        <input name="lundiMo" type="time" />
-        Horaire de fermeture :
-        <label>Lundi</label>
-        <input name="lundiMf" type="time" />
+      <!-- LUNDI MIDI -->
+      <div>
+        <span>Lundi midi de :</span>
+        <select id="lundiMO" name="LundiMO">
+          <option value="110000">11h</option>
+          <option value="111500">11h15</option>
+          <option value="113000">11h30</option>
+          <option value="114500">11h45</option>
+          <option value="120000">12h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="lundiSO" name="lundiSO">
+          <option value="130000">13h</option>
+          <option value="131500">13h15</option>
+          <option value="133000">13h30</option>
+          <option value="134500">13h45</option>
+          <option value="140000">14h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
-      <div id="mardi">
-        Horaire d'ouverture :
-        <label>Mardi</label>
-        <input name="mardiMo" type="time" />
-        Horaire de fermeture :
-        <label>Mardi</label>
-        <input name="mardiMf" type="time" />
+      <!-- LUNDI SOIR -->
+      <div>
+        <span>Lundi soir de :</span>
+        <select id="lundiSO" name="lundiSO">
+          <option value="190000">19h</option>
+          <option value="191500">19h15</option>
+          <option value="193000">19h30</option>
+          <option value="194500">19h45</option>
+          <option value="200000">20h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="lundiSF" name="lundiSF">
+          <option value="220000">22h</option>
+          <option value="221500">22h15</option>
+          <option value="223000">22h30</option>
+          <option value="224500">22h45</option>
+          <option value="230000">23h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
-      <div id="mercredi">
-        Horaire d'ouverture :
-        <label>Mercredi</label>
-        <input name="mercrediMo" type="time" />
-        Horaire de fermeture :
-        <label>Mercredi</label>
-        <input name="mercrediMf" type="time" />
+      <br />
+      <!-- MARDI MIDI -->
+      <div>
+        <span>Mardi midi de :</span>
+        <select id="mardiMO" name="mardiMO">
+          <option value="110000">11h</option>
+          <option value="111500">11h15</option>
+          <option value="113000">11h30</option>
+          <option value="114500">11h45</option>
+          <option value="120000">12h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="mardiMF" name="mardiMF">
+          <option value="130000">13h</option>
+          <option value="131500">13h15</option>
+          <option value="133000">13h30</option>
+          <option value="134500">13h45</option>
+          <option value="140000">14h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
-      <div id="jeudi">
-        Horaire d'ouverture :
-        <label>Jeudi</label>
-        <input name="jeudiMo" type="time" />
-        Horaire de fermeture :
-        <label>Jeudi</label>
-        <input name="jeudiMf" type="time" />
+      <!-- MARDI SOIR -->
+      <div>
+        <span>Mardi soir de :</span>
+        <select id="mardiSO" name="mardiSO">
+          <option value="190000">19h</option>
+          <option value="191500">19h15</option>
+          <option value="193000">19h30</option>
+          <option value="194500">19h45</option>
+          <option value="200000">20h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="mardiSF" name="mardiSF">
+          <option value="220000">22h</option>
+          <option value="221500">22h15</option>
+          <option value="223000">22h30</option>
+          <option value="224500">22h45</option>
+          <option value="230000">23h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
-      <div id="vendredi">
-        Horaire d'ouverture :
-        <label>Vendredi</label>
-        <input name="vendrediMo" type="time" />
-        Horaire de fermeture :
-        <label>Vendredi</label>
-        <input name="vendrediMf" type="time" />
+      <br />
+      <!-- MERCEDI MIDI -->
+      <div>
+        <span>Mercredi midi de :</span>
+        <select id="mercrediMO" name="mercrediMO">
+          <option value="110000">11h</option>
+          <option value="111500">11h15</option>
+          <option value="113000">11h30</option>
+          <option value="114500">11h45</option>
+          <option value="120000">12h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="mercrediMF" name="mercrediMF">
+          <option value="130000">13h</option>
+          <option value="131500">13h15</option>
+          <option value="133000">13h30</option>
+          <option value="134500">13h45</option>
+          <option value="140000">14h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
-      <div id="samedi">
-        Horaire d'ouverture :
-        <label>Samedi</label>
-        <input name="samediMo" type="time" />
-        Horaire de fermeture :
-        <label>Samedi</label>
-        <input name="samediMf" type="time" />
+      <!-- MERCREDI SOIR -->
+      <div>
+        <span>Mercredi soir de :</span>
+        <select id="mercrediSO" name="mercrediSO">
+          <option value="190000">19h</option>
+          <option value="191500">19h15</option>
+          <option value="193000">19h30</option>
+          <option value="194500">19h45</option>
+          <option value="200000">20h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="mercrediSF" name="mercrediSF">
+          <option value="220000">22h</option>
+          <option value="221500">22h15</option>
+          <option value="223000">22h30</option>
+          <option value="224500">22h45</option>
+          <option value="230000">23h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
-      <div id="dimanche">
-        Horaire d'ouverture :
-        <label>Dimanche</label>
-        <input name="dimancheMo" type="time" />
-        Horaire de fermeture :
-        <label>Dimanche</label>
-        <input name="dimancheMf" type="time" />
+      <br />
+      <!-- JEUDI MIDI -->
+      <div>
+        <span>Jeudi midi de :</span>
+        <select id="jeudiMO" name="jeudiMO">
+          <option value="110000">11h</option>
+          <option value="111500">11h15</option>
+          <option value="113000">11h30</option>
+          <option value="114500">11h45</option>
+          <option value="120000">12h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="jeudiMF" name="jeudiMF">
+          <option value="130000">13h</option>
+          <option value="131500">13h15</option>
+          <option value="133000">13h30</option>
+          <option value="134500">13h45</option>
+          <option value="140000">14h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
-      <!----------------Horaire du soir-------------->
-      <p>Horaire du soir</p>
-      <div id="lundi">
-        Horaire d'ouverture :
-        <label>Lundi</label>
-        <input name="lundiSo" type="time" />
-        Horaire de fermeture :
-        <label>Lundi</label>
-        <input name="lundiSf" type="time" />
+      <!-- JEUDI SOIR -->
+      <div>
+        <span>Jeudi soir de :</span>
+        <select id="jeudiSO" name="jeudiSO">
+          <option value="190000">19h</option>
+          <option value="191500">19h15</option>
+          <option value="193000">19h30</option>
+          <option value="194500">19h45</option>
+          <option value="200000">20h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="jeudiSF" name="jeudiSF">
+          <option value="220000">22h</option>
+          <option value="221500">22h15</option>
+          <option value="223000">22h30</option>
+          <option value="224500">22h45</option>
+          <option value="230000">23h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
-      <div id="mardi">
-        Horaire d'ouverture :
-        <label>Mardi</label>
-        <input name="mardiSo" type="time" />
-        Horaire de fermeture :
-        <label>Mardi</label>
-        <input name="mardiSf" type="time" />
+      <br />
+      <!-- VENDREDI MIDI -->
+      <div>
+        <span>Vendredi midi de :</span>
+        <select id="vendrediMO" name="vendrediMO">
+          <option value="110000">11h</option>
+          <option value="111500">11h15</option>
+          <option value="113000">11h30</option>
+          <option value="114500">11h45</option>
+          <option value="120000">12h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="vendrediMF" name="vendrediMF">
+          <option value="130000">13h</option>
+          <option value="131500">13h15</option>
+          <option value="133000">13h30</option>
+          <option value="134500">13h45</option>
+          <option value="140000">14h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
-      <div id="mercredi">
-        Horaire d'ouverture :
-        <label>Mercredi</label>
-        <input name="mercrediSo" type="time" />
-        Horaire de fermeture :
-        <label>Mercredi</label>
-        <input name="mercrediSf" type="time" />
+      <!-- VENDREDI SOIR -->
+      <div>
+        <span>Vendredi soir de :</span>
+        <select id="vendrediSO" name="vendrediSO">
+          <option value="190000">19h</option>
+          <option value="191500">19h15</option>
+          <option value="193000">19h30</option>
+          <option value="194500">19h45</option>
+          <option value="200000">20h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="vendrediSF" name="vendrediSF">
+          <option value="220000">22h</option>
+          <option value="221500">22h15</option>
+          <option value="223000">22h30</option>
+          <option value="224500">22h45</option>
+          <option value="230000">23h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
-      <div id="jeudi">
-        Horaire d'ouverture :
-        <label>Jeudi</label>
-        <input name="jeudiSo" type="time" />
-        Horaire de fermeture :
-        <label>Jeudi</label>
-        <input name="jeudiSf" type="time" />
+      <br />
+      <!-- SAMEDI MIDI -->
+      <div>
+        <span>Samedi midi de :</span>
+        <select id="samediMO" name="samediMO">
+          <option value="110000">11h</option>
+          <option value="111500">11h15</option>
+          <option value="113000">11h30</option>
+          <option value="114500">11h45</option>
+          <option value="120000">12h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="samediMF" name="samediMF">
+          <option value="130000">13h</option>
+          <option value="131500">13h15</option>
+          <option value="133000">13h30</option>
+          <option value="134500">13h45</option>
+          <option value="140000">14h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
-      <div id="vendredi">
-        Horaire d'ouverture :
-        <label>Vendredi</label>
-        <input name="vendrediSo" type="time" />
-        Horaire de fermeture :
-        <label>Vendredi</label>
-        <input name="vendrediSf" type="time" />
+      <!-- SAMEDI SOIR -->
+      <div>
+        <span>Samedi soir de :</span>
+        <select id="samediSO" name="samediSO">
+          <option value="190000">19h</option>
+          <option value="191500">19h15</option>
+          <option value="193000">19h30</option>
+          <option value="194500">19h45</option>
+          <option value="200000">20h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="samediSF" name="samediSF">
+          <option value="22000">22h</option>
+          <option value="221500">22h15</option>
+          <option value="223000">22h30</option>
+          <option value="224500">22h45</option>
+          <option value="230000">23h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
-      <div id="samedi">
-        Horaire d'ouverture :
-        <label>Samedi</label>
-        <input name="samediSo" type="time" />
-        Horaire de fermeture :
-        <label>Samedi</label>
-        <input name="samediSf" type="time" />
+      <br />
+      <!-- DIMANCHE MIDI -->
+      <div>
+        <span>Dimanche midi de :</span>
+        <select id="dimancheMO" name="dimancheMO">
+          <option value="110000">11h</option>
+          <option value="111500">11h15</option>
+          <option value="113000">11h30</option>
+          <option value="114500">11h45</option>
+          <option value="120000">12h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="dimancheMF" name="dimancheMF">
+          <option value="130000">13h</option>
+          <option value="131500">13h15</option>
+          <option value="133000">13h30</option>
+          <option value="134500">13h45</option>
+          <option value="140000">14h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
-      <div id="dimanche">
-        Horaire d'ouverture :
-        <label>Dimanche</label>
-        <input name="dimancheSo" type="time" />
-        Horaire de fermeture :
-        <label>Dimanche</label>
-        <input name="dimancheSf" type="time" />
+      <!-- DIMANCHE SOIR -->
+      <div>
+        <span>Dimanche soir de :</span>
+        <select id="dimancheSO" name="dimancheSO">
+          <option value="190000">19h</option>
+          <option value="191500">19h15</option>
+          <option value="193000">19h30</option>
+          <option value="194500">19h45</option>
+          <option value="200000">20h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
+        <span>Jusqu'à</span>
+        <select id="dimancheSF" name="dimancheSF">
+          <option value="22h">22h</option>
+          <option value="22h15">22h15</option>
+          <option value="22h30">22h30</option>
+          <option value="22h45">22h45</option>
+          <option value="23h00">23h</option>
+          <option value="ferme">FERMÉ</option>
+        </select>
       </div>
       <input name="submit" type="submit" value="Enregistré les horaires" />
     </form>

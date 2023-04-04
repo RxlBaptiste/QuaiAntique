@@ -1,104 +1,74 @@
 <?php
 
+/*TROUVER POURQUOI LES HORAIRES NE SONT PAS AU BON ENDROIT DANS LA BDD*/
+
 session_start();
 // Connexion à la base de données
 $dbHoraire = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-if (isset($_POST["submit"])) {
+/* if (isset($_POST["submit"])) { */
 /*--------Horaire du midi------------*/
-	$lundiMo = $_POST["lundiMo"];
-	$lundiMf = $_POST["lundiMf"];
-	$mardiMo = $_POST["mardiMo"];
-	$mardiMf = $_POST["mardiMf"];
-	$mercrediMo = $_POST["mercrediMo"];
-	$mercrediMf = $_POST["mercrediMf"];
-	$jeudiMo = $_POST["jeudiMo"];
-	$jeudiMf = $_POST["jeudiMf"];
-	$vendrediMo = $_POST["vendrediMo"];
-	$vendrediMf = $_POST["vendrediMf"];
-	$samediMo = $_POST["samediMo"];
-	$samediMf = $_POST["samediMf"];
-	$dimancheMo = $_POST["dimancheMo"];
-	$dimancheMf = $_POST["dimancheMf"];
+	$lundiMo = $_POST["lundiMO"];
+	$lundiMf = $_POST["lundiMF"];
+	$mardiMo = $_POST["mardiMO"];
+	$mardiMf = $_POST["mardiMF"];
+	$mercrediMo = $_POST["mercrediMO"];
+	$mercrediMf = $_POST["mercrediMF"];
+	$jeudiMo = $_POST["jeudiMO"];
+	$jeudiMf = $_POST["jeudiMF"];
+	$vendrediMo = $_POST["vendrediMO"];
+	$vendrediMf = $_POST["vendrediMF"];
+	$samediMo = $_POST["samediMO"];
+	$samediMf = $_POST["samediMF"];
+	$dimancheMo = $_POST["dimancheMO"];
+	$dimancheMf = $_POST["dimancheMF"];
 /*--------Horaire du soir------------*/
-	$lundiSo = $_POST["lundiSo"];
-	$lundiSf = $_POST["lundiSf"];
-	$mardiSo = $_POST["mardiSo"];
-	$mardiSf = $_POST["mardiSf"];
-	$mercrediSo = $_POST["mercrediSo"];
-	$mercrediSf = $_POST["mercrediSf"];
-	$jeudiSo = $_POST["jeudiSo"];
-	$jeudiSf = $_POST["jeudiSf"];
-	$vendrediSo = $_POST["vendrediSo"];
-	$vendrediSf = $_POST["vendrediSf"];
-	$samediSo = $_POST["samediSo"];
-	$samediSf = $_POST["samediSf"];
-	$dimancheSo = $_POST["dimancheSo"];
-	$dimancheSf = $_POST["dimancheSf"];
-
-    
-/*--------Horaire du midi------------*/
-	$ClundiMo = date("H:i");
-	$ClundiMf = date("H:i");
-	$CmardiMo = date("H:i");
-	$CmardiMf = date("H:i");
-	$CmercrediMo = date("H:i");
-	$CmercrediMf = date("H:i");
-	$CjeudiMo = date("H:i");
-	$CjeudiMf = date("H:i");
-	$CvendrediMo = date("H:i");
-	$CvendrediMf = date("H:i");
-	$CsamediMo = date("H:i");
-	$CsamediMf = date("H:i");
-	$CdimancheMo = date("H:i");
-	$CdimancheMf = date("H:i");
-/*--------Horaire du soir------------*/
-	$ClundiSo = date("H:i");
-	$ClundiSf = date("H:i");
-	$CmardiSo = date("H:i");
-	$CmardiSf = date("H:i");
-	$CmercrediSo = date("H:i");
-	$CmercrediSf = date("H:i");
-	$CjeudiSo = date("H:i");
-	$CjeudiSf = date("H:i");
-	$CvendrediSo = date("H:i");
-	$CvendrediSf = date("H:i");
-	$CsamediSo = date("H:i");
-	$CsamediSf = date("H:i");
-	$CdimancheSo = date("H:i");
-	$CdimancheSf = date("H:i");
+	$lundiSo = $_POST["lundiSO"];
+	$lundiSf = $_POST["lundiSF"];
+	$mardiSo = $_POST["mardiSO"];
+	$mardiSf = $_POST["mardiSF"];
+	$mercrediSo = $_POST["mercrediSO"];
+	$mercrediSf = $_POST["mercrediSF"];
+	$jeudiSo = $_POST["jeudiSO"];
+	$jeudiSf = $_POST["jeudiSF"];
+	$vendrediSo = $_POST["vendrediSO"];
+	$vendrediSf = $_POST["vendrediSF"];
+	$samediSo = $_POST["samediSO"];
+	$samediSf = $_POST["samediSF"];
+	$dimancheSo = $_POST["dimancheSO"];
+	$dimancheSf = $_POST["dimancheSF"];
 
     $dbHoraire->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Afficher les erreurs PDO
 
     $sqlUpdateOuvert = "UPDATE horaires SET 
     lundiM='$lundiMo', 
-    lundiS='$lundiMf', 
+    lundiS='$lundiSo', 
+    mardiS='$mardiSo', 
     mardiM='$mardiMo', 
-    mardiS='$mardiMf', 
     mercrediM='$mercrediMo', 
-    mercrediS='$mercrediMf', 
+    mercrediS='$mercrediSo', 
     jeudiM='$jeudiMo', 
-    jeudiS='$jeudiMf', 
+    jeudiS='$jeudiSo', 
     vendrediM='$vendrediMo', 
-    vendrediS='$vendrediMf', 
+    vendrediS='$vendrediSo', 
     samediM='$samediMo', 
-    samediS='$samediMf', 
-    dimancheM='$dimancheMo', 
-    dimancheS='$dimancheMf' WHERE id = 1 ";
+    samediS='$samediSo', 
+    dimancheM='$dimancheMo',
+    dimancheS='$dimancheSo'  WHERE id = 1 ";
 
     $sqlUpdateFerme = "UPDATE horaires SET 
-    lundiM='$lundiSo', 
+    lundiM='$lundiMf', 
     lundiS='$lundiSf', 
-    mardiM='$mardiSo', 
+    mardiM='$mardiMf', 
     mardiS='$mardiSf', 
-    mercrediM='$mercrediSo', 
+    mercrediM='$mercrediMf', 
     mercrediS='$mercrediSf', 
-    jeudiM='$jeudiSo', 
+    jeudiM='$jeudiMf', 
     jeudiS='$jeudiSf', 
-    vendrediM='$vendrediSo', 
+    vendrediM='$vendrediMf', 
     vendrediS='$vendrediSf', 
-    samediM='$samediSo', 
+    samediM='$samediMf', 
     samediS='$samediSf', 
-    dimancheM='$dimancheSo', 
+    dimancheM='$dimancheMf', 
     dimancheS='$dimancheSf' WHERE id = 2 ";
 
     $sqlPrepareOuvert = $dbHoraire->prepare($sqlUpdateOuvert); 
@@ -107,7 +77,7 @@ if (isset($_POST["submit"])) {
     $sqlPrepareOuvert->execute();
     $sqlPrepareFerme->execute();
 
-    header("Location: ../index.php" );
-}
+    header("Location: ../index.php" );/* 
+} */
 
 ?>
