@@ -170,6 +170,11 @@
                         </p>
                     </div>
                     <div id="inputs">
+                        <label class="LabelToInputs">Veuiller indiquer votre nom:
+                        </label>
+                        <input id="name" name="name" class="InputReservation" type="text"
+                            placeholder="Nom de la réservation" />
+                        <br />
                         <label class="LabelToInputs">Veuiller indiquer le nombre de personne :
                         </label>
                         <input id="number" name="nbPers" class="InputReservation" type="number"

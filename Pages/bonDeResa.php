@@ -1,10 +1,11 @@
 <?php
 if ( isset( $_POST['submit'] ) ) {
-        $nbPers = $_POST['nbPers'];
-        $date = $_POST['date'];
-        $commentaire = $_POST['commentaire'];
-        $horaire = $_POST['horaires'];
-        $allergies = $_POST["allergies"];  
+        $name = htmlspecialchars($_POST['name']);
+        $nbPers = htmlspecialchars($_POST['nbPers']);
+        $date = htmlspecialchars($_POST['date']);
+        $commentaire = htmlspecialchars($_POST['commentaire'], ENT_QUOTES);
+        $horaire = htmlspecialchars($_POST['horaires']);
+        $allergies = ($_POST["allergies"]);
     }
         if(!empty($allergies)){
             $count = -1;
@@ -82,7 +83,7 @@ if ( isset( $_POST['submit'] ) ) {
     $sqlInsert = "INSERT INTO reservation 
     (
         Allergies
-    ) 
+    )
     VALUES
     (
         '$allergie1'
@@ -109,5 +110,15 @@ if ( isset( $_POST['submit'] ) ) {
     $sqlPrepareInsert = $dbClient->prepare($sqlInsert);
     $sqlPrepareInsert->execute();
 
+    $sqlRecupLastLign = "UPDATE reservation SET 
+    name='$name',
+    NbPers='$nbPers',
+    Date='$date',
+    Horaire='$horaire',
+    Commentaire='$commentaire'
+    ORDER BY id DESC LIMIT 1";
+    $result = $dbClient->query($sqlRecupLastLign);
+    $LastLign = $result->fetch(PDO::FETCH_ASSOC);
+   
     header("Location: ../accueilPopUp.html");
 ?>

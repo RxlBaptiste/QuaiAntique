@@ -44,7 +44,18 @@ if(session_status() == '1'){
         <div class="slider-container">
             <span class="nos">Les réservations</span>
             <!-- ---------------------Reservation Client------------------------------------------------- -->
-            <section></section>
+            <section>
+                <p>
+                    <?php
+                        $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                        $count = $dbClient->query("SELECT COUNT(*) FROM reservation WHERE etat = 0")->fetchColumn();
+                        if($count > 0){
+                echo '<div id="notif" data-count="'.$count.'"></div>';  
+                        };
+                    ?>
+                    <a class="section" href="reservation.php">Accéder aux réservations</a>
+                </p>
+            </section>
             <div class="br"></div>
             <span class="nos">La carte</span>
             <!-- --------------------Modification Carte---------------------------------------------- -->
@@ -458,25 +469,32 @@ if(session_status() == '1'){
 </body>
 
 </html>
-<!-- 
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le Quai Antique / Admin</title>
-  </head>
+<style>
+div#notif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
-  <body>
-    <nav>
-      <section>
-        <a href="../Logout.php">Se deconnecter</a>
-        <a href="Modifications/carte.html">La Carte</a>
-        <a href="Modifications/menu.html">Les Menus</a>
-        <a href="Modifications/horaire.html">Les Horaires</a>
-        <a href="Modifications/reservation.html">Les Réservations</a>
-      </section>
-    </nav> 
-  </body>
-</html>-->
+div#notif:before {
+    content: attr(data-count);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    color: #291211;
+    border-radius: 50%;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#notif span {
+    display: inline-block;
+    text-align: center;
+}
+</style>
