@@ -81,12 +81,25 @@ if(session_status() == '1'){
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $lundiMO = $horaire['lundiM'];
+                        $lundiMO = $horaire['lundiM'];
+                        if($lundiMO == "00:00:00"){
+                        }else{
+                            echo substr($lundiMO, 0, 5);
+                        }
+                    }
+                    if($lundiMO == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
                     }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $lundiMF = $horaire['lundiM'];
+                        $lundiMF = $horaire['lundiM'];
+                        if($lundiMO == "00:00:00"){
+                        }else{
+                            echo substr($lundiMF, 0, 5);
+                        }
                     }
                     
                  ?><br />
@@ -94,12 +107,25 @@ if(session_status() == '1'){
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $lundiSO = $horaire['lundiS'];
+                        $lundiSO = $horaire['lundiS'];
+                        if($lundiSO == "00:00:00"){
+                        }else{
+                            echo substr($lundiSO, 0, 5);
+                        }
+                    }
+                    if($lundiSO == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
                     }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $lundiSF = $horaire['lundiS'];
+                        $lundiSF = $horaire['lundiS'];
+                        if($lundiSF == "00:00:00"){
+                        }else{
+                            echo substr($lundiSF, 0, 5);
+                        }
                     }
                     
                  ?>
@@ -110,12 +136,25 @@ if(session_status() == '1'){
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $mardiMO = $horaire['mardiM'];;
+                        $mardiMO = $horaire['mardiM'];
+                        if($mardiMO == "00:00:00"){
+                        }else{
+                            echo substr($mardiMO, 0, 5);
+                        }
+                    }
+                    if($mardiMO == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
                     }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $mardiMF = $horaire['mardiM'];
+                        $mardiMF = $horaire['mardiM'];
+                        if($mardiMF == "00:00:00"){
+                        }else{
+                            echo substr($mardiMF, 0, 5);
+                        }
                     }
                     
                  ?><br />
@@ -123,12 +162,25 @@ if(session_status() == '1'){
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $mardiSO = $horaire['mardiS'];
+                        $mardiSO = $horaire['mardiS'];
+                        if($mardiSO == "00:00:00"){
+                        }else{
+                            echo substr($mardiSO, 0, 5);
+                        }
+                    }
+                    if($mardiSO == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
                     }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $mardiSF = $horaire['mardiS'];
+                        $mardiSF = $horaire['mardiS'];
+                        if($mardiSF == "00:00:00"){
+                        }else{
+                            echo substr($mardiSF, 0, 5);
+                        }
                     }
                     
                  ?>
@@ -138,24 +190,50 @@ if(session_status() == '1'){
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $mercrediMO = $horaire['mercrediM'];
+                        $mercrediMO = $horaire['mercrediM'];
+                        if($mercrediMO == "00:00:00"){
+                        }else{
+                            echo substr($mercrediMO, 0, 5);
+                        }
+                    }
+                    if($mercrediMO == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
                     }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $mercrediMF = $horaire['mercrediM'];
+                        $mercrediMF = $horaire['mercrediM'];
+                        if($mercrediMF == "00:00:00"){
+                        }else{
+                            echo substr($mercrediMF, 0, 5);
+                        }
                     }
                  ?><br />
                 <?php
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $mercrediMO = $horaire['mercrediM'];
+                        $mercrediMO = $horaire['mercrediM'];
+                        if($mercrediMO == "00:00:00"){
+                        }else{
+                            echo substr($mercrediMO, 0, 5);
+                        }
+                    }
+                    if($mercrediMO == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
                     }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $mercrediSF = $horaire['mercrediS'];
+                        $mercrediSF = $horaire['mercrediS'];
+                        if($mercrediSF == "00:00:00"){
+                        }else{
+                            echo substr($mercrediSF, 0, 5);
+                        }
                     }
                  ?></div>
             <div class="horaires" id="jeudi">
@@ -164,13 +242,25 @@ if(session_status() == '1'){
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $jeudiM0 = $horaire['jeudiM'];
+                        $jeudiMO = $horaire['jeudiM'];
+                        if($jeudiMO == "00:00:00"){
+                        }else{
+                            echo substr($jeudiMO, 0, 5);
+                        }
                     }
-                    echo "&nbsp-&nbsp";
+                    if($jeudiMO == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
+                    }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $jeudiM0 = $horaire['jeudiM'];
+                        $jeudiMO = $horaire['jeudiM'];
+                        if($jeudiMO == "00:00:00"){
+                        }else{
+                            echo substr($jeudiMO, 0, 5);
+                        }
                     }
                     
                  ?><br />
@@ -178,13 +268,25 @@ if(session_status() == '1'){
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $jeudiMO = $horaire['jeudiS'];
+                        $jeudiMO = $horaire['jeudiS'];
+                        if($jeudiMO == "00:00:00"){
+                        }else{
+                            echo substr($jeudiMO, 0, 5);
+                        }
                     }
-                    echo "&nbsp-&nbsp";
+                    if($jeudiMO == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
+                    }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
-                        echo $jeudiMO = $horaire['jeudiS'];
+                        $jeudiMO = $horaire['jeudiS'];
+                        if($jeudiMO == "00:00:00"){
+                        }else{
+                            echo substr($jeudiMO, 0, 5);
+                        }
                     }
                     
                  ?>
@@ -196,12 +298,24 @@ if(session_status() == '1'){
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $vendrediM0 = $horaire['vendrediM'];
+                        if($vendrediM0 == "00:00:00"){
+                        }else{
+                            echo substr($vendrediM0, 0, 5);
+                        }
                     }
-                    echo "&nbsp-&nbsp";
+                    if($vendrediM0 == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
+                    }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $vendrediM0 = $horaire['vendrediM'];
+                        if($vendrediM0 == "00:00:00"){
+                        }else{
+                            echo substr($vendrediM0, 0, 5);
+                        }
                     }
                     
                  ?><br />
@@ -210,12 +324,24 @@ if(session_status() == '1'){
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $vendrediM0 = $horaire['vendrediS'];
+                        if($vendrediM0 == "00:00:00"){
+                        }else{
+                            echo substr($vendrediM0, 0, 5);
+                        }
                     }
-                    echo "&nbsp-&nbsp";
+                    if($vendrediM0 == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
+                    }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $vendrediM0 = $horaire['vendrediS'];
+                        if($vendrediM0 == "00:00:00"){
+                        }else{
+                            echo substr($vendrediM0, 0, 5);
+                        }
                     }
                     
                  ?>
@@ -226,14 +352,24 @@ if(session_status() == '1'){
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $samediM0 = $horaire['samediM'];
-                        echo substr($samediM0, 0, 5);
+                        if($samediM0 == "00:00:00"){
+                        }else{
+                            echo substr($samediM0, 0, 5);
+                        }
                     }
-                    echo "&nbsp-&nbsp";
+                    if($samediM0 == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
+                    }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $samediM0 = $horaire['samediM'];
-                        echo substr($samediM0, 0, 5);
+                        if($samediM0 == "00:00:00"){
+                        }else{
+                            echo substr($samediM0, 0, 5);
+                        }
                     }
                     
                  ?><br />
@@ -242,15 +378,26 @@ if(session_status() == '1'){
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $samediM0 = $horaire['samediS'];
-                        echo substr($samediM0, 0, 5);
+                        if($samediM0 == "00:00:00"){
+                        }else{
+                            echo substr($samediM0, 0, 5);
+                        }
                     }
-                    echo "&nbsp-&nbsp";
+                    if($samediM0 == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
+                    }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $samediM0 = $horaire['samediS'];
-                        echo substr($samediM0, 0, 5);
-                    }?></div>
+                        if($samediM0 == "00:00:00"){
+                        }else{
+                            echo substr($samediM0, 0, 5);
+                        }
+                    }
+                    ?></div>
             <div class="horaires" id="dimanche">
                 DIMANCHE<br /><br />
                 <?php
@@ -258,14 +405,24 @@ if(session_status() == '1'){
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $dimancheSO = $horaire['dimancheM'];
-                        echo substr($dimancheSO, 0, 5);
+                        if($dimancheSO == "00:00:00"){
+                        }else{
+                            echo substr($dimancheSO, 0, 5);
+                        }
                     }
-                    echo "&nbsp-&nbsp";
+                    if($dimancheSO == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
+                    }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $dimancheSO = $horaire['dimancheM'];
-                        echo substr($dimancheSO, 0, 5);
+                        if($dimancheSO == "00:00:00"){
+                        }else{
+                            echo substr($dimancheSO, 0, 5);
+                        }
                     }
                     
                  ?><br />
@@ -274,15 +431,26 @@ if(session_status() == '1'){
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $dimancheM0 = $horaire['dimancheS'];
-                        echo substr($dimancheM0, 0, 5);
+                        if($dimancheM0 == "00:00:00"){
+                        }else{
+                            echo substr($dimancheM0, 0, 5);
+                        }
                     }
-                    echo "&nbsp-&nbsp";
+                    if($dimancheM0 == "00:00:00"){
+                        echo "FERMÉ";
+                    }else{
+                        echo "&nbsp-&nbsp";
+                    }
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $dimancheM0 = $horaire['dimancheS'];
-                        echo substr($dimancheM0, 0, 5);
-                    }?>
+                        if($dimancheM0 == "00:00:00"){
+                        }else{
+                            echo substr($dimancheM0, 0, 5);
+                        }
+                    }
+                    ?>
             </div>
         </div>
     </footer>

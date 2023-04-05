@@ -9,7 +9,7 @@ $dbHoraire = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
 /*--------Horaire du midi------------*/
 	$lundiMo = $_POST["lundiMO"];
 	$lundiMf = $_POST["lundiMF"];
-	$mardiMo = $_POST["mardiMO"];
+    $mardiMo = $_POST["mardiMO"];
 	$mardiMf = $_POST["mardiMF"];
 	$mercrediMo = $_POST["mercrediMO"];
 	$mercrediMf = $_POST["mercrediMF"];
@@ -21,7 +21,7 @@ $dbHoraire = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
 	$samediMf = $_POST["samediMF"];
 	$dimancheMo = $_POST["dimancheMO"];
 	$dimancheMf = $_POST["dimancheMF"];
-/*--------Horaire du soir------------*/
+/*--------Horaire du soir------------*/ 
 	$lundiSo = $_POST["lundiSO"];
 	$lundiSf = $_POST["lundiSF"];
 	$mardiSo = $_POST["mardiSO"];
@@ -36,6 +36,7 @@ $dbHoraire = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
 	$samediSf = $_POST["samediSF"];
 	$dimancheSo = $_POST["dimancheSO"];
 	$dimancheSf = $_POST["dimancheSF"];
+
 
     $dbHoraire->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Afficher les erreurs PDO
 
@@ -53,7 +54,8 @@ $dbHoraire = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
     samediM='$samediMo', 
     samediS='$samediSo', 
     dimancheM='$dimancheMo',
-    dimancheS='$dimancheSo'  WHERE id = 1 ";
+    dimancheS='$dimancheSo'
+    WHERE id = 1 ";
 
     $sqlUpdateFerme = "UPDATE horaires SET 
     lundiM='$lundiMf', 
@@ -69,7 +71,8 @@ $dbHoraire = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
     samediM='$samediMf', 
     samediS='$samediSf', 
     dimancheM='$dimancheMf', 
-    dimancheS='$dimancheSf' WHERE id = 2 ";
+    dimancheS='$dimancheSf'
+    WHERE id = 2 ";
 
     $sqlPrepareOuvert = $dbHoraire->prepare($sqlUpdateOuvert); 
     $sqlPrepareFerme = $dbHoraire->prepare($sqlUpdateFerme); 
@@ -77,7 +80,7 @@ $dbHoraire = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
     $sqlPrepareOuvert->execute();
     $sqlPrepareFerme->execute();
 
-    header("Location: ../index.php" );/* 
-} */
+    header("Location: ../index.php" );
+/* } */
 
 ?>
