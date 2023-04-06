@@ -170,18 +170,24 @@
                         </p>
                     </div>
                     <div id="inputs">
-                        <label class="LabelToInputs">Veuiller indiquer votre nom:
+                        <label class="LabelToInputs">Veuiller indiquer votre nom :
                         </label>
                         <input id="name" name="name" class="InputReservation" type="text"
-                            placeholder="Nom de la réservation" />
+                            placeholder="Nom de la réservation" required />
+                        <br />
+                        <label class="LabelToInputs">Veuiller indiquer votre numéro de téléphone :
+                        </label>
+                        <input id="tel" name="tel" class="InputReservation" type="tel" placeholder="Numéro de téléphone"
+                            pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" required />
                         <br />
                         <label class="LabelToInputs">Veuiller indiquer le nombre de personne :
                         </label>
                         <input id="number" name="nbPers" class="InputReservation" type="number"
-                            placeholder="Nombre de personnes" min="1" max="10" />
+                            placeholder="Nombre de personnes" min="1" max="10" required />
                         <br />
                         <label class="LabelToInputs">Choisissez votre date : </label>
-                        <input id="date" name="date" class="InputReservation" type="date" placeholder="Quel jour" />
+                        <input id="date" name="date" class="InputReservation" type="date" placeholder="Quel jour"
+                            required />
                         <br />
                         <label class="LabelToInputs">Ecrivez un commentaire : </label>
                         <input id="commentaire" name="commentaire" class="InputReservation" type="text"

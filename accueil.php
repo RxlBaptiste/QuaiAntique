@@ -1,15 +1,3 @@
-<?php
-
-$dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-
-$updateEtat = "UPDATE reservation SET etat='1' WHERE etat = 0";
-
-    $sqlEtat = $dbClient->prepare($updateEtat); 
-    $sqlEtat->execute();
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -17,9 +5,9 @@ $updateEtat = "UPDATE reservation SET etat='1' WHERE etat = 0";
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../../Assets/favicon.PNG" rel="icon" type="image/png" />
-    <link href="../../css/style.css" rel="stylesheet" />
-    <title>Document</title>
+    <link href="Assets/favicon.PNG" rel="icon" type="image/png" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title class="DocTitle">Le Quai Antique</title>
 </head>
 
 <body>
@@ -34,63 +22,193 @@ $updateEtat = "UPDATE reservation SET etat='1' WHERE etat = 0";
         </form>
     </nav>
     <main>
-        <section>
-            <form class="formDelete" action="deleteResa.php" method="post">
-                <br>
-                <section id="boxText">
-                    <input type="checkbox" required />Pour confirmer la suppression de toutes les réservations
-                    dépassées, <br> veuillez cocher cette case.
-                </section>
-                <br>
-                <input type="submit" value="Supprimer les réservation">
-            </form>
-            <?php
-                    $count = 1;
-            /*$recupBase = $dbClient->query("SELECT * FROM reservation");*/
-                $recupBase = $dbClient->query("SELECT * FROM reservation ORDER BY id DESC");
-                if($recupBase->rowCount() == 0){
-                    echo "Il n'y a aucune réservation enregistré";
-                }else{
-                while ($resa = $recupBase->fetch()) {
-                    $clientName = $resa['name'];
-                    $clientNb = $resa['NbPers'];
-                    $clientDate = strftime("%d/%m/%Y", strtotime($resa['Date']));
-                    $clientHoraire = $resa['Horaire'];
-                    $clientCommentaire = $resa['Commentaire'];
-                    $clientAllergies = $resa['Allergies'];
-    
-            ?>
-            <hr class="hr" />
-            <div class="container">
-                <p class="numeroResa">Réservation N° : <?php echo $count++; ?></p>
-                <p class="nomResa">Nom de la réservation : <?php echo $clientName; ?> </p>
-                <p class="personneResa">Nombre de personnes : <?php echo $clientNb; ?> </p>
-                <p class="dateResa">Date de la réservation : <?php echo $clientDate; ?> </p>
-                <p class="heureResa">Heure de la réservation : <?php echo substr($clientHoraire, 0, 5); ?> </p>
-                <p class="commentResa">Commentaire : <?php echo $clientCommentaire; ?> </p>
-                <p class="allergiesResa">Les allergies de la réservation :
-                    <?php 
-                                $allergiesListe = explode('-', $clientAllergies);
-                                    foreach($allergiesListe as $allergie) {
-                                        ?>
-                <div>
-                    <ul>
-                        <li class="li"> <?php echo $allergie;?></li>
-                    </ul>
+        <div class="slider-container">
+            <span class="nos">Nos Entrées</span>
+            <!-- --------------------Carrousel Entrés---------------------------------------------- -->
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/Entré1.png" alt="Entré : Tomate mozzarella" />
+                        <div class="HoverBox">
+                            Tomate mozzarella
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/Entré2.jpeg" alt="Entré : Brochette de crevette" />
+                        <div class="HoverBox">
+                            Brochette de crevette
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/entré3.webp" alt="Entré : Saumon" />
+                        <div class="HoverBox">
+                            Saumon
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/Entré4.webp" alt="Entré : Oeuf poché" />
+                        <div class="HoverBox">Oeuf poché
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/Entré1.png" alt="Entré : Tomate mozzarella" />
+                        <div class="HoverBox">
+                            Tomate mozzarella
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/Entré2.jpeg" alt="Entré : Brochette de crevette" />
+                        <div class="HoverBox">
+                            Brochette de crevette
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/entré3.webp" alt="Entré : Saumon" />
+                        <div class="HoverBox">
+                            Saumon
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/Entré4.webp" alt="Entré : Oeuf poché" />
+                        <div class="HoverBox">
+                            Oeuf poché
+                        </div>
+                    </div>
                 </div>
-                <hr class="hr" /><?php
-                                    }
-                            ?>
-                </p>
             </div>
-            <?php
-                
-            }
-        }
-            ?>
-        </section>
+            <div class="br"></div>
+            <span class="nos">Nos Plats</span>
+            <!-- ---------------------Carrousel Plats------------------------------------ -->
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="imgHover">
+                        <img class="slide" class="entré1" src="Assets/FausseImages/Plat1.png"
+                            alt="Entré : Pâtes aux crevettes" />
+                        <div class="HoverBox">
+                            Pâtes aux crevettes
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/plat2.png" alt="Entré : Hamburger" />
+                        <div class="HoverBox">
+                            Hamburger
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/plat3.png" alt="Entré : Canard" />
+                        <div class="HoverBox">
+                            Canard
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/plat4.png" alt="Entré : Agneau" />
+                        <div class="HoverBox">
+                            Agneau
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/Plat1.png" alt="Entré : Pâtes aux crevettes" />
+                        <div class="HoverBox">
+                            Pâtes aux crevettes
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/plat2.png" alt="Entré : Hamburger" />
+                        <div class="HoverBox">
+                            Hamburger
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/plat3.png" alt="Entré : Canard" />
+                        <div class="HoverBox">
+                            Canard
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/plat4.png" alt="Entré : Agneau" />
+                        <div class="HoverBox">
+                            Agneau
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="br">
+
+            </div>
+            <span class="nos">Nos Desserts</span>
+            <!-- ---------------------Carrousel Desserts------------------------------------------------- -->
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="imgHover">
+                        <img class="slide" class="entré1" src="Assets/FausseImages/dessert1.png"
+                            alt="Entré : Gâteau glaçage" />
+                        <div class="HoverBox">
+                            Gâteau glaçage
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/dessert2.png" alt="Entré : Macarons" />
+                        <div class="HoverBox">
+                            Macarons
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/dessert3.png"
+                            alt="Entré : Gâteau aux fruit rouge" />
+                        <div class="HoverBox">
+                            Gâteau aux fruit rouge
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/dessert4.png" alt="Entré : Pancakes" />
+                        <div class="HoverBox">
+                            Pancakes
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/dessert1.png" alt="Entré : Gâteau glaçage" />
+                        <div class="HoverBox">
+                            Gâteau glaçage
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/dessert2.png" alt="Entré : Macarons" />
+                        <div class="HoverBox">
+                            Macarons
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/dessert3.png"
+                            alt="Entré : Gâteau aux fruit rouge" />
+                        <div class="HoverBox">
+                            Gâteau aux fruit rouge
+                        </div>
+                    </div>
+                    <div class="imgHover">
+                        <img class="slide" src="Assets/FausseImages/dessert4.png" alt="Entré : Pancakes" />
+                        <div class="HoverBox">
+                            Pancakes
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div>
+            <div class="BtnContainer">
+                <form action="Pages/carte.php">
+                    <button class="Btn">
+                        Notre Carte
+                    </button>
+                </form>
+                <form action="Pages/reservation.php">
+                    <button class="Btn">
+                        Réservations
+                    </button>
+                </form>
+            </div>
+        </div>
     </main>
-    <br>
     <footer>
         <div class="containerHoraire">
             <div class="horaires" id="lundi">
@@ -472,69 +590,8 @@ $updateEtat = "UPDATE reservation SET etat='1' WHERE etat = 0";
             </div>
         </div>
     </footer>
+    <script>
+    </script>
 </body>
 
 </html>
-<style>
-.container {
-    display: flex;
-    flex-direction: column;
-    background-color: #f8cf2c;
-    width: 35%;
-    margin-left: 32%;
-    padding: 1em;
-    font-family: "Montserrat";
-}
-
-.numeroResa {}
-
-.nomResa {
-    margin-left: 30%;
-}
-
-.personneResa {
-    margin-left: 30%;
-}
-
-.dateResa {
-    margin-left: 30%;
-}
-
-.heureResa {
-    margin-left: 30%;
-}
-
-.commentResa {
-    margin-left: 30%;
-}
-
-.allergiesResa {
-    margin-left: 30%;
-}
-
-.li {
-    margin-left: 50%;
-    font-weight: normal;
-    font-family: "Montserrat";
-}
-
-.hr {
-    border: 1px solid #f8cf2c;
-}
-
-#boxText {
-    text-align: center;
-}
-
-.formDelete {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8cf2c;
-    font-family: "Montserrat";
-    width: 35%;
-    margin-left: 32%;
-    padding: 1em;
-}
-</style>
