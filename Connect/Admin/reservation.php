@@ -25,7 +25,9 @@ $updateEtat = "UPDATE reservation SET etat='1' WHERE etat = 0";
 <body>
     <nav class="parent">
         <div class="title">
-            <h1>Le Quai Antique</h1>
+            <h1>
+                <a href="index.php">Le Quai Antique</a>
+            </h1>
         </div>
         <form action="acces/connection.html" class="BtnSeConnecter">
             <button type="submit" class="btnConnecter">

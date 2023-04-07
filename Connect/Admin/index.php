@@ -34,9 +34,7 @@ if(session_status() == '1'){
         </div>
         <form action="../Logout.php" class="BtnSeConnecter">
             <button class="btnConnecter" style="width: auto; padding: 0 1em">
-                <?php
-                    echo $_SESSION['AdminName'];
-                ?>
+                Se Déconnecter
             </button>
         </form>
     </nav>
@@ -79,6 +77,14 @@ if(session_status() == '1'){
             <section>
                 <p>
                     <a class="section" href="Modifications/horaire.html">Modification des horaires</a>
+                </p>
+            </section>
+            <div class="br"></div>
+            <span class="nos">Les photos</span>
+            <!-- --------------------Modification Photos---------------------------------------------- -->
+            <section>
+                <p>
+                    <a class="section" href="Modifications/photo.php">Modification de la galerie photos</a>
                 </p>
             </section>
         </div>

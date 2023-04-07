@@ -10,7 +10,7 @@
 $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
 $recupBase = $dbClient->query("SELECT * FROM reservation");
 if($recupBase->rowCount() == 0){
-        header("Location: reservation.php");
+        echo "<script>alert('Aucune réservation a été suprimer.');</script>";
 } else {
     // Boucle sur les réservations
     while ($resa = $recupBase->fetch()) {
@@ -22,10 +22,10 @@ if($recupBase->rowCount() == 0){
             // Suppression de la réservation
             $supprResa = $dbClient->prepare("DELETE FROM reservation WHERE id = :id");
             $supprResa->execute(array('id' => $idReservation));
-            echo "La réservation #$idReservation a été supprimée car elle est dépassée.";
+            echo "<script>alert('La réservation #$idReservation a été supprimée.');</script>";
         }
-        header("Location: reservation.php");
     }
 }
+    header("Location: reservation.php");
 
 ?>
