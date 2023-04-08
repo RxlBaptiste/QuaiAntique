@@ -22,17 +22,14 @@ session_start();
                 <a href="../index.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="../../Logout.php" class="BtnSeConnecter">
-            <button class="btnConnecter" style="width: auto; padding: 0 1em">
-                <?php
-                    echo $_SESSION['AdminName'];
-                ?>
+        <form action="menu.php" class="BtnSeConnecter">
+            <button type="submit" class="btnConnecter">
+                RETOUR
             </button>
         </form>
     </nav>
     <main>
         <section class="sectionP">
-            <p id="retour"><a id="linkRetour" href="menu.php">Retour</a></p>
             <p class="Title">Menu : <?php  
                         $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                         $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = $id"); 
@@ -441,7 +438,7 @@ main {
 
 Section.sectionP {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     color: #f8cf2c;

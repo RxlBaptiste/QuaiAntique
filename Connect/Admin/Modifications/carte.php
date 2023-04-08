@@ -26,11 +26,9 @@ session_start();
                 <a href="../index.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="../Logout.php" class="BtnSeConnecter">
-            <button class="btnConnecter" style="width: auto; padding: 0 1em">
-                <?php
-                    echo $_SESSION['AdminName'];
-                ?>
+        <form action="../index.php" class="BtnSeConnecter">
+            <button type="submit" class="btnConnecter">
+                RETOUR
             </button>
         </form>
     </nav>

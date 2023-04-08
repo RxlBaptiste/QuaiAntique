@@ -29,9 +29,9 @@ $updateEtat = "UPDATE reservation SET etat='1' WHERE etat = 0";
                 <a href="index.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="acces/connection.html" class="BtnSeConnecter">
+        <form action="index.php" class="BtnSeConnecter">
             <button type="submit" class="btnConnecter">
-                Se Connecter
+                RETOUR
             </button>
         </form>
     </nav>

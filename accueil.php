@@ -27,53 +27,30 @@
             <!-- --------------------Carrousel Entrés---------------------------------------------- -->
             <div class="slider">
                 <div class="slide-track">
+                    <?php $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'entré'"); while
+                            ($row = $recupPlat->fetch()){
+                        ?>
                     <div class="imgHover">
-                        <img class="slide" src="Assets/Images/Entré1.png" alt="Entré : Tomate mozzarella" />
+                        <img class="slide" class="entré1" <?php echo "src='" . $row['image_path'] . "'"?>
+                            alt=" Entré : " <?php $row['name']?>" />
                         <div class="HoverBox">
-                            Tomate mozzarella
+                            <?php echo $row['name'] ;?>
                         </div>
                     </div>
+                    <?php }?>
+                    <?php $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'entré'"); while
+                            ($row = $recupPlat->fetch()){
+                        ?>
                     <div class="imgHover">
-                        <img class="slide" src="Assets/Images/Entré2.jpeg" alt="Entré : Brochette de crevette" />
+                        <img class="slide" class="entré1" <?php echo "src='" . $row['image_path'] . "'"?>
+                            alt=" Entré : " <?php $row['name']?>" />
                         <div class="HoverBox">
-                            Brochette de crevette
+                            <?php echo $row['name'] ;?>
                         </div>
                     </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/entré3.webp" alt="Entré : Saumon" />
-                        <div class="HoverBox">
-                            Saumon
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/Entré4.webp" alt="Entré : Oeuf poché" />
-                        <div class="HoverBox">Oeuf poché
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/Entré1.png" alt="Entré : Tomate mozzarella" />
-                        <div class="HoverBox">
-                            Tomate mozzarella
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/Entré2.jpeg" alt="Entré : Brochette de crevette" />
-                        <div class="HoverBox">
-                            Brochette de crevette
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/entré3.webp" alt="Entré : Saumon" />
-                        <div class="HoverBox">
-                            Saumon
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/Entré4.webp" alt="Entré : Oeuf poché" />
-                        <div class="HoverBox">
-                            Oeuf poché
-                        </div>
-                    </div>
+                    <?php }?>
                 </div>
             </div>
             <div class="br"></div>
@@ -81,55 +58,30 @@
             <!-- ---------------------Carrousel Plats------------------------------------ -->
             <div class="slider">
                 <div class="slide-track">
+                    <?php $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'plat'"); while
+                            ($row = $recupPlat->fetch()){
+                        ?>
                     <div class="imgHover">
-                        <img class="slide" class="entré1" src="Assets/Images/Plat1.png"
-                            alt="Entré : Pâtes aux crevettes" />
+                        <img class="slide" <?php echo "src='" . $row['image_path'] . "'"?> alt=" Plat : "
+                            <?php $row['name']?>" />
                         <div class="HoverBox">
-                            Pâtes aux crevettes
+                            <?php echo $row['name'] ;?>
                         </div>
                     </div>
+                    <?php }?>
+                    <?php $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'plat'"); while
+                            ($row = $recupPlat->fetch()){
+                        ?>
                     <div class="imgHover">
-                        <img class="slide" src="Assets/Images/plat2.png" alt="Entré : Hamburger" />
+                        <img class="slide" <?php echo "src='" . $row['image_path'] . "'"?> alt=" Plat : "
+                            <?php $row['name']?>" />
                         <div class="HoverBox">
-                            Hamburger
+                            <?php echo $row['name'] ;?>
                         </div>
                     </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/plat3.png" alt="Entré : Canard" />
-                        <div class="HoverBox">
-                            Canard
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/plat4.png" alt="Entré : Agneau" />
-                        <div class="HoverBox">
-                            Agneau
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/Plat1.png" alt="Entré : Pâtes aux crevettes" />
-                        <div class="HoverBox">
-                            Pâtes aux crevettes
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/plat2.png" alt="Entré : Hamburger" />
-                        <div class="HoverBox">
-                            Hamburger
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/plat3.png" alt="Entré : Canard" />
-                        <div class="HoverBox">
-                            Canard
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/plat4.png" alt="Entré : Agneau" />
-                        <div class="HoverBox">
-                            Agneau
-                        </div>
-                    </div>
+                    <?php }?>
                 </div>
             </div>
             <div class="br">
@@ -139,58 +91,32 @@
             <!-- ---------------------Carrousel Desserts------------------------------------------------- -->
             <div class="slider">
                 <div class="slide-track">
+                    <?php $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'dessert'"); while
+                            ($row = $recupPlat->fetch()){
+                        ?>
                     <div class="imgHover">
-                        <img class="slide" class="entré1" src="Assets/Images/dessert1.png"
-                            alt="Entré : Gâteau glaçage" />
+                        <img class="slide" <?php echo "src='" . $row['image_path'] . "'"?> alt=" Dessert : "
+                            <?php $row['name']?>" />
                         <div class="HoverBox">
-                            Gâteau glaçage
+                            <?php echo $row['name'] ;?>
                         </div>
                     </div>
+                    <?php }?>
+                    <?php $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'dessert'"); while
+                            ($row = $recupPlat->fetch()){
+                        ?>
                     <div class="imgHover">
-                        <img class="slide" src="Assets/Images/dessert2.png" alt="Entré : Macarons" />
+                        <img class="slide" class="entré1" <?php echo "src='" . $row['image_path'] . "'"?>
+                            alt=" Dessert : " <?php $row['name']?>" />
                         <div class="HoverBox">
-                            Macarons
+                            <?php echo $row['name'] ;?>
                         </div>
                     </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/dessert3.png" alt="Entré : Gâteau aux fruit rouge" />
-                        <div class="HoverBox">
-                            Gâteau aux fruit rouge
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/dessert4.png" alt="Entré : Pancakes" />
-                        <div class="HoverBox">
-                            Pancakes
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/dessert1.png" alt="Entré : Gâteau glaçage" />
-                        <div class="HoverBox">
-                            Gâteau glaçage
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/dessert2.png" alt="Entré : Macarons" />
-                        <div class="HoverBox">
-                            Macarons
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/dessert3.png" alt="Entré : Gâteau aux fruit rouge" />
-                        <div class="HoverBox">
-                            Gâteau aux fruit rouge
-                        </div>
-                    </div>
-                    <div class="imgHover">
-                        <img class="slide" src="Assets/Images/dessert4.png" alt="Entré : Pancakes" />
-                        <div class="HoverBox">
-                            Pancakes
-                        </div>
-                    </div>
+                    <?php }?>
                 </div>
             </div>
-        </div>
         </div>
         <div>
             <div class="BtnContainer">
@@ -593,3 +519,8 @@
 </body>
 
 </html>
+<style>
+.HoverBox {
+    text-align: center;
+}
+</style>

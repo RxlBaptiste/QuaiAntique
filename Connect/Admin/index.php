@@ -89,7 +89,6 @@ if(session_status() == '1'){
             </section>
         </div>
     </main>
-    <br>
     <footer>
         <div class="containerHoraire">
             <div class="horaires" id="lundi">

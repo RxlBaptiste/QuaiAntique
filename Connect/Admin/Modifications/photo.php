@@ -26,11 +26,9 @@ session_start();
                 <a href="../index.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="../Logout.php" class="BtnSeConnecter">
-            <button class="btnConnecter" style="width: auto; padding: 0 1em">
-                <?php
-                    echo $_SESSION['AdminName'];
-                ?>
+        <form action="../index.php" class="BtnSeConnecter">
+            <button type="submit" class="btnConnecter">
+                RETOUR
             </button>
         </form>
     </nav>
@@ -48,7 +46,7 @@ session_start();
                         ?>
                 <div class="hover">
                     <?php echo "<div class='text'> ".$row['name']."</div>" ;?>
-                    <a href=" changeImage.php?id=<?= $row['id']; ?>">
+                    <a href=" changeImage.php?id=<?= $row['id']; ?>&image_path=<?= $row['image_path']; ?>">
                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                             cette image</button>
                     </a>
@@ -68,7 +66,7 @@ session_start();
                         ?>
                 <div class="hover">
                     <?php echo "<div class='text'> ".$row['name']."</div>" ;?>
-                    <a href=" changeImage.php?id=<?= $row['id']; ?>">
+                    <a href=" changeImage.php?id=<?= $row['id']; ?>&image_path=<?= $row['image_path']; ?>">
                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                             cette image</button>
                     </a>
@@ -88,7 +86,7 @@ session_start();
                         ?>
                 <div class="hover">
                     <?php echo "<div class='text'> ".$row['name']."</div>" ;?>
-                    <a href=" changeImage.php?id=<?= $row['id']; ?> image_path=<?= $row['image_path']; ?>">
+                    <a href=" changeImage.php?id=<?= $row['id']; ?>&image_path=<?= $row['image_path']; ?>">
                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                             cette image</button>
                     </a>

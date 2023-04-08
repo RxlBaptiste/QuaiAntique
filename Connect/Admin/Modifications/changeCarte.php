@@ -15,27 +15,40 @@ $id = $_GET['id'];
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Change</title>
+    <link href="../favicon.PNG" rel="icon" type="image/png" />
+    <link href="../../../css/style.css" rel="stylesheet" />
+    <title class="DocTitle">Le Quai Antique / Le menu</title>
 </head>
 
 <body>
+    <nav class="parent">
+        <div class="title">
+            <h1>
+                <a href="carte.php">Le Quai Antique</a>
+            </h1>
+        </div>
+        <form action="menu.php" class="BtnSeConnecter">
+            <button type="submit" class="btnConnecter">
+                RETOUR
+            </button>
+        </form>
+    </nav>
+    <main>
 
-    <a href="carte.php">
-        <-RETOUR </a>
-
-            <form action="" method="post">
-                <input name="name" type="text" placeholder="Nom du plat" />&nbsp
-                <input name="description" type="text" placeholder="Description du plat" />
-                <label>Prix du plat</label>
-                <input name="price" type="number" placeholder="Prix en €" />
-                <label for="categories-select">Catégorie du plat</label>
-                <select name="categories" id="categories-select">
-                    <option>entrée</option>
-                    <option>plat</option>
-                    <option>déssert</option>
-                </select>
-                <input type="submit" name="submit" value="Valider les changements" />
-            </form>
+        <form action="" method="post">
+            <input name="name" type="text" placeholder="Nom du plat" />&nbsp
+            <input name="description" type="text" placeholder="Description du plat" />
+            <label>Prix du plat</label>
+            <input name="price" type="number" placeholder="Prix en €" />
+            <label for="categories-select">Catégorie du plat</label>
+            <select name="categories" id="categories-select">
+                <option>entrée</option>
+                <option>plat</option>
+                <option>déssert</option>
+            </select>
+            <input type="submit" name="submit" value="Valider les changements" />
+        </form>
+    </main>
 </body>
 
 </html>
