@@ -34,7 +34,7 @@ $imagePath = isset($_GET['image_path']) ? $_GET['image_path'] : null;
             </button>
         </form>
     </nav>
-    <main>
+    <main class="main">
         <form class="container" method="post" action="" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?= $id ?>" />
             <section class="addName">
@@ -51,7 +51,7 @@ $imagePath = isset($_GET['image_path']) ? $_GET['image_path'] : null;
             <input id="submit" class="submit" type="submit" name="submit" value="Mettre à jour l'image" />
         </form>
     </main>
-    <footer>
+    <footer class="footer">
         <div class="containerHoraire">
             <div class="horaires" id="lundi">
                 LUNDI <br /><br />
@@ -454,6 +454,13 @@ main {
     margin: 12em 0 12em 0;
     display: flex;
     justify-content: center;
+    min-height: 100%;
+    margin-bottom: 9.8%;
+}
+
+footer.footer {
+    height: -9.8%;
+    margin: 0;
 }
 
 .container {

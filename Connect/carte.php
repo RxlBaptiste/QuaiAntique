@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -14,11 +17,28 @@
     <nav class="parent">
         <div class="title">
             <h1>
-                <a href="../index.php">Le Quai Antique</a>
+                <a href="Accueil.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="connection.html" class="BtnSeConnecter">
-            <button class="btnConnecter">Se Connecter</button>
+        <form action="Accueil.php" class="BtnSeConnecter">
+            <button class="btnConnecter" style="width:auto; padding:0 1em;">
+                <?php
+                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $recupName = $dbClient->query("SELECT * FROM client WHERE mail = '{$_SESSION['mail']}'");
+                    while ($client = $recupName->fetch()){
+                        $ClientFirstname = $client['firstname'];
+                        $ClientName = $client['name'];
+                        if(!empty($ClientName)){
+                            echo $ClientFirstname;
+                            echo "&nbsp";
+                            echo $ClientName;
+                        }else{
+                            echo $_SESSION['mail'];
+                        }
+                    }
+
+                ?>
+            </button>
         </form>
     </nav>
     <main>
@@ -316,7 +336,7 @@
                     <p class="textCarte">Q</p>
                 </div>
                 <div id="inteG">
-                    <p id="TitleG">Menu pour les Petits Gourmets (14€)</p>
+                    <p id="TitleG">Nos Entrées</p>
                     <div class="liPanneau">
                         <ul>
                             <li>
@@ -385,10 +405,7 @@
             </div>
             <div class="Fond">
                 <div class="fond">
-                    <div class="SpanMenu">
-                        <p id="TitleL">Menu Découverte (37€)</p>
-                        <p id="TitleR">Menu du Terroir (44€)</p>
-                    </div>
+                    <p id="TitleP">Nos Plats</p>
                     <div class="TextPlats">
                         <div id="PlatG">
                             <ul>
@@ -511,12 +528,12 @@
                     </div>
                 </div>
                 <div class="BtnMenu">
-                    <a href="carte.php"><input id="BtnMenu" type="button" value="Voir la carte" /></a>
+                    <a href="menu.php"><input id="BtnMenu" type="button" value="Voir les menus" /></a>
                 </div>
             </div>
             <div id="Droite">
                 <div id="inteD">
-                    <p id="TitleD">Menu Gourmet <br> (65€)</p>
+                    <p id="TitleD">Nos Desserts</p>
                     <div class="liPanneau">
                         <ul>
                             <li>
@@ -612,41 +629,6 @@
     </footer>
 </body>
 <style>
-.SpanMenu {
-    display: flex;
-    justify-content: space-around;
-}
-
-#TitleD,
-#TitleG {
-    text-align: center;
-}
-
-#TitleL,
-#TitleR {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    font-family: "Lora", serif;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* 
-#TitleL {
-    display: flex;
-    align-items: flex-start;
-    margin-right: 15%;
-}
-
-#TitleR {
-    display: flex;
-    align-items: flex-end;
-    margin-right: 15%;
-} */
-
 .PlatD {
     border-left: 5px solid #291211;
 }

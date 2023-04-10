@@ -14,7 +14,7 @@
     <nav class="parent">
         <div class="title">
             <h1>
-                <a href="../index.html">Le Quai Antique</a>
+                <a href="../index.php">Le Quai Antique</a>
             </h1>
         </div>
         <form action="connection.html" class="BtnSeConnecter">

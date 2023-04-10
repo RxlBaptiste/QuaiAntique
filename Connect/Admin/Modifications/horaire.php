@@ -22,11 +22,10 @@
         </form>
     </nav>
     <main>
-        <p style="color:#f8cf2c;"> Attendre les choix pour css span </p>
         <form class="horaireForm" action="changeHoraires.php" method="POST">
             <!-- LUNDI MIDI -->
             <div class="itemSelect">
-                <div class="horaires">
+                <div class="textHoraires">
                     <p>Horaires du midi :</p>
                 </div>
                 <span>Lundi midi de : &nbsp
@@ -50,7 +49,7 @@
             </div>
             <!-- LUNDI SOIR -->
             <div class="itemSelect">
-                <div class="horaires">
+                <div class="textHoraires">
                     <p>Horaires du soir :</p>
                 </div>
                 <span>Lundi soir de : &nbsp
@@ -732,14 +731,8 @@ span {
     font-family: "Montserrat";
     color: #252827;
     white-space: nowrap;
-    /*
-    justify-content : center; choix 1*/
+
     justify-content: flex-end;
-    /*choix 2
-    
-    justify-content : space-between; choix 3
-    justify-content : space-evenly; choix 4
-    */
 }
 
 .horaireForm {
@@ -754,7 +747,7 @@ span {
     justify-content: space-around;
 }
 
-.horaires {
+.textHoraires {
     display: flex;
     white-space: nowrap;
     font-family: "Montserrat";

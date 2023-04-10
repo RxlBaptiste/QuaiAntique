@@ -1001,14 +1001,12 @@ p#Client {
     font-size: 8px !important;
   }
 }
-
 #footerCarte {
   position: relative;
   bottom: 0;
   display: flex;
   flex-direction: column;
 }
-
 footer#footer {
   position: relative;
   bottom: 0;

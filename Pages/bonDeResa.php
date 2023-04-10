@@ -120,5 +120,5 @@ if ( isset( $_POST['submit'] ) ) {
     $result = $dbClient->query($sqlRecupLastLign);
     $LastLign = $result->fetch(PDO::FETCH_ASSOC);
    
-    header("Location: ../accueilPopUp.html");
+    header("Location: ../accueilPopUp.php");
 ?>

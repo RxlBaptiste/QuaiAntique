@@ -26,6 +26,16 @@ $sqlClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
     <link href="../css/style.css" rel="stylesheet" />
     <title class="DocTitle">Le Quai Antique</title>
     <style>
+    main {
+        min-height: 100%;
+        margin-bottom: 10.2%;
+    }
+
+    footer.footer {
+        height: -10.2%;
+        margin: 0;
+    }
+
     .fond {
         background-color: #291211;
         border: 1px solid #f8cf2c;
@@ -116,20 +126,23 @@ $sqlClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
                     <?php echo $nbEnf?>
                 </div>
                 <br>
-                <div>Vos allergies :
+                <div style="display:flex; flex-direction:column; align-items: center;">Vos allergies :
                     <?php 
-                        if(!empty($allergies)){
-                            echo $allergies;
-                        }else{
-                            echo 'Vous n\'avez pas enregistré d\'allergies.'?> <br> <?php
-                            echo '<a href="../acces/Allergies/allergies.html">Cliquez ici</a> pour enregistré des allergies.';
+                        if (!empty($allergies)) {
+                            $allergies_list = explode('-', $allergies);
+                            foreach ($allergies_list as $allergie) {
+                                echo '<div style="text-align:center; padding:0.2em;">'.$allergie.'</div>';
+                            }
+                        } else {
+                            echo 'Vous n\'avez pas enregistré d\'allergies.<br>';
+                            echo '<a href="../acces/Allergies/allergies.php">Cliquez ici</a> pour enregistrer des allergies.';
                         }
                     ?>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <div class="containerHoraire">
             <div class="horaires" id="lundi">
                 LUNDI <br /><br />12:00 - 14:00<br />19:00 - 22:00

@@ -38,7 +38,7 @@ if(session_status() == '1'){
             </button>
         </form>
     </nav>
-    <main>
+    <main class="main">
         <div class="slider-container">
             <span class="nos">Les réservations</span>
             <!-- ---------------------Reservation Client------------------------------------------------- -->
@@ -76,7 +76,7 @@ if(session_status() == '1'){
             <!-- ---------------------Modification Horaire------------------------------------------------- -->
             <section>
                 <p>
-                    <a class="section" href="Modifications/horaire.html">Modification des horaires</a>
+                    <a class="section" href="Modifications/horaire.php">Modification des horaires</a>
                 </p>
             </section>
             <div class="br"></div>
@@ -89,7 +89,7 @@ if(session_status() == '1'){
             </section>
         </div>
     </main>
-    <footer>
+    <footer class="footer">
         <div class="containerHoraire">
             <div class="horaires" id="lundi">
                 LUNDI <br /><br />

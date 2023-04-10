@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -14,11 +17,28 @@
     <nav class="parent">
         <div class="title">
             <h1>
-                <a href="../index.php">Le Quai Antique</a>
+                <a href="Accueil.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="connection.html" class="BtnSeConnecter">
-            <button class="btnConnecter">Se Connecter</button>
+        <form action="Accueil.php" class="BtnSeConnecter">
+            <button class="btnConnecter" style="width:auto; padding:0 1em;">
+                <?php
+                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $recupName = $dbClient->query("SELECT * FROM client WHERE mail = '{$_SESSION['mail']}'");
+                    while ($client = $recupName->fetch()){
+                        $ClientFirstname = $client['firstname'];
+                        $ClientName = $client['name'];
+                        if(!empty($ClientName)){
+                            echo $ClientFirstname;
+                            echo "&nbsp";
+                            echo $ClientName;
+                        }else{
+                            echo $_SESSION['mail'];
+                        }
+                    }
+
+                ?>
+            </button>
         </form>
     </nav>
     <main>
