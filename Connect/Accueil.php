@@ -26,6 +26,7 @@ session_start();
                     while ($client = $recupName->fetch()){
                         $ClientFirstname = $client['firstname'];
                         $ClientName = $client['name'];
+                        $ClientID = $client['id'];
                         if(!empty($ClientName)){
                             echo $ClientFirstname;
                             echo "&nbsp";
@@ -34,6 +35,7 @@ session_start();
                             echo $_SESSION['mail'];
                         }
                     }
+                    $_SESSION['id'] = $ClientID;
 
                 ?>
             </button>
@@ -138,12 +140,12 @@ session_start();
         </div>
         <div>
             <div class="BtnContainer">
-                <form action="Pages/carte.php">
+                <form action="carte.php">
                     <button class="Btn">
                         Notre Carte
                     </button>
                 </form>
-                <form action="Pages/reservation.php">
+                <form action="reservation.php">
                     <button class="Btn">
                         Réservations
                     </button>

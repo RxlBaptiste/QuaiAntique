@@ -20,7 +20,7 @@ session_start();
                 <a href="Accueil.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="Accueil.php" class="BtnSeConnecter">
+        <form action="paramCompte.php" class="BtnSeConnecter">
             <button class="btnConnecter" style="width:auto; padding:0 1em;">
                 <?php
                     $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
