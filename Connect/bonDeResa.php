@@ -1,6 +1,7 @@
 <?php
 if ( isset( $_POST['submit'] ) ) {
         $name = htmlspecialchars($_POST['name']);
+        $mail = htmlspecialchars($_POST['mail']);
         $nbPers = htmlspecialchars($_POST['nbPers']);
         $date = htmlspecialchars($_POST['date']);
         $commentaire = htmlspecialchars($_POST['commentaire'], ENT_QUOTES);
@@ -112,6 +113,7 @@ if ( isset( $_POST['submit'] ) ) {
 
     $sqlRecupLastLign = "UPDATE reservation SET 
     name='$name',
+    mail='$mail',
     NbPers='$nbPers',
     Date='$date',
     Horaire='$horaire',
@@ -120,5 +122,5 @@ if ( isset( $_POST['submit'] ) ) {
     $result = $dbClient->query($sqlRecupLastLign);
     $LastLign = $result->fetch(PDO::FETCH_ASSOC);
    
-    header("Location: ../accueil.php");
+    header("Location: popUp.php");
 ?>

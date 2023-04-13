@@ -93,7 +93,36 @@ $sqlClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
     <main>
         <section class="fond">
             <div class="Info">Vos informations</div>
-            <div class="title">
+            <div style="display: flex; flex-direction: column; align-items: center; color: #f8cf2c; padding: 2em; font-family: 'Montserrat', sans-serif; font-size: .8em;"
+                class="Title">
+                <?php 
+                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $recupName = $dbClient->query("SELECT * FROM reservation WHERE mail = '$mail'");
+                    while ($client = $recupName->fetch()) {
+                        $Mail = $client['mail'];
+                        $date =  strftime("%d/%m/%Y", strtotime($client['Date']));
+                        $heure = substr($client['Horaire'], 0, 5);
+                        $nbPers = $client['NbPers'];
+                    }
+                    if(!empty($Mail)){
+                        ?>
+                <div style="border: 1px solid #f8cf2c; border-radius: 20px; padding:1em; margin-bottom:1.5em;">
+                    <b><u>Vous
+                            avez
+                            une réservation :</u></b> <br>
+                    <div style="display:flex; flex-direction:column; align-items: flex-start;">
+                        <div>Le <?php echo $date;
+                    echo "<br>";?></div>
+                        <div> A <?php echo $heure;
+                    echo "<br>";?></div>
+                        <div> Avec une table de : <?php echo $nbPers; ?> personnes.
+                            <?php echo "<br>";?></div>
+                    </div>
+
+                </div>
+                <?php
+                    }
+                ?>
                 <div>Votre Nom :
                     <?php 
                         if(!empty($name)){
@@ -126,8 +155,9 @@ $sqlClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
                     <?php echo $nbEnf?>
                 </div>
                 <br>
-                <div style="display:flex; flex-direction:column; align-items: center;">Vos allergies :
-                    <?php 
+                <div style="text-align:center;">Vos allergies :
+                    <div style="display:flex; flex-direction:row; flex-wrap:wrap; align-items: center;">
+                        <?php 
                         if (!empty($allergies)) {
                             $allergies_list = explode('-', $allergies);
                             foreach ($allergies_list as $allergie) {
@@ -138,6 +168,7 @@ $sqlClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
                             echo '<a href="../acces/Allergies/allergies.php">Cliquez ici</a> pour enregistrer des allergies.';
                         }
                     ?>
+                    </div>
                 </div>
             </div>
         </section>
