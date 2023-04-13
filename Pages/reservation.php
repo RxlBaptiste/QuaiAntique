@@ -189,36 +189,36 @@
                         <input id="date" name="date" class="InputReservation" type="date" placeholder="Quel jour"
                             required />
                         <?php 
-    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-    $recupName = $dbClient->query("SELECT Date AS Date, Horaire AS Horaire FROM reservation");
-   
-    $reservations = array(); // Tableau pour stocker les réservations
-    $counts = array(); // Tableau pour stocker le nombre de réservations pour chaque date et heure
+                            $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                            $recupName = $dbClient->query("SELECT Date AS Date, Horaire AS Horaire FROM reservation");
+                        
+                            $reservations = array(); // Tableau pour stocker les réservations
+                            $counts = array(); // Tableau pour stocker le nombre de réservations pour chaque date et heure
+                        
+                        while ($client = $recupName->fetch()) {
+                            $date = $client['Date'];
+                            $heure = $client['Horaire'];
+                            
+                            // Compter le nombre de réservations pour chaque date et heure
+                            if (isset($counts["$date $heure"])) {
+                                $counts["$date $heure"]++;
+                            } else {
+                                $counts["$date $heure"] = 1;
+                            }
+                            
+                            // Afficher la réservation normalement
+                                //echo "$date &nbsp $heure <br>";
+                            // Vérifier si le nombre de réservations atteint 5
+                            if ($counts["$date $heure"] == 5) {
+                                //echo "Attention : $date $heure a atteint la limite de réservations (5) <br>";
+                                echo "<script>";
+                                echo "let datePhp = '" .$date."';";
+                                echo "let heurePhp = '" .$heure."';";
+                                echo "</script>"; 
+                            }
 
-while ($client = $recupName->fetch()) {
-    $date = $client['Date'];
-    $heure = $client['Horaire'];
-    
-    // Compter le nombre de réservations pour chaque date et heure
-    if (isset($counts["$date $heure"])) {
-        $counts["$date $heure"]++;
-    } else {
-        $counts["$date $heure"] = 1;
-    }
-    
-    // Afficher la réservation normalement
-        //echo "$date &nbsp $heure <br>";
-    // Vérifier si le nombre de réservations atteint 5
-    if ($counts["$date $heure"] == 5) {
-        //echo "Attention : $date $heure a atteint la limite de réservations (5) <br>";
-        echo "<script>";
-        echo "let datePhp = '" .$date."';";
-        echo "let heurePhp = '" .$heure."';";
-        echo "</script>";
-    }
-    
-}
-                            ?>
+                        }
+                        ?>
                         <br />
                         <label class="LabelToInputs">Ecrivez un commentaire : </label>
                         <input id="commentaire" name="commentaire" class="InputReservation" type="text"
@@ -234,27 +234,27 @@ while ($client = $recupName->fetch()) {
                         <div class="HoraireMidi">
                             <div class="ContainerHoraire">
                                 <input id="horaires1" class="BtnRadio" type="radio" name="horaires" value="12:00:00"
-                                    onclick="horaire()" />
+                                    onclick="horaire()" required />
                                 <label for="12:00">12:00</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires2" class="BtnRadio" type="radio" name="horaires" value="12:15:00"
-                                    onclick="horaire()" />
+                                    onclick="horaire()" required />
                                 <label for="12:15">12:15</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires3" class="BtnRadio" type="radio" value="12:30:00" name="horaires"
-                                    onclick="horaire()" />
+                                    onclick="horaire()" required />
                                 <label>12:30</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires4" class="BtnRadio" type="radio" value="12:45:00" name="horaires"
-                                    onclick="horaire()" />
+                                    onclick="horaire()" required />
                                 <label>12:45</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires5" class="BtnRadio" type="radio" value="13:00:00" name="horaires"
-                                    onclick="horaire()" />
+                                    onclick="horaire()" required />
                                 <label>13:00</label>
                             </div>
                         </div>
@@ -342,453 +342,100 @@ while ($client = $recupName->fetch()) {
                         <u>Cocher les allergies.</u>
                     </div>
                     <div class="Allergies">
+                        <?php
+
+                            $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                            // Define a function to generate the HTML for an allergy
+                            function generateAllergyHtml2($id, $name, $description) {
+                                $html = '<section>
+                                            <div class="textAllergies">
+                                                <u>' . htmlspecialchars($name) . '</u>
+                                                <label class="switch">
+                                                    <input type="checkbox" name="allergies[]" value="' . htmlspecialchars($name) . '" />
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                            <div class="textAllergies">
+                                                <i style="font-size:0.8em">' . htmlspecialchars($description) . '</i>
+                                            </div>
+                                        </section>';
+                                return $html;
+                            }
+                            // Use prepared statements to query the database
+                            $statement = $dbClient->prepare("SELECT * FROM allergies WHERE id=:id");
+                            // récupérer tous les ids de la base de données
+                            $statementAllIds = $dbClient->query('SELECT id FROM allergies');
+                            $ids = $statementAllIds->fetchAll(PDO::FETCH_COLUMN);
+
+                            // trier les ids par ordre décroissant
+                            rsort($ids);
+
+                            // sélectionner la dernière moitié des ids
+                            $halfCount = count($ids) / 2;
+                            $lastHalfIds = array_slice($ids, $halfCount);
+
+                            // utiliser les ids sélectionnés pour générer le HTML
+                            $html = '';
+                            foreach (array_reverse($lastHalfIds) as $id) {
+                                $statement->execute([':id' => $id]);
+                                $allergie = $statement->fetch();
+                                $html .= generateAllergyHtml2($allergie['id'], $allergie['name'], $allergie['description']);
+                            }
+                        ?>
                         <section class="Gauche">
                             <div class="allergieGauche">
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php 
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=1");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php 
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=2");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=3");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=4");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=5");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=6");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=7");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=8");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=9");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=10");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
+                                <?php echo $html; ?>
                             </div>
                         </section>
+                        <?php
+                        $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                        // Define a function to generate the HTML for an allergy
+                        function generateAllergyHtml($id, $name, $description) {
+                        $html = '<section>
+                            <div class="textAllergies">
+                                <u>' . htmlspecialchars($name) . '</u>
+                                <label class="switch">
+                                    <input type="checkbox" name="allergies[]" value="' . htmlspecialchars($name) . '" />
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="textAllergies">
+                                <i style="font-size:0.8em">' . htmlspecialchars($description) . '</i>
+                            </div>
+                        </section>';
+                        return $html;
+                        }
+                        // Use prepared statements to query the database
+                        $statement = $dbClient->prepare("SELECT * FROM allergies WHERE id=:id");
+                        // récupérer tous les ids de la base de données
+                        $statementAllIds = $dbClient->query('SELECT id FROM allergies');
+                        $ids = $statementAllIds->fetchAll(PDO::FETCH_COLUMN);
+
+                        // trier les ids par ordre décroissant
+                        rsort($ids);
+
+                        // sélectionner la dernière moitié des ids
+                        $halfCount = count($ids) / 2;
+                        $lastHalfIds = array_slice($ids,0, $halfCount);
+
+                        // utiliser les ids sélectionnés pour générer le HTML
+                        $html = '';
+                        foreach (array_reverse($lastHalfIds) as $id) {
+                        $statement->execute([':id' => $id]);
+                        $allergie = $statement->fetch();
+                        $html .= generateAllergyHtml($allergie['id'], $allergie['name'], $allergie['description']);
+                        }
+
+                        ?>
                         <section class="Droite">
                             <div class="allergieDroite">
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=11");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=12");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=13");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=14");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=15");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=16");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=17");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=18");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=19");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
-                                <section>
-                                    <div class="textAllergies">
-                                        <?php
-                                          $recupAllergie = 
-                                          $dbClient->query("SELECT * FROM allergies WHERE id=20");
-                                          while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
-                                             */
-                                        ?>
-                                        <label class="switch">
-                                            <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="textAllergies">
-                                        <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
-                                            }
-                                          ?>
-                                    </div>
-                                </section>
+                                <?php echo $html; ?>
                             </div>
                         </section>
+                        <form action="" methode="POST">
+                            <input id="addAllergie" name="addAllergie" type="text"
+                                placeholder="Ajouter votre allergie" />
+                        </form>
                     </div>
                     <section id="submitAllergies">
                         <button type="button" class="btnConnecter" onclick="prevPage()">
@@ -1108,6 +755,7 @@ while ($client = $recupName->fetch()) {
         }
         //Affichage des horaires en directe
 
+
         if (datePhp == dateValue) {
             var checkboxes = [checkbox1, checkbox2, checkbox3, checkbox4, checkbox5, checkbox6, checkbox7,
                 checkbox8, checkbox9, checkbox10, checkbox11, checkbox12, checkbox13, checkbox14,
@@ -1122,14 +770,49 @@ while ($client = $recupName->fetch()) {
                 "21:15:00", "21:30:00", "21:45:00", "22:00:00"
             ];
 
+            var heuresSaturees = [];
+
             for (var i = 0; i < heures.length; i++) {
                 if (heurePhp == heures[i]) {
-                    checkboxes[i].setAttribute("disabled", true);
-                    divParents[i].style.backgroundColor = "red";
+                    if (counts[datePhp + " " + heurePhp] >= 5) {
+                        heuresSaturees.push(i);
+                    }
                     break; // Sortir de la boucle après avoir trouvé une correspondance
                 }
             }
+
+            for (var i = 0; i < heuresSaturees.length; i++) {
+                var index = heuresSaturees[i];
+                checkboxes[index].setAttribute("disabled", true);
+                divParents[index].style.backgroundColor = "red";
+            }
         }
+
+
+        /* TEST CODE  */
+        /* 
+                if (datePhp == dateValue) {
+                    var checkboxes = [checkbox1, checkbox2, checkbox3, checkbox4, checkbox5, checkbox6, checkbox7,
+                        checkbox8, checkbox9, checkbox10, checkbox11, checkbox12, checkbox13, checkbox14,
+                        checkbox15, checkbox16, checkbox17, checkbox18
+                    ];
+                    var divParents = [divParent1, divParent2, divParent3, divParent4, divParent5, divParent6,
+                        divParent7, divParent8, divParent9, divParent10, divParent11, divParent12, divParent13,
+                        divParent14, divParent15, divParent16, divParent17, divParent18
+                    ];
+                    var heures = ["12:00:00", "12:15:00", "12:30:00", "12:45:00", "13:00:00", "19:00:00", "19:15:00",
+                        "19:30:00", "19:45:00", "20:00:00", "20:15:00", "20:30:00", "20:45:00", "21:00:00",
+                        "21:15:00", "21:30:00", "21:45:00", "22:00:00"
+                    ];
+
+                    for (var i = 0; i < heures.length; i++) {
+                        if (heurePhp == heures[i]) {
+                            checkboxes[i].setAttribute("disabled", true);
+                            divParents[i].style.backgroundColor = "red";
+                            break; // Sortir de la boucle après avoir trouvé une correspondance
+                        }
+                    }
+                } */
     });
     //Formulaire en 2
     function nextPage() {
