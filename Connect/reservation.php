@@ -222,35 +222,24 @@ if(isset($_SESSION['id'])) {
                     echo '<label class="LabelToInputs">Choisissez votre date : </label>';
                     echo '<input id="date" name="date" class="InputReservations" type="date" placeholder="Quel jour" required /><br />';
                     
-    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-    $recupName = $dbClient->query("SELECT Date AS Date, Horaire AS Horaire FROM reservation");
-   
-    $reservations = array(); // Tableau pour stocker les réservations
-    $counts = array(); // Tableau pour stocker le nombre de réservations pour chaque date et heure
+    
+                        $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                        // Requête SQL pour récupérer les dates et heures regroupées ensemble et le nombre de fois où ils apparaissent
+                        $sql = "SELECT CONCAT(Date, ' ', Horaire) AS date_heure, COUNT(*) AS count FROM reservation GROUP BY date_heure";
+                        
+                        $result = $dbClient->prepare($sql);
+                        $result->execute();
+                                        
+                        // Boucle sur les résultats de la requête et stocke les noms qui apparaissent 5 fois ou plus dans un tableau
+                        $resultats = array();
+                                        
+                        while($row = $result->fetch()) {
+                            if ($row["count"] == 5 && !in_array($row["date_heure"], $resultats)) {
+                                array_push($resultats, $row["date_heure"]);
+                                //var_dump($resultats);
+                            }
+                        }
 
-while ($client = $recupName->fetch()) {
-    $date = $client['Date'];
-    $heure = $client['Horaire'];
-    
-    // Compter le nombre de réservations pour chaque date et heure
-    if (isset($counts["$date $heure"])) {
-        $counts["$date $heure"]++;
-    } else {
-        $counts["$date $heure"] = 1;
-    }
-    
-    // Afficher la réservation normalement
-        //echo "$date &nbsp $heure <br>";
-    // Vérifier si le nombre de réservations atteint 5
-    if ($counts["$date $heure"] == 5) {
-        //echo "Attention : $date $heure a atteint la limite de réservations (5) <br>";
-        echo "<script>";
-        echo "let datePhp = '" .$date."';";
-        echo "let heurePhp = '" .$heure."';";
-        echo "</script>";
-    }
-    
-}
                     
                     echo '<label class="LabelToInputs">Ecrivez un commentaire : </label>';
                     echo '<input id="commentaire" name="commentaire" class="InputReservations" type="text" placeholder="Commentaire" />';
@@ -826,28 +815,37 @@ while ($client = $recupName->fetch()) {
                 elements[i].style.backgroundColor = "red";
             }
         }
-        //Affichage des horaires en directe
-        console.log(datePhp);
-        if (datePhp == dateValue) {
-            var checkboxes = [checkbox1, checkbox2, checkbox3, checkbox4, checkbox5, checkbox6, checkbox7,
-                checkbox8, checkbox9, checkbox10, checkbox11, checkbox12, checkbox13, checkbox14,
-                checkbox15, checkbox16, checkbox17, checkbox18
-            ];
-            var divParents = [divParent1, divParent2, divParent3, divParent4, divParent5, divParent6,
-                divParent7, divParent8, divParent9, divParent10, divParent11, divParent12, divParent13,
-                divParent14, divParent15, divParent16, divParent17, divParent18
-            ];
-            var heures = ["12:00:00", "12:15:00", "12:30:00", "12:45:00", "13:00:00", "19:00:00",
-                "19:15:00",
-                "19:30:00", "19:45:00", "20:00:00", "20:15:00", "20:30:00", "20:45:00", "21:00:00",
-                "21:15:00", "21:30:00", "21:45:00", "22:00:00"
-            ];
+        let resultatsPHP = '<?php echo json_encode($resultats); ?>';
+        let resultatsJS = JSON.parse(resultatsPHP);
+        let datesHeures = [];
 
-            for (var i = 0; i < heures.length; i++) {
-                if (heurePhp == heures[i]) {
-                    checkboxes[i].setAttribute("disabled", true);
-                    divParents[i].style.backgroundColor = "red";
-                    break; // Sortir de la boucle après avoir trouvé une correspondance
+        for (let i = 0; i < resultatsJS.length; i++) {
+            let dateHeure = resultatsJS[i].split(" ");
+            datesHeures.push({
+                date: dateHeure[0],
+                heure: dateHeure[1]
+
+            });
+            console.log(dateHeure);
+        }
+
+        let checkboxes = document.querySelectorAll('input[type="radio"]');
+
+        // Parcours des checkbox radio
+        for (let i = 0; i < checkboxes.length; i++) {
+            let checkbox = checkboxes[i];
+            let checkboxValue = checkbox.value;
+
+            // Vérification si la valeur de la checkbox est présente dans datesHeures
+            for (let j = 0; j < datesHeures.length; j++) {
+                let heure = datesHeures[j].heure;
+                if (checkboxValue === heure) {
+                    // Désactivation de la checkbox
+                    checkbox.disabled = true;
+
+                    // Changement de la couleur de fond de la div parent de la checkbox
+                    checkbox.parentElement.style.backgroundColor = 'gray';
+                    break; // Sortie de la boucle de vérification des heures
                 }
             }
         }
