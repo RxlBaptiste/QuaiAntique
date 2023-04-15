@@ -5,132 +5,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="favicon.PNG" rel="icon" type="image/png" />
-    <link href="css/style.css" rel="stylesheet" />
-    <title class="DocTitle">Le Quai Antique</title>
+    <link href="../favicon.PNG" rel="icon" type="image/png" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <title>Le Quai Antique / Connection</title>
 </head>
 
 <body>
     <nav class="parent">
         <div class="title">
-            <h1>Le Quai Antique</h1>
+            <h1>
+                <a href="../index.php">Le Quai Antique</a>
+            </h1>
         </div>
-        <form action="../acces/connection.html" class="BtnSeConnecter">
-            <button class="btnConnecter">
-                Se Connecter
-            </button>
-        </form>
     </nav>
     <main>
-        <div class="slider-container">
-            <span class="nos">Nos Entrées</span>
-            <!-- --------------------Carrousel Entrés---------------------------------------------- -->
-            <div class="slider">
-                <div class="slide-track">
-                    <?php $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'entré'"); while
-                            ($row = $recupPlat->fetch()){
-                        ?>
-                    <div class="imgHover">
-                        <img class="slide" class="entré1" <?php echo "src='" . $row['image_path'] . "'"?>
-                            alt=" Entré : " <?php $row['name']?>" />
-                        <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
-                        </div>
-                    </div>
-                    <?php }?>
-                    <?php $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'entré'"); while
-                            ($row = $recupPlat->fetch()){
-                        ?>
-                    <div class="imgHover">
-                        <img class="slide" class="entré1" <?php echo "src='" . $row['image_path'] . "'"?>
-                            alt=" Entré : " <?php $row['name']?>" />
-                        <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
-                        </div>
-                    </div>
-                    <?php }?>
-                </div>
-            </div>
-            <div class="br"></div>
-            <span class="nos">Nos Plats</span>
-            <!-- ---------------------Carrousel Plats------------------------------------ -->
-            <div class="slider">
-                <div class="slide-track">
-                    <?php $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'plat'"); while
-                            ($row = $recupPlat->fetch()){
-                        ?>
-                    <div class="imgHover">
-                        <img class="slide" <?php echo "src='" . $row['image_path'] . "'"?> alt=" Plat : "
-                            <?php $row['name']?>" />
-                        <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
-                        </div>
-                    </div>
-                    <?php }?>
-                    <?php $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'plat'"); while
-                            ($row = $recupPlat->fetch()){
-                        ?>
-                    <div class="imgHover">
-                        <img class="slide" <?php echo "src='" . $row['image_path'] . "'"?> alt=" Plat : "
-                            <?php $row['name']?>" />
-                        <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
-                        </div>
-                    </div>
-                    <?php }?>
-                </div>
-            </div>
-            <div class="br">
-
-            </div>
-            <span class="nos">Nos Desserts</span>
-            <!-- ---------------------Carrousel Desserts------------------------------------------------- -->
-            <div class="slider">
-                <div class="slide-track">
-                    <?php $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'dessert'"); while
-                            ($row = $recupPlat->fetch()){
-                        ?>
-                    <div class="imgHover">
-                        <img class="slide" <?php echo "src='" . $row['image_path'] . "'"?> alt=" Dessert : "
-                            <?php $row['name']?>" />
-                        <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
-                        </div>
-                    </div>
-                    <?php }?>
-                    <?php $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'dessert'"); while
-                            ($row = $recupPlat->fetch()){
-                        ?>
-                    <div class="imgHover">
-                        <img class="slide" class="entré1" <?php echo "src='" . $row['image_path'] . "'"?>
-                            alt=" Dessert : " <?php $row['name']?>" />
-                        <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
-                        </div>
-                    </div>
-                    <?php }?>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div>
-            <div class="BtnContainer">
-                <form action="Pages/carte.php">
-                    <button class="Btn">
-                        Notre Carte
-                    </button>
+        <div class="FondConnection">
+            <div id="form">
+                <form class="Formulaire" action="../Connect/connection.php" method="POST">
+                    <input class="iptForm" name="email" type="mail" placeholder="Votre adresse-mail" required></input>
+                    <input class="iptForm" name="password" type="password" placeholder="Votre mot de passe"
+                        title="Au moins 8 caractères, un chiffre, une lettre majuscule et une minuscule"
+                        pattern="(?=^.{8,}$)(?=.*[A-Z])(?=.*[a-z]).*" minlength="8"></input>
+                    <button id="BtnConnection" class="Btn" name="submit" type="submit">Connectez-vous</button>
                 </form>
-                <form action="Pages/reservation.php">
-                    <button class="Btn">
-                        Réservations
-                    </button>
-                </form>
+                <p id="Client">Vous n'êtes pas client chez nous ?</p>
+                <button class="BtnInscription Btn">
+                    <a id="RefInscription" href="creation/inscription.php">
+                        S'inscrire
+                    </a>
+                </button>
             </div>
         </div>
     </main>
@@ -515,10 +418,6 @@
             </div>
         </div>
     </footer>
-    <script>
-    alert("Votre réservation à bien été prise en compte");
-    document.location.href = "Accueil.php";
-    </script>
 </body>
 
 </html>

@@ -170,22 +170,22 @@
                         </p>
                     </div>
                     <div id="inputs">
-                        <label class="LabelToInputs">Veuiller indiquer votre nom :
+                        <label for="name" class="LabelToInputs">Veuiller indiquer votre nom :
                         </label>
                         <input id="name" name="name" class="InputReservation" type="text"
                             placeholder="Nom de la réservation" required />
                         <br />
-                        <label class="LabelToInputs">Veuiller indiquer votre numéro de téléphone :
+                        <label for="tel" class="LabelToInputs">Veuiller indiquer votre numéro de téléphone :
                         </label>
                         <input id="tel" name="tel" class="InputReservation" type="tel" placeholder="Numéro de téléphone"
                             pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" required />
                         <br />
-                        <label class="LabelToInputs">Veuiller indiquer le nombre de personne :
+                        <label for="nbPers" class="LabelToInputs">Veuiller indiquer le nombre de personne :
                         </label>
                         <input id="number" name="nbPers" class="InputReservation" type="number"
                             placeholder="Nombre de personnes" min="1" max="10" required />
                         <br />
-                        <label class="LabelToInputs">Choisissez votre date : </label>
+                        <label for="date" class="LabelToInputs">Choisissez votre date : </label>
                         <input id="date" name="date" class="InputReservation" type="date" placeholder="Quel jour"
                             required />
                         <?php 
@@ -233,17 +233,17 @@
                             <div class="ContainerHoraire">
                                 <input id="horaires3" class="BtnRadio" type="radio" value="12:30:00" name="horaires"
                                     onclick="horaire()" required />
-                                <label>12:30</label>
+                                <label for="12:30">12:30</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires4" class="BtnRadio" type="radio" value="12:45:00" name="horaires"
                                     onclick="horaire()" required />
-                                <label>12:45</label>
+                                <label for="12:45">12:45</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires5" class="BtnRadio" type="radio" value="13:00:00" name="horaires"
                                     onclick="horaire()" required />
-                                <label>13:00</label>
+                                <label for="13:00">13:00</label>
                             </div>
                         </div>
                         <p class="TextHoraire">SOIR</p>
@@ -251,67 +251,67 @@
                             <div class="ContainerHoraire">
                                 <input id="horaires6" class="BtnRadio" type="radio" value="19:00:00" name="horaires"
                                     onclick="horaire()" />
-                                <label>19:00</label>
+                                <label for="19:00">19:00</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires7" class="BtnRadio" type="radio" value="19:15:00" name="horaires"
                                     onclick="horaire()" />
-                                <label>19:15</label>
+                                <label for="19:15">19:15</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires8" class="BtnRadio" type="radio" value="19:30:00" name="horaires"
                                     onclick="horaire()" />
-                                <label>19:30</label>
+                                <label for="19:30">19:30</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires9" class="BtnRadio" type="radio" value="19:45:00" name="horaires"
                                     onclick="horaire()" />
-                                <label>19:45</label>
+                                <label for="19:45">19:45</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires10" class="BtnRadio" type="radio" value="20:00:00" name="horaires"
                                     onclick="horaire()" />
-                                <label>20:00</label>
+                                <label for="20:00">20:00</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires11" class="BtnRadio" type="radio" value="20:15:00" name="horaires"
                                     onclick="horaire()" />
-                                <label>20:15</label>
+                                <label for="20:15">20:15</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires12" class="BtnRadio" type="radio" value="20:30:00" name="horaires"
                                     onclick="horaire()" />
-                                <label>20:30</label>
+                                <label for="20:30">20:30</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires13" class="BtnRadio" type="radio" value="20:45:00" name="horaires"
                                     onclick="horaire()" />
-                                <label>20:45</label>
+                                <label for="20:45">20:45</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires14" class="BtnRadio" type="radio" value="21:00:00" name="horaires"
                                     onclick="horaire()" />
-                                <label>21:00</label>
+                                <label for="21:00">21:00</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires15" class="BtnRadio" type="radio" value="21:15:00" name="horaires"
                                     onclick="horaire()" />
-                                <label>21:15</label>
+                                <label for="21:15">21:15</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires16" class="BtnRadio" type="radio" value="21:30:00" name="horaires"
                                     onclick="horaire()" />
-                                <label>21:30</label>
+                                <label for="21:30">21:30</label>
                             </div>
                             <div class="ContainerHoraire">
                                 <input id="horaires17" class="BtnRadio" type="radio" value="21:45:00" name="horaires"
                                     onclick="horaire()" />
-                                <label>21:45</label>
+                                <label for="21:45">21:45</label>
                             </div>
                             <div id="boxhoraire" class="ContainerHoraire">
                                 <input id="horaires18" class="BtnRadio" type="radio" value="22:00:00" name="horaires"
                                     onclick="horaire()" />
-                                <label>22:00</label>
+                                <label for="22:00">22:00</label>
                             </div>
                         </div>
                     </div>
@@ -327,7 +327,10 @@
           ?>
                 <div id="page2" style="display: none">
                     <div id="titleAllergies">
-                        <u>Cocher les allergies.</u>
+                        <u>Cocher les allergies.</u><br>
+                        <p style="font-size: .5em;">Si vous souffrez d'une allergie qui n'est pas mentionnée, veuillez
+                            l'indiquer dans la section
+                            commentaire. </p>
                     </div>
                     <div class="Allergies">
                         <?php
@@ -420,16 +423,14 @@
                                 <?php echo $html; ?>
                             </div>
                         </section>
-                        <form action="" methode="POST">
-                            <input id="addAllergie" name="addAllergie" type="text"
-                                placeholder="Ajouter votre allergie" />
-                        </form>
                     </div>
+                    <br><br>
                     <section id="submitAllergies">
                         <button type="button" class="btnConnecter" onclick="prevPage()">
                             Validé les allergies
                         </button>
                     </section>
+
                 </div>
             </form>
         </div>
@@ -763,16 +764,23 @@
             let checkbox = checkboxes[i];
             let checkboxValue = checkbox.value;
 
-            // Vérification si la valeur de la checkbox est présente dans datesHeures
-            for (let j = 0; j < datesHeures.length; j++) {
-                let heure = datesHeures[j].heure;
-                if (checkboxValue === heure) {
-                    // Désactivation de la checkbox
-                    checkbox.disabled = true;
+            // Récupération de la date sélectionnée
+            let dateSelectionnee = document.querySelector('input[type="date"]').value;
 
-                    // Changement de la couleur de fond de la div parent de la checkbox
-                    checkbox.parentElement.style.backgroundColor = 'gray';
-                    break; // Sortie de la boucle de vérification des heures
+            // Vérification si la date sélectionnée correspond à une date présente dans le tableau datesHeures
+            for (let i = 0; i < datesHeures.length; i++) {
+                if (datesHeures[i].date === dateSelectionnee) {
+                    // Boucle sur les heures de cette date
+                    for (let j = 0; j < checkboxes.length; j++) {
+                        let checkbox = checkboxes[j];
+                        let checkboxValue = checkbox.value;
+                        if (datesHeures[i].heure === checkboxValue) {
+                            // Désactivation de la checkbox
+                            checkbox.disabled = true;
+                            // Changement de la couleur de fond de la div parent de la checkbox
+                            checkbox.parentElement.style.backgroundColor = 'gray';
+                        }
+                    }
                 }
             }
         }

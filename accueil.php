@@ -15,7 +15,7 @@
         <div class="title">
             <h1>Le Quai Antique</h1>
         </div>
-        <form action="acces/connection.html" class="BtnSeConnecter">
+        <form action="acces/connection.php" class="BtnSeConnecter">
             <button type="submit" class="btnConnecter">
                 Se Connecter
             </button>
