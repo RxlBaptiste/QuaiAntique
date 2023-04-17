@@ -48,243 +48,249 @@ session_start();
                         <p class="MTitleG">Nos</p>
                         <div>
                             <ul class="Mplat">
-                                <li>
-                                    <?php
+                                <div class="LiEntreG">
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 1");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
-                                <li>
-                                    <?php
+                                    </li>
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 2");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
-                                <li>
-                                    <?php
+                                    </li>
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 3");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
+                                    </li>
+                                </div>
                             </ul>
                             <p class="MTitleG">Nos</p>
                             <ul class="Mplat">
-                                <li>
-                                    <?php
+                                <div class="LiPlatG">
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 6");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
-                                <li>
-                                    <?php
+                                    </li>
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 7");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
-                                <li>
-                                    <?php
+                                    </li>
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 8");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
-                                <li>
-                                    <?php
+                                    </li>
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 9");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
-                                <li>
-                                    <?php
+                                    </li>
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 10");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
+                                    </li>
+                                </div>
                             </ul>
                             <p class="MTitleG">Nos</p>
                             <ul class="Mplat">
-                                <li>
-                                    <?php
+                                <div class="LiDessertG">
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 15");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
-                                <li>
-                                    <?php
+                                    </li>
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 16");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
-                                <li>
-                                    <?php
+                                    </li>
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 17");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
+                                    </li>
+                                </div>
                             </ul>
                         </div>
                     </div>
@@ -300,180 +306,186 @@ session_start();
                         <p class="MTitleD">Entrées</p>
                         <div>
                             <ul class="Mplat">
-                                <li>
-                                    <?php
+                                <div class="LiEntreD">
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 4");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
-                                <li>
-                                    <?php
+                                    </li>
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 5");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
+                                    </li>
+                                </div>
                             </ul>
                             <p class="MTitleD">Plats</p>
                             <ul class="Mplat">
-                                <li>
-                                    <?php
+                                <div class="LiPlatD">
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 11");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
-                                <li>
-                                    <?php
+                                    </li>
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 12");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
-                                <li>
-                                    <?php
+                                    </li>
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 13");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
-                                <li>
-                                    <?php
+                                    </li>
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 14");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
+                                    </li>
+                                </div>
                             </ul>
                             <p class="MTitleD">Desserts</p>
                             <ul class="Mplat">
-                                <li>
-                                    <?php
+                                <div class="LiDessertD">
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 18");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
-                                <li>
-                                    <?php
+                                    </li>
+                                    <li>
+                                        <?php
                                     $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 19");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
-                                    <div class="article">
-                                        <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
-                                            <button
-                                                style="color:white; background-color:red; margin:0 0 10px 0;">Changer
-                                                l'entré</button>
-                                        </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
-                                        <b><?=$carte['price']?>€ </b>&nbsp
-                                        <br>
-                                        <i><?= $carte['description']; ?></i>
-                                    </div>
-                                    <?php
+                                        <div class="article">
+                                            <a href=" changeCarte.php?id=<?= $carte['id']; ?>">
+                                                <button
+                                                    style="color:white; background-color:red; margin:0 0 10px 0;">Changer
+                                                    l'entré</button>
+                                            </a>
+                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <br>
+                                            <i><?= $carte['description']; ?></i>
+                                        </div>
+                                        <?php
                                 }
                                     ?>
-                                </li>
+                                    </li>
+                                </div>
                             </ul>
                         </div>
                     </div>
@@ -1301,6 +1313,261 @@ session_start();
 
 </html>
 <style>
+@media screen and (max-width: 970px) {
+
+    .LiEntreD,
+    .LiEntreG {
+        height: 350px;
+    }
+
+    .LiPlatG,
+    .LiPlatD {
+        height: 540px;
+    }
+
+    .LiDessertD,
+    .LiDessertG {
+        height: 350px;
+    }
+
+    .Textmobile {
+        display: block !important;
+    }
+
+    #Gauche {
+        display: none !important;
+    }
+
+    .Fond {
+        display: none !important;
+    }
+
+    #Droite {
+        display: none !important;
+    }
+
+    .ContainerEntré {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 0px;
+    }
+
+    .Entre1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .Entre2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .Entre3 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .Entre4 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .Entre5 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .ContainerPlats {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 0px;
+    }
+
+
+    .Plat1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .Plat2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .Plat3 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .Plat4 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .Plat5 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .Plat6 {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
+    .Plat7 {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    .Plat8 {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+
+    .Plat9 {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+
+    /*Carte MOBILE*/
+
+    .MGauche {
+        background-color: aqua;
+        width: 48%;
+        height: 1440px;
+
+        border-right: 2.5px solid #f8cf2c;
+        position: relative;
+        right: -48%;
+        display: flex;
+        background-color: transparent;
+        transform-style: preserve-3d;
+        transform-origin: 0;
+
+        animation: ouverture 8s;
+        animation-fill-mode: forwards;
+    }
+
+    .TextCarte,
+    #TextMenu {
+        color: #f8cf2c;
+    }
+
+    #MavantG {
+        z-index: 1;
+        background-color: #291211;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    #MinteG {
+        background-color: #f8cf2c;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(180deg);
+        backface-visibility: visible;
+        padding: 0;
+    }
+
+    .MDroite {
+        background-color: #f8cf2c;
+        width: 48%;
+        height: 1440px;
+    }
+
+    .Textmobile {
+        color: #282527;
+    }
+
+    .MTitleG,
+    .MTitleD {
+        display: flex;
+        justify-content: flex-end;
+
+        margin: 1em 1.5em;
+        font-size: 1.5em;
+    }
+
+    .MTitleG {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .MTitleD {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .Mplat {
+        font-size: 1em !important;
+    }
+
+    #TextMenu {
+        display: flex !important;
+        justify-content: center;
+
+        margin-top: 3em;
+
+        font-family: "Lora", sans-serif;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .TextCarte {
+        display: flex;
+        justify-content: space-evenly;
+
+        font-family: luxurious script;
+        font-size: 5em;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .LiEntreD,
+    .LiEntreG {
+        height: 500px;
+    }
+
+    .LiPlatG,
+    .LiPlatD {
+        height: 800px;
+    }
+
+    .LiDessertD,
+    .LiDessertG {
+        height: 500px;
+    }
+
+    .MGauche {
+        height: 2000px;
+    }
+
+    .MDroite {
+        height: 2000px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+
+    .LiEntreD,
+    .LiEntreG {
+        height: 700px !important;
+    }
+
+    .LiPlatG,
+    .LiPlatD {
+        height: 1400px !important;
+    }
+
+    .LiDessertD,
+    .LiDessertG {
+        height: 700px !important;
+    }
+
+    .MGauche {
+        height: 2950px !important;
+    }
+
+    .MDroite {
+        height: 2950px !important;
+    }
+}
+
 .BtnMenu {
     display: flex;
     justify-content: center;
@@ -1323,4 +1590,23 @@ session_start();
     font-weight: 800;
     font-size: 24px;
 }
+
+/*COLLER LE FOOTER EN BAS DE PAGE*/
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/*FIN DE FOOTER*/
 </style>

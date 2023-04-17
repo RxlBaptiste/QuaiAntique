@@ -9,11 +9,47 @@
     <link href="../../css/style.css" rel="stylesheet" />
     <title class="DocTitle">Le Quai Antique</title>
     <style>
+    /* Style pour les appareils mobiles */
+    @media only screen and (max-width:600px) {
+
+
+        .iptForm {
+            font-size: 0.8em !important;
+        }
+
+        #NbPers input[type=number]::placeholder {
+            font-size: 9px !important;
+        }
+
+    }
+
+    @media only screen and (min-width:601px) and (max-width: 1500px) {
+
+
+        .iptForm {
+            font-size: 1em !important;
+        }
+
+        #NbPers input[type=number]::placeholder {
+            font-size: 15px !important;
+        }
+
+        #BtnAllergies {
+            padding: .5em !important;
+        }
+
+        /* Ajuster la taille de la police pour le texte du pied de page */
+        footer {
+            font-size: 14px;
+        }
+    }
+
+
+
     /*COLLER LE FOOTER EN BAS DE PAGE*/
     body {
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
     }
 
     main {
@@ -29,7 +65,7 @@
 
     /*FIN DE FOOTER*/
     .main {
-        margin-top: 5%;
+        margin-top: 2.5%;
     }
 
     .FondConnection {
@@ -40,7 +76,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 2em;
+        padding: 2em 2em 0 2em;
+        margin: 2em 0;
+        background-color: #282527;
+        border: solid 1px black;
+        border-radius: 20px;
     }
 
     #NbPers {

@@ -8,6 +8,100 @@
     <link href="../favicon.PNG" rel="icon" type="image/png" />
     <link href="../css/style.css" rel="stylesheet" />
     <title>Le Quai Antique / Connection</title>
+    <style>
+    /* Style pour les appareils mobiles */
+    @media only screen and (max-width:500px) {
+
+
+        .iptForm {
+            font-size: 0.4em !important;
+            width: 80%;
+        }
+
+        .Formulaire input::placeholder {
+            font-size: 2px !important;
+        }
+
+    }
+
+    @media only screen and (max-width:700px) {
+
+
+        .main {
+            margin-top: 10%;
+        }
+
+        .Formulaire {
+            padding: 2em;
+        }
+
+        .iptForm {
+            font-size: 0.8em !important;
+        }
+
+        .Formulaire input::placeholder {
+            font-size: 9px !important;
+        }
+
+
+    }
+
+    @media only screen and (min-width:701px) and (max-width: 1500px) {
+
+
+        .main {
+            margin-top: 4%;
+        }
+
+        .iptForm {
+            font-size: 1em !important;
+        }
+
+        .Formulaire input::placeholder {
+            font-size: 15px !important;
+        }
+
+        #BtnConnection {
+            padding: .5em !important;
+        }
+
+
+        /* Ajuster la taille de la police pour le texte du pied de page */
+        footer {
+            font-size: 14px;
+        }
+    }
+
+    /*COLLER LE FOOTER EN BAS DE PAGE*/
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex-grow: 1;
+    }
+
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /*FIN DE FOOTER*/
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em 2em 0 2em;
+        margin: 2em 0;
+        background-color: #282527;
+        border: solid 1px black;
+        border-radius: 20px;
+    }
+    </style>
 </head>
 
 <body>
@@ -18,7 +112,7 @@
             </h1>
         </div>
     </nav>
-    <main>
+    <main class="main">
         <div class="FondConnection">
             <div id="form">
                 <form class="Formulaire" action="../Connect/connection.php" method="POST">

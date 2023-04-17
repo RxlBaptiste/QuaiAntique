@@ -45,142 +45,121 @@ session_start();
                 </div>
                 <div id="MinteG" style="padding: 0">
                     <div class="Textmobile">
-                        <p class="MTitleG">Nos</p>
+                        <p class="MTitleG"><b><u>Menu
+                                    <?php 
+                        $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                        $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 1"); 
+                        while ($menu = $recupMenu->fetch()){ 
+                          echo $menu['name']."&nbsp";
+                          echo "(".$menu['price']."€)";
+                        }
+                      ?></b></u></p>
                         <div>
                             <ul class="Mplat">
                                 <div class="LiEntreG">
-                                    <li class="LiEntre1">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'entrée' and id = 1"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                    <li class="LiEntre3">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'entrée' and id = 3"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                    <li class="LiEntre5">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'entrée' and id = 5"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
+                                    <ul>
+                                        <li style="display:flex;text-align: center;justify-content: center;">
+                                            <?php 
+                          $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                          $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 1"); 
+                          while ($menu = $recupMenu->fetch()){
+                            echo "<br>";
+                            echo $menu['plat1'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['plat2'];
+                            echo "<br>";
+                          }
+                        ?>
+                                        </li>
+                                        <li style="display:flex;text-align: center;justify-content: center;">
+                                            <?php 
+                          $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                          $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 1"); 
+                          while ($menu = $recupMenu->fetch()){
+                            ?>
+                                            <div><?php
+                            echo "<br>";
+                            echo $menu['dessert1'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['dessert2'];
+                            echo "<br>";
+                            echo "<br>";
+                        ?>
+                                                <div class="article">
+                                                    <a href=" changeMenu.php?id=<?= $menu['id']; ?>">
+                                                        <button
+                                                            style="color:white; background-color:red; margin:0 0 10px 0;">
+                                                            Changer le menu
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                                <?php
+                        }?>
+                                        </li>
+                                    </ul>
                                 </div>
                             </ul>
-                            <p class="MTitleG">Nos</p>
-                            <ul class="Mplat">
-                                <div class="LiPlatG">
-                                    <li class="LiPlat1">
+                            <p class="MTitleG"><b><u>Menu
+                                        <?php 
+                        $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                        $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 3"); 
+                        while ($menu = $recupMenu->fetch()){ 
+                          echo $menu['name']."<br>";
+                          echo "(".$menu['price']."€)";
+                        }
+                      ?></b></u></p>
+                            <ul>
+                                <li style="display:flex;text-align: center;justify-content: center;">
+                                    <?php 
+                          $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                          $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 3"); 
+                          while ($menu = $recupMenu->fetch()){
+                            echo "<br>";
+                            echo $menu['entre1'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['entre2'];
+                            echo "<br>";
+                          }
+                        ?>
+                                <li style="display:flex;text-align: center;justify-content: center;">
+                                    <?php 
+                          $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                          $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 3"); 
+                          while ($menu = $recupMenu->fetch()){
+                            echo "<br>";
+                            echo $menu['plat1'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['plat2'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['plat3'];
+                            echo "<br>";
+                          }
+                        ?>
+                                </li>
+                                <li style="display:flex;text-align: center;justify-content: center;">
+                                    <?php 
+                          $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                          $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 3"); 
+                          while ($menu = $recupMenu->fetch()){
+                            ?>
+                                    <div><?php
+                            echo "<br>";
+                            echo $menu['dessert1'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['dessert2'];
+                            echo "<br>";
+                            echo "<br>";
+                        ?>
+                                        <div class="article">
+                                            <a href=" changeMenu.php?id=<?= $menu['id']; ?>">
+                                                <button style="color:white; background-color:red; margin:0 0 10px 0;">
+                                                    Changer le menu
+                                                </button>
+                                            </a>
+                                        </div>
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'plat' and id = 6"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                    <li class="LiPlat3">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'plat' and id = 8"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                    <li class="LiPlat5">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'plat' and id = 10"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                    <li class="LiPlat7">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'plat' and id = 12"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                    <li class="LiPlat9">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'plat' and id = 14"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                </div>
-                            </ul>
-                            <p class="MTitleG">Nos</p>
-                            <ul class="Mplat">
-                                <div class="LiDessertG">
-                                    <li class="LiDessert1">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'dessert' and id = 15"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                    <li class="LiDessert3">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'dessert' and id = 17"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                    <li class="LiDessert5">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'dessert' and id = 19"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                </div>
+                        }?>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -194,109 +173,131 @@ session_start();
                     -->
                 <div id="MinteD">
                     <div class="Textmobile">
-                        <p class="MTitleD">Entrées</p>
+                        <p class="MTitleD"><b><u>Menu
+                                    <?php 
+                        $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                        $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 2"); 
+                        while ($menu = $recupMenu->fetch()){ 
+                          echo $menu['name']."<br>";
+                          echo "(".$menu['price']."€)";
+                        }
+                      ?></b></u></p>
                         <div>
-                            <ul class="Mplat">
-                                <div class="LiEntreD">
-                                    <li class="LiEntre2">
+                            <ul>
+                                <li style="display:flex;text-align: center;justify-content: center;">
+                                    <?php 
+                          $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                          $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 2"); 
+                          while ($menu = $recupMenu->fetch()){
+                            echo "<br>";
+                            echo $menu['entre1'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['entre2'];
+                            echo "<br>";
+                          }
+                        ?>
+                                <li style="display:flex;text-align: center;justify-content: center;">
+                                    <?php 
+                          $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                          $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 2"); 
+                          while ($menu = $recupMenu->fetch()){
+                            echo "<br>";
+                            echo $menu['plat1'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['plat2'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['plat3'];
+                            echo "<br>";
+                          }
+                        ?>
+                                </li>
+                                <li style="display:flex;text-align: center;justify-content: center;">
+                                    <?php 
+                          $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                          $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 2"); 
+                          while ($menu = $recupMenu->fetch()){
+                            ?>
+                                    <div><?php
+                            echo "<br>";
+                            echo $menu['dessert1'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['dessert2'];
+                            echo "<br>";
+                            echo "<br>";
+                        ?>
+                                        <div class="article">
+                                            <a href=" changeMenu.php?id=<?= $menu['id']; ?>">
+                                                <button style="color:white; background-color:red; margin:0 0 10px 0;">
+                                                    Changer le menu
+                                                </button>
+                                            </a>
+                                        </div>
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'entrée' and id = 2"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                    <li class="LiEntre4">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'entrée' and id = 4"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                </div>
+                        }?>
+                                </li>
                             </ul>
-                            <p class="MTitleD">Plats</p>
-                            <ul class="Mplat">
-                                <div class="LiPlatD">
-                                    <li class="LiPlat2">
+                            <p class="MTitleD"><b><u>
+                                        Menu
+                                        <?php 
+                        $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                        $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 4"); 
+                        while ($menu = $recupMenu->fetch()){ 
+                          echo $menu['name']."<br>";
+                          echo "(".$menu['price']."€)";
+                        }?>
+                                </b></u></p>
+                            <ul>
+                                <li style="display:flex;text-align: center;justify-content: center;">
+                                    <?php 
+                          $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                          $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 4"); 
+                          while ($menu = $recupMenu->fetch()){
+                            echo "<br>";
+                            echo $menu['entre1'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['entre2'];
+                            echo "<br>";
+                          }
+                        ?>
+                                <li style="display:flex;text-align: center;justify-content: center;">
+                                    <?php 
+                          $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                          $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 4"); 
+                          while ($menu = $recupMenu->fetch()){
+                            echo "<br>";
+                            echo $menu['plat1'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['plat2'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['plat3'];
+                            echo "<br>";
+                          }
+                        ?>
+                                </li>
+                                <li style="display:flex;text-align: center;justify-content: center;">
+                                    <?php 
+                          $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                          $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 4"); 
+                          while ($menu = $recupMenu->fetch()){
+                            ?>
+                                    <div><?php
+                            echo "<br>";
+                            echo $menu['dessert1'];
+                            echo "<br>"." OU "."<br>";
+                            echo $menu['dessert2'];
+                            echo "<br>";
+                            echo "<br>";
+                        ?>
+                                        <div class="article">
+                                            <a href=" TEST.php?id=<?= $menu['id']; ?>">
+                                                <button style="color:white; background-color:red; margin:0 0 10px 0;">
+                                                    Changer le menu
+                                                </button>
+                                            </a>
+                                        </div>
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'plat' and id = 7"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                    <li class="LiPlat4">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'plat' and id = 9"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                    <li class="LiPlat6">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'plat' and id = 11"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                    <li class="LiPlat8">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'plat' and id = 13"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                </div>
-                            </ul>
-                            <p class="MTitleD">Desserts</p>
-                            <ul class="Mplat">
-                                <div class="LiDessertD">
-                                    <li class="LiDessert2">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'dessert' and id = 16"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                    <li class="LiDessert4">
-                                        <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM
-                      carte WHERE categories = 'dessert' and id = 18"); while
-                      ($carte = $recupPlat->fetch()){ echo
-                      '<u>'.$carte['name'].'</u>'; echo'&nbsp'; echo '<b
-                        >'.$carte['price'].'€ </b
-                      >'; echo '<br />'; echo
-                      '<i>'.$carte['description'].'</i>';} ?>
-                                    </li>
-                                </div>
+                        }?>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -1243,15 +1244,18 @@ session_start();
     }
 
     .MGauche {
-        height: 2000px;
+        height: 1500px;
     }
 
     .MDroite {
-        height: 2000px;
+        height: 1500px;
     }
 }
 
 @media screen and (max-width: 440px) {
+    .MTitleG {
+        margin-left: 5.7em;
+    }
 
     .LiEntreD,
     .LiEntreG {
@@ -1269,11 +1273,11 @@ session_start();
     }
 
     .MGauche {
-        height: 2600px !important;
+        height: 1600px !important;
     }
 
     .MDroite {
-        height: 2600px !important;
+        height: 1600px !important;
     }
 }
 </style>
