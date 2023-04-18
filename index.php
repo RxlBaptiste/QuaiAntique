@@ -30,9 +30,10 @@
 
     @media screen and (max-width: 500px) {
         .popupText {
-            font-size: 5px !important;
+            font-size: .5em !important;
             top: 200px !important;
-            width: auto !important;
+            width: 80% !important;
+            height: 40% !important;
         }
 
         .formPopup {

@@ -17,6 +17,137 @@ if(isset($_SESSION['id'])) {
     <link href="../css/style.css" rel="stylesheet" />
     <title class="DocTitle">Le Quai Antique / Votre Revervation</title>
     <style>
+    @media only screen and (max-width:1300px) {
+
+
+        .TextHoraire {
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .Allergies {
+            padding: 0 5em !important;
+        }
+
+        .switch {
+            height: 28.6px !important;
+            width: 50px !important;
+        }
+
+        .switch input+span:before {
+            width: 21px !important;
+            height: 21px !important;
+        }
+
+        .switch input:checked+span:before {
+            left: 25px !important;
+        }
+
+        .Gauche,
+        .Droite {
+            font-size: .5em;
+        }
+
+        .textAllergies {
+            font-size: 1em;
+        }
+
+        footer {
+            font-size: 14px;
+        }
+    }
+
+    @media only screen and (max-width:800px) {
+        #choixHoraires {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .HoraireMidi {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .TextHoraire {
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .HoraireSoir {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #titleAllergies {
+            font-size: 1em !important;
+        }
+
+        .Allergies {
+            padding: 0 4em !important;
+        }
+
+        .Gauche,
+        .Droite {
+            font-size: .2em;
+        }
+
+        .textAllergies {
+            font-size: 2em;
+        }
+
+        .btnConnecter {
+            padding: 1em !important;
+            margin: 1em !important;
+            width: 20vw !important;
+            height: 7vw !important;
+        }
+
+        /* 
+        .btnConnecter {} */
+    }
+
+    @media only screen and (max-width:600px) {
+        #titleAllergies {
+            font-size: 0.65em !important;
+        }
+
+        .FormReservation {
+            padding: 0 4em !important;
+        }
+
+        .Allergies {
+            padding: 0 4.5em !important;
+        }
+
+        .switch {
+            height: 28.6px !important;
+            width: 50px !important;
+        }
+
+        .switch input+span:before {
+            width: 21px !important;
+            height: 21px !important;
+        }
+
+        .Gauche,
+        .Droite {
+            font-size: .2em;
+        }
+
+        .textAllergies {
+            font-size: 2em;
+        }
+
+        .btnConnecter {
+            width: 28vw !important;
+            height: 7vw !important;
+        }
+    }
+
     /*Style pour les allergies*/
     #btnGoAllergie {
         display: flex;

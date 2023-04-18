@@ -55,6 +55,7 @@ session_start();
                 echo "</div>";
                 } ?>
             </section>
+            <hr class="HR">
             <section class="plat">
                 <div class="Title">Galerie des plats</div><?php
 
@@ -75,6 +76,7 @@ session_start();
                 echo "</div>";
                 } ?>
             </section>
+            <hr class="HR">
             <section class="dessert">
                 <div class="Title">Galerie des desserts</div><?php
 
@@ -482,9 +484,49 @@ session_start();
 
 </html>
 <style>
+@media screen and (max-width: 850px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .HR {
+        display: block !important;
+        width: 80%;
+        border: solid 1px #f8cf2c;
+        margin: 3em 0;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .Hoverbox {
+        position: relative !important;
+        margin: 1em !important;
+        width: 160px !important;
+        height: 150px !important;
+    }
+
+    .hover {
+        position: absolute !important;
+        top: 20px !important;
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+}
+
+.HR {
+    display: none;
+    width: 80%;
+    border: solid 1px #f8cf2c;
+    margin: 3em 0;
+}
+
 .container {
     display: flex;
-
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
 }
 

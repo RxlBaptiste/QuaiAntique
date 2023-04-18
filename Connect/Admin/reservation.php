@@ -478,6 +478,32 @@ $updateEtat = "UPDATE reservation SET etat='1' WHERE etat = 0";
 
 </html>
 <style>
+@media screen and (max-width: 900px) {
+    .formDelete {
+        width: 50% !important;
+        margin-left: 30% !important;
+    }
+
+    .container {
+        width: 50% !important;
+        margin-left: 30% !important;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .formDelete {
+        width: 80% !important;
+        margin-left: 7% !important;
+    }
+
+    .container {
+        width: 80% !important;
+        margin-left: 7% !important;
+    }
+
+}
+
 .container {
     display: flex;
     flex-direction: column;

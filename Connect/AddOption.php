@@ -40,6 +40,62 @@ if(isset($_POST['submit'])){
     <link href="../css/style.css" rel="stylesheet" />
     <title class="DocTitle">Le Quai Antique</title>
     <style>
+    @media screen and (min-width: 801) and (max-width: 1800px) {
+
+        .fond {
+            margin: 50% 0 0 0 !important;
+            font-size: 2em;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+
+        .fond {
+            margin: 25% 0 0 25% !important;
+            font-size: 1.5em;
+        }
+    }
+
+    /*COLLER LE FOOTER EN BAS DE PAGE*/
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex-grow: 1;
+        min-height: 100%;
+        margin-bottom: 10.2%;
+    }
+
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: -10.2%;
+        margin: 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5em 0;
+    }
+
+    .fond {
+        background-color: #291211;
+        border: 1px solid #f8cf2c;
+        border-radius: 1.5em;
+
+        margin: 5% 0 0 25%;
+
+        height: 50%;
+        width: 50%;
+    }
+
+    /* 
     .fond {
         display: flex;
         justify-content: center;
@@ -50,7 +106,7 @@ if(isset($_POST['submit'])){
         width: 500px;
         margin-left: calc(50% - 250px);
         margin-top: calc(50% - 1000px);
-    }
+    } */
     </style>
 </head>
 

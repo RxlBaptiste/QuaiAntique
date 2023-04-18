@@ -26,14 +26,57 @@ $sqlClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
     <link href="../css/style.css" rel="stylesheet" />
     <title class="DocTitle">Le Quai Antique</title>
     <style>
+    @media screen and (min-width: 200px) and (max-width: 810px) {
+        .btnConnecter {
+            padding: 0 !important;
+            margin-left: 5em !important;
+            white-space: nowrap !important;
+        }
+    }
+
+    @media screen and (max-width: 665px) {
+        .fond {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: .8em !important;
+        }
+
+    }
+
+    @media screen and (max-width: 440px) {
+        .fond {
+            font-size: .5em !important;
+        }
+    }
+
+    /*COLLER LE FOOTER EN BAS DE PAGE*/
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
     main {
+        flex-grow: 1;
         min-height: 100%;
         margin-bottom: 10.2%;
     }
 
-    footer.footer {
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
         height: -10.2%;
         margin: 0;
+    }
+
+    #FormNav {
+        grid-area: 1 / 5 / 2 / 8;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 
     .fond {
@@ -41,10 +84,10 @@ $sqlClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
         border: 1px solid #f8cf2c;
         border-radius: 1.5em;
 
-        height: 500px;
-        width: 500px;
-        margin-left: calc(50% - 250px);
-        margin-top: calc(50% - 1000px);
+        margin: 5% 0 0 25%;
+
+        height: 50%;
+        width: 50%;
     }
 
     .Info {
@@ -86,9 +129,11 @@ $sqlClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
                 <a href="Accueil.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="Logout.php" class="BtnSeConnecter">
-            <button class="btnConnecter">Se Déconnecter</button>
-        </form>
+        <section id="FormNav">
+            <form action="Logout.php" class="BtnSeConnecter">
+                <button class="btnConnecter">Se Déconnecter</button>
+            </form>
+        </section>
     </nav>
     <main>
         <section class="fond">
@@ -161,7 +206,8 @@ $sqlClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
                         if (!empty($allergies)) {
                             $allergies_list = explode('-', $allergies);
                             foreach ($allergies_list as $allergie) {
-                                echo '<div style="text-align:center; padding:0.2em;">'.$allergie.'</div>';
+                                echo '<div style="text-align:center; padding:0.2em;">'.$allergie.' <br> <?php </div>';
+                                
                             }
                         } else {
                             echo 'Vous n\'avez pas enregistré d\'allergies.<br>';

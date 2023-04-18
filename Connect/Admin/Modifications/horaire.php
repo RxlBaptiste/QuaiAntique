@@ -23,312 +23,312 @@
     </nav>
     <main>
         <form class="horaireForm" action="changeHoraires.php" method="POST">
-            <!-- LUNDI MIDI -->
-            <div class="itemSelect">
-                <div class="textHoraires">
-                    <p>Horaires du midi :</p>
-                </div>
-                <span>Lundi midi de : &nbsp
-                    <select id="lundiMO" name="lundiMO">
-                        <option value="110000">11h</option>
-                        <option value="111500">11h15</option>
-                        <option value="113000">11h30</option>
-                        <option value="114500">11h45</option>
-                        <option value="120000">12h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span class="span">Jusqu'à : &nbsp
-                    <select id="lundiMF" name="lundiMF">
-                        <option value="130000">13h</option>
-                        <option value="131500">13h15</option>
-                        <option value="133000">13h30</option>
-                        <option value="134500">13h45</option>
-                        <option value="140000">14h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
-            <!-- LUNDI SOIR -->
-            <div class="itemSelect">
-                <div class="textHoraires">
-                    <p>Horaires du soir :</p>
-                </div>
-                <span>Lundi soir de : &nbsp
-                    <select id="lundiSO" name="lundiSO">
-                        <option value="190000">19h</option>
-                        <option value="191500">19h15</option>
-                        <option value="193000">19h30</option>
-                        <option value="194500">19h45</option>
-                        <option value="200000">20h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span>Jusqu'à : &nbsp
-                    <select id="lundiSF" name="lundiSF">
-                        <option value="220000">22h</option>
-                        <option value="221500">22h15</option>
-                        <option value="223000">22h30</option>
-                        <option value="224500">22h45</option>
-                        <option value="230000">23h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
-            <br />
-            <!-- MARDI MIDI -->
-            <div class="itemSelect">
-                <span>Mardi midi de : &nbsp
-                    <select id="mardiMO" name="mardiMO">
-                        <option value="110000">11h</option>
-                        <option value="111500">11h15</option>
-                        <option value="113000">11h30</option>
-                        <option value="114500">11h45</option>
-                        <option value="120000">12h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span>Jusqu'à : &nbsp
-                    <select id="mardiMF" name="mardiMF">
-                        <option value="130000">13h</option>
-                        <option value="131500">13h15</option>
-                        <option value="133000">13h30</option>
-                        <option value="134500">13h45</option>
-                        <option value="140000">14h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
-            <!-- MARDI SOIR -->
-            <div class="itemSelect">
-                <span>Mardi soir de : &nbsp
-                    <select id="mardiSO" name="mardiSO">
-                        <option value="190000">19h</option>
-                        <option value="191500">19h15</option>
-                        <option value="193000">19h30</option>
-                        <option value="194500">19h45</option>
-                        <option value="200000">20h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span>Jusqu'à : &nbsp
-                    <select id="mardiSF" name="mardiSF">
-                        <option value="220000">22h</option>
-                        <option value="221500">22h15</option>
-                        <option value="223000">22h30</option>
-                        <option value="224500">22h45</option>
-                        <option value="230000">23h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
-            <br />
-            <!-- MERCEDI MIDI -->
-            <div class="itemSelect">
-                <span>Mercredi midi de : &nbsp
-                    <select id="mercrediMO" name="mercrediMO">
-                        <option value="110000">11h</option>
-                        <option value="111500">11h15</option>
-                        <option value="113000">11h30</option>
-                        <option value="114500">11h45</option>
-                        <option value="120000">12h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span>Jusqu'à : &nbsp
-                    <select id="mercrediMF" name="mercrediMF">
-                        <option value="130000">13h</option>
-                        <option value="131500">13h15</option>
-                        <option value="133000">13h30</option>
-                        <option value="134500">13h45</option>
-                        <option value="140000">14h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
-            <!-- MERCREDI SOIR -->
-            <div class="itemSelect">
-                <span>Mercredi soir de : &nbsp
-                    <select id="mercrediSO" name="mercrediSO">
-                        <option value="190000">19h</option>
-                        <option value="191500">19h15</option>
-                        <option value="193000">19h30</option>
-                        <option value="194500">19h45</option>
-                        <option value="200000">20h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span>Jusqu'à : &nbsp
-                    <select id="mercrediSF" name="mercrediSF">
-                        <option value="220000">22h</option>
-                        <option value="221500">22h15</option>
-                        <option value="223000">22h30</option>
-                        <option value="224500">22h45</option>
-                        <option value="230000">23h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
-            <br />
-            <!-- JEUDI MIDI -->
-            <div class="itemSelect">
-                <span>Jeudi midi de : &nbsp
-                    <select id="jeudiMO" name="jeudiMO">
-                        <option value="110000">11h</option>
-                        <option value="111500">11h15</option>
-                        <option value="113000">11h30</option>
-                        <option value="114500">11h45</option>
-                        <option value="120000">12h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span>Jusqu'à : &nbsp
-                    <select id="jeudiMF" name="jeudiMF">
-                        <option value="130000">13h</option>
-                        <option value="131500">13h15</option>
-                        <option value="133000">13h30</option>
-                        <option value="134500">13h45</option>
-                        <option value="140000">14h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
-            <!-- JEUDI SOIR -->
-            <div class="itemSelect">
-                <span>Jeudi soir de : &nbsp
-                    <select id="jeudiSO" name="jeudiSO">
-                        <option value="190000">19h</option>
-                        <option value="191500">19h15</option>
-                        <option value="193000">19h30</option>
-                        <option value="194500">19h45</option>
-                        <option value="200000">20h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span>Jusqu'à : &nbsp
-                    <select id="jeudiSF" name="jeudiSF">
-                        <option value="220000">22h</option>
-                        <option value="221500">22h15</option>
-                        <option value="223000">22h30</option>
-                        <option value="224500">22h45</option>
-                        <option value="230000">23h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
-            <br />
-            <!-- VENDREDI MIDI -->
-            <div class="itemSelect">
-                <span>Vendredi midi de : &nbsp
-                    <select id="vendrediMO" name="vendrediMO">
-                        <option value="110000">11h</option>
-                        <option value="111500">11h15</option>
-                        <option value="113000">11h30</option>
-                        <option value="114500">11h45</option>
-                        <option value="120000">12h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span>Jusqu'à : &nbsp
-                    <select id="vendrediMF" name="vendrediMF">
-                        <option value="130000">13h</option>
-                        <option value="131500">13h15</option>
-                        <option value="133000">13h30</option>
-                        <option value="134500">13h45</option>
-                        <option value="140000">14h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
-            <!-- VENDREDI SOIR -->
-            <div class="itemSelect">
-                <span>Vendredi soir de : &nbsp
-                    <select id="vendrediSO" name="vendrediSO">
-                        <option value="190000">19h</option>
-                        <option value="191500">19h15</option>
-                        <option value="193000">19h30</option>
-                        <option value="194500">19h45</option>
-                        <option value="200000">20h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span>Jusqu'à : &nbsp
-                    <select id="vendrediSF" name="vendrediSF">
-                        <option value="220000">22h</option>
-                        <option value="221500">22h15</option>
-                        <option value="223000">22h30</option>
-                        <option value="224500">22h45</option>
-                        <option value="230000">23h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
-            <br />
-            <!-- SAMEDI MIDI -->
-            <div class="itemSelect">
-                <span>Samedi midi de : &nbsp
-                    <select id="samediMO" name="samediMO">
-                        <option value="110000">11h</option>
-                        <option value="111500">11h15</option>
-                        <option value="113000">11h30</option>
-                        <option value="114500">11h45</option>
-                        <option value="120000">12h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span>Jusqu'à : &nbsp
-                    <select id="samediMF" name="samediMF">
-                        <option value="130000">13h</option>
-                        <option value="131500">13h15</option>
-                        <option value="133000">13h30</option>
-                        <option value="134500">13h45</option>
-                        <option value="140000">14h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
-            <!-- SAMEDI SOIR -->
-            <div class="itemSelect">
-                <span>Samedi soir de : &nbsp
-                    <select id="samediSO" name="samediSO">
-                        <option value="190000">19h</option>
-                        <option value="191500">19h15</option>
-                        <option value="193000">19h30</option>
-                        <option value="194500">19h45</option>
-                        <option value="200000">20h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span>Jusqu'à : &nbsp
-                    <select id="samediSF" name="samediSF">
-                        <option value="220000">22h</option>
-                        <option value="221500">22h15</option>
-                        <option value="223000">22h30</option>
-                        <option value="224500">22h45</option>
-                        <option value="230000">23h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
-            <br />
-            <!-- DIMANCHE MIDI -->
-            <div class="itemSelect">
-                <span>Dimanche midi de : &nbsp
-                    <select id="dimancheMO" name="dimancheMO">
-                        <option value="110000">11h</option>
-                        <option value="111500">11h15</option>
-                        <option value="113000">11h30</option>
-                        <option value="114500">11h45</option>
-                        <option value="120000">12h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span>Jusqu'à : &nbsp
-                    <select id="dimancheMF" name="dimancheMF">
-                        <option value="130000">13h</option>
-                        <option value="131500">13h15</option>
-                        <option value="133000">13h30</option>
-                        <option value="134500">13h45</option>
-                        <option value="140000">14h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
-            <!-- DIMANCHE SOIR -->
-            <div class="itemSelect">
-                <span>Dimanche soir de : &nbsp
-                    <select id="dimancheSO" name="dimancheSO">
-                        <option value="190000">19h</option>
-                        <option value="191500">19h15</option>
-                        <option value="193000">19h30</option>
-                        <option value="194500">19h45</option>
-                        <option value="200000">20h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-                <span>Jusqu'à : &nbsp
-                    <select id="dimancheSF" name="dimancheSF">
-                        <option value="220000">22h</option>
-                        <option value="221500">22h15</option>
-                        <option value="223000">22h30</option>
-                        <option value="224500">22h45</option>
-                        <option value="230000">23h</option>
-                        <option value="ferme">FERMÉ</option>
-                    </select></span>
-            </div>
+            <section class="Horaires">
+                <section class="Midi">
+                    <div class="textHoraires">
+                        <h2>Horaires du midi :</h2>
+                    </div>
+                    <!-- LUNDI MIDI -->
+                    <div class="itemSelect">
+                        <span>Lundi midi de : &nbsp
+                            <select id="lundiMO" name="lundiMO">
+                                <option value="110000">11h</option>
+                                <option value="111500">11h15</option>
+                                <option value="113000">11h30</option>
+                                <option value="114500">11h45</option>
+                                <option value="120000">12h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span class="span">Jusqu'à : &nbsp
+                            <select id="lundiMF" name="lundiMF">
+                                <option value="130000">13h</option>
+                                <option value="131500">13h15</option>
+                                <option value="133000">13h30</option>
+                                <option value="134500">13h45</option>
+                                <option value="140000">14h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                    <!-- MARDI MIDI -->
+                    <div class="itemSelect">
+                        <span>Mardi midi de : &nbsp
+                            <select id="mardiMO" name="mardiMO">
+                                <option value="110000">11h</option>
+                                <option value="111500">11h15</option>
+                                <option value="113000">11h30</option>
+                                <option value="114500">11h45</option>
+                                <option value="120000">12h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span>Jusqu'à : &nbsp
+                            <select id="mardiMF" name="mardiMF">
+                                <option value="130000">13h</option>
+                                <option value="131500">13h15</option>
+                                <option value="133000">13h30</option>
+                                <option value="134500">13h45</option>
+                                <option value="140000">14h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                    <!-- MERCEDI MIDI -->
+                    <div class="itemSelect">
+                        <span>Mercredi midi de : &nbsp
+                            <select id="mercrediMO" name="mercrediMO">
+                                <option value="110000">11h</option>
+                                <option value="111500">11h15</option>
+                                <option value="113000">11h30</option>
+                                <option value="114500">11h45</option>
+                                <option value="120000">12h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span>Jusqu'à : &nbsp
+                            <select id="mercrediMF" name="mercrediMF">
+                                <option value="130000">13h</option>
+                                <option value="131500">13h15</option>
+                                <option value="133000">13h30</option>
+                                <option value="134500">13h45</option>
+                                <option value="140000">14h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                    <!-- JEUDI MIDI -->
+                    <div class="itemSelect">
+                        <span>Jeudi midi de : &nbsp
+                            <select id="jeudiMO" name="jeudiMO">
+                                <option value="110000">11h</option>
+                                <option value="111500">11h15</option>
+                                <option value="113000">11h30</option>
+                                <option value="114500">11h45</option>
+                                <option value="120000">12h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span>Jusqu'à : &nbsp
+                            <select id="jeudiMF" name="jeudiMF">
+                                <option value="130000">13h</option>
+                                <option value="131500">13h15</option>
+                                <option value="133000">13h30</option>
+                                <option value="134500">13h45</option>
+                                <option value="140000">14h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                    <!-- VENDREDI MIDI -->
+                    <div class="itemSelect">
+                        <span>Vendredi midi de : &nbsp
+                            <select id="vendrediMO" name="vendrediMO">
+                                <option value="110000">11h</option>
+                                <option value="111500">11h15</option>
+                                <option value="113000">11h30</option>
+                                <option value="114500">11h45</option>
+                                <option value="120000">12h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span>Jusqu'à : &nbsp
+                            <select id="vendrediMF" name="vendrediMF">
+                                <option value="130000">13h</option>
+                                <option value="131500">13h15</option>
+                                <option value="133000">13h30</option>
+                                <option value="134500">13h45</option>
+                                <option value="140000">14h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                    <!-- SAMEDI MIDI -->
+                    <div class="itemSelect">
+                        <span>Samedi midi de : &nbsp
+                            <select id="samediMO" name="samediMO">
+                                <option value="110000">11h</option>
+                                <option value="111500">11h15</option>
+                                <option value="113000">11h30</option>
+                                <option value="114500">11h45</option>
+                                <option value="120000">12h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span>Jusqu'à : &nbsp
+                            <select id="samediMF" name="samediMF">
+                                <option value="130000">13h</option>
+                                <option value="131500">13h15</option>
+                                <option value="133000">13h30</option>
+                                <option value="134500">13h45</option>
+                                <option value="140000">14h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                    <!-- DIMANCHE MIDI -->
+                    <div class="itemSelect">
+                        <span>Dimanche midi de : &nbsp
+                            <select id="dimancheMO" name="dimancheMO">
+                                <option value="110000">11h</option>
+                                <option value="111500">11h15</option>
+                                <option value="113000">11h30</option>
+                                <option value="114500">11h45</option>
+                                <option value="120000">12h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span>Jusqu'à : &nbsp
+                            <select id="dimancheMF" name="dimancheMF">
+                                <option value="130000">13h</option>
+                                <option value="131500">13h15</option>
+                                <option value="133000">13h30</option>
+                                <option value="134500">13h45</option>
+                                <option value="140000">14h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                </section>
+                <section class="Soir">
+                    <div class="textHoraires">
+                        <h2>Horaires du soir :</h2>
+                    </div>
+                    <!-- LUNDI SOIR -->
+                    <div class="itemSelect">
+                        <span>Lundi soir de : &nbsp
+                            <select id="lundiSO" name="lundiSO">
+                                <option value="190000">19h</option>
+                                <option value="191500">19h15</option>
+                                <option value="193000">19h30</option>
+                                <option value="194500">19h45</option>
+                                <option value="200000">20h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span>Jusqu'à : &nbsp
+                            <select id="lundiSF" name="lundiSF">
+                                <option value="220000">22h</option>
+                                <option value="221500">22h15</option>
+                                <option value="223000">22h30</option>
+                                <option value="224500">22h45</option>
+                                <option value="230000">23h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                    <!-- MARDI SOIR -->
+                    <div class="itemSelect">
+                        <span>Mardi soir de : &nbsp
+                            <select id="mardiSO" name="mardiSO">
+                                <option value="190000">19h</option>
+                                <option value="191500">19h15</option>
+                                <option value="193000">19h30</option>
+                                <option value="194500">19h45</option>
+                                <option value="200000">20h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span>Jusqu'à : &nbsp
+                            <select id="mardiSF" name="mardiSF">
+                                <option value="220000">22h</option>
+                                <option value="221500">22h15</option>
+                                <option value="223000">22h30</option>
+                                <option value="224500">22h45</option>
+                                <option value="230000">23h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                    <!-- MERCREDI SOIR -->
+                    <div class="itemSelect">
+                        <span>Mercredi soir de : &nbsp
+                            <select id="mercrediSO" name="mercrediSO">
+                                <option value="190000">19h</option>
+                                <option value="191500">19h15</option>
+                                <option value="193000">19h30</option>
+                                <option value="194500">19h45</option>
+                                <option value="200000">20h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span>Jusqu'à : &nbsp
+                            <select id="mercrediSF" name="mercrediSF">
+                                <option value="220000">22h</option>
+                                <option value="221500">22h15</option>
+                                <option value="223000">22h30</option>
+                                <option value="224500">22h45</option>
+                                <option value="230000">23h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                    <!-- JEUDI SOIR -->
+                    <div class="itemSelect">
+                        <span>Jeudi soir de : &nbsp
+                            <select id="jeudiSO" name="jeudiSO">
+                                <option value="190000">19h</option>
+                                <option value="191500">19h15</option>
+                                <option value="193000">19h30</option>
+                                <option value="194500">19h45</option>
+                                <option value="200000">20h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span>Jusqu'à : &nbsp
+                            <select id="jeudiSF" name="jeudiSF">
+                                <option value="220000">22h</option>
+                                <option value="221500">22h15</option>
+                                <option value="223000">22h30</option>
+                                <option value="224500">22h45</option>
+                                <option value="230000">23h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                    <!-- VENDREDI SOIR -->
+                    <div class="itemSelect">
+                        <span>Vendredi soir de : &nbsp
+                            <select id="vendrediSO" name="vendrediSO">
+                                <option value="190000">19h</option>
+                                <option value="191500">19h15</option>
+                                <option value="193000">19h30</option>
+                                <option value="194500">19h45</option>
+                                <option value="200000">20h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span>Jusqu'à : &nbsp
+                            <select id="vendrediSF" name="vendrediSF">
+                                <option value="220000">22h</option>
+                                <option value="221500">22h15</option>
+                                <option value="223000">22h30</option>
+                                <option value="224500">22h45</option>
+                                <option value="230000">23h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                    <!-- SAMEDI SOIR -->
+                    <div class="itemSelect">
+                        <span>Samedi soir de : &nbsp
+                            <select id="samediSO" name="samediSO">
+                                <option value="190000">19h</option>
+                                <option value="191500">19h15</option>
+                                <option value="193000">19h30</option>
+                                <option value="194500">19h45</option>
+                                <option value="200000">20h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span>Jusqu'à : &nbsp
+                            <select id="samediSF" name="samediSF">
+                                <option value="220000">22h</option>
+                                <option value="221500">22h15</option>
+                                <option value="223000">22h30</option>
+                                <option value="224500">22h45</option>
+                                <option value="230000">23h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                    <!-- DIMANCHE SOIR -->
+                    <div class="itemSelect">
+                        <span>Dimanche soir de : &nbsp
+                            <select id="dimancheSO" name="dimancheSO">
+                                <option value="190000">19h</option>
+                                <option value="191500">19h15</option>
+                                <option value="193000">19h30</option>
+                                <option value="194500">19h45</option>
+                                <option value="200000">20h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                        <span>Jusqu'à : &nbsp
+                            <select id="dimancheSF" name="dimancheSF">
+                                <option value="220000">22h</option>
+                                <option value="221500">22h15</option>
+                                <option value="223000">22h30</option>
+                                <option value="224500">22h45</option>
+                                <option value="230000">23h</option>
+                                <option value="ferme">FERMÉ</option>
+                            </select></span>
+                    </div>
+                </section>
+            </section>
             <div class="BtnEnd">
                 <input id="btnSubmit" name="submit" type="submit" value="Enregistré les horaires" />
             </div>
@@ -719,6 +719,35 @@
 
 </html>
 <style>
+@media screen and (max-width: 1500px) {
+
+    .textHoraires {
+        font-size: 2em;
+    }
+
+    .itemSelect {
+        font-size: .5em;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .horaireForm {
+        padding: 2em !important;
+    }
+
+    .textHoraires {
+        font-size: 1em !important;
+    }
+
+    #btnSubmit {
+        width: 180px !important;
+        height: 40px !important;
+        font-size: .8em !important;
+    }
+
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -737,22 +766,30 @@ span {
 
 .horaireForm {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    flex-direction: column;
     background-color: #f8cf2c;
     margin: 5em;
     padding: 5em 0;
     border-radius: 50px;
     width: 55%;
+}
+
+.Midi,
+.Soir {
+    padding: 0 2em;
+}
+
+section.Horaires {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
 }
 
 .textHoraires {
-    display: flex;
-    white-space: nowrap;
     font-family: "Montserrat";
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 1.5em;
 }
 
 .horaires p {

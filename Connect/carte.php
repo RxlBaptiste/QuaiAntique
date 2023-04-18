@@ -42,6 +42,9 @@ session_start();
         </form>
     </nav>
     <main>
+        <div class="BtnMenu">
+            <a href="menu.php"><input id="BtnMenu" type="button" value="Voir les menus" /></a>
+        </div>
         <div class="carte">
             <!--Carte Version Mobile-->
             <div class="MGauche">
@@ -526,9 +529,6 @@ session_start();
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="BtnMenu">
-                    <a href="menu.php"><input id="BtnMenu" type="button" value="Voir les menus" /></a>
                 </div>
             </div>
             <div id="Droite">

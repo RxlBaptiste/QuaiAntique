@@ -1,12 +1,3 @@
-<?php
-if(session_status() == '1'){
-session_start();
-
-
-  if(!$_SESSION['Admin']){
-    header('location: ../Logout.php');
-  }}
-?>
 <!DOCTYPE html>
 <html lang="fr">
 

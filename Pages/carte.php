@@ -17,8 +17,10 @@
                 <a href="../index.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="connection.html" class="BtnSeConnecter">
-            <button class="btnConnecter">Se Connecter</button>
+        <form action="../index.php" class="BtnSeConnecter">
+            <button type="submit" class="btnConnecter">
+                RETOUR
+            </button>
         </form>
     </nav>
     <main>
