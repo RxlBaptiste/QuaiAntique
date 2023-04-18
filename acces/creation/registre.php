@@ -33,7 +33,7 @@
             echo '<script language="javascript">
                     alert("Enregistrement validé... Veuillez vous connecter")
                     </script>';
-                header("location:../connection.html");
+                header("location:../connection.php");
         }
     
     }

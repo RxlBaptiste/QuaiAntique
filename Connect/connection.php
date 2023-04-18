@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
@@ -9,14 +8,21 @@ if(isset($_POST['submit'])){
 } */
 if(isset($_POST['submit'])){/* 
     if(!empty($_POST['email']) AND !empty($_POST['password'])){ */
-        $pseudoParDefaut = "admin";
-        $mdpParDefaut = "Admin_22";
+        $pseudoParDefaut = "admin@lequaiantique.fr";
+        $mdpParDefaut = "LeQuaiAntique_Admin";
 
         $pseudoSaisi = htmlspecialchars($_POST['email']);
         $mdpSaisi = htmlspecialchars($_POST['password']);
 
+        $sqlStatut = $dbClient->query("SELECT statut FROM client WHERE mail = '$pseudoParDefaut'");
+        while ($statut =$sqlStatut->fetch()){
+            $statut = $statut['statut'];
+            echo $statut;
+        }
+
         
-        if($pseudoSaisi == $pseudoParDefaut AND $mdpSaisi == $mdpParDefaut){
+        if($pseudoSaisi == $pseudoParDefaut AND $mdpSaisi == $mdpParDefaut AND $statut = "admin"){
+
             $_SESSION['Admin'] = $mdpSaisi;
             $_SESSION['AdminName'] = $pseudoSaisi;
             $_SESSION['mdp'] = $mdpSaisi;
