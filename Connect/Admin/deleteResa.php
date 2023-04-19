@@ -7,7 +7,7 @@
         }
         header("Location: index.php" ); */
 // Récupération des réservations
-$dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+$dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
 $recupBase = $dbClient->query("SELECT * FROM reservation");
 if($recupBase->rowCount() == 0){
         echo "<script>alert('Aucune réservation a été suprimer.');</script>";

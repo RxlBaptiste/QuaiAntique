@@ -23,7 +23,7 @@ session_start();
         <form action="paramCompte.php" class="BtnSeConnecter">
             <button class="btnConnecter" style="width:auto; padding:0 1em;">
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupName = $dbClient->query("SELECT * FROM client WHERE mail = '{$_SESSION['mail']}'");
                     while ($client = $recupName->fetch()){
                         $ClientFirstname = $client['firstname'];
@@ -63,7 +63,7 @@ session_start();
                                 <div class="LiEntreG">
                                     <li class="LiEntre1">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 1");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -75,7 +75,7 @@ session_start();
                                     </li>
                                     <li class="LiEntre3">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 3");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -86,7 +86,7 @@ session_start();
                                     ?></li>
                                     <li class="LiEntre5">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 5");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -103,7 +103,7 @@ session_start();
                                 <div class="LiPlatG">
                                     <li class="LiPlat1">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 6");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -115,7 +115,7 @@ session_start();
                                     </li>
                                     <li class="LiPlat3">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 8");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -127,7 +127,7 @@ session_start();
                                     </li>
                                     <li class="LiPlat5">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 10");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -139,7 +139,7 @@ session_start();
                                     </li>
                                     <li class="LiPlat7">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 12");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -151,7 +151,7 @@ session_start();
                                     </li>
                                     <li class="LiPlat9">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 14");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -168,7 +168,7 @@ session_start();
                                 <div class="LiDessertG">
                                     <li class="LiDessert1">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 15");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -180,7 +180,7 @@ session_start();
                                     </li>
                                     <li class="LiDessert3">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte =  new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 17");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -192,7 +192,7 @@ session_start();
                                     </li>
                                     <li class="LiDessert5">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 19");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -222,7 +222,7 @@ session_start();
                                 <div class="LiEntreD">
                                     <li class="LiEntre2">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 2");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -234,7 +234,7 @@ session_start();
                                     </li>
                                     <li class="LiEntre4">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 4");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -251,7 +251,7 @@ session_start();
                                 <div class="LiPlatD">
                                     <li class="LiPlat2">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 7");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -263,7 +263,7 @@ session_start();
                                     </li>
                                     <li class="LiPlat4">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 9");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -275,7 +275,7 @@ session_start();
                                     </li>
                                     <li class="LiPlat6">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 11");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -287,7 +287,7 @@ session_start();
                                     </li>
                                     <li class="LiPlat8">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 13");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -304,7 +304,7 @@ session_start();
                                 <div class="LiDessertD">
                                     <li class="LiDessert2">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte =  new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 16");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -316,7 +316,7 @@ session_start();
                                     </li>
                                     <li class="LiDessert4">
                                         <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 18");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -344,7 +344,7 @@ session_start();
                         <ul>
                             <li>
                                 <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 1");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -356,7 +356,7 @@ session_start();
                             </li>
                             <li>
                                 <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 2");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -368,7 +368,7 @@ session_start();
                             </li>
                             <li>
                                 <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 3");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -380,7 +380,7 @@ session_start();
                             </li>
                             <li>
                                 <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 4");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -392,7 +392,7 @@ session_start();
                             </li>
                             <li>
                                 <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 5");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -417,7 +417,7 @@ session_start();
                             <ul>
                                 <li>
                                     <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 6");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -429,7 +429,7 @@ session_start();
                                 </li>
                                 <li>
                                     <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 7");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -441,7 +441,7 @@ session_start();
                                 </li>
                                 <li>
                                     <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 8");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -453,7 +453,7 @@ session_start();
                                 </li>
                                 <li>
                                     <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 9");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -465,7 +465,7 @@ session_start();
                                 </li>
                                 <li>
                                     <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 14");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -483,7 +483,7 @@ session_start();
                             <ul>
                                 <li>
                                     <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 10");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -495,7 +495,7 @@ session_start();
                                 </li>
                                 <li>
                                     <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 11");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -507,7 +507,7 @@ session_start();
                                 </li>
                                 <li>
                                     <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 12");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -519,7 +519,7 @@ session_start();
                                 </li>
                                 <li>
                                     <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 13");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -541,7 +541,7 @@ session_start();
                         <ul>
                             <li>
                                 <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 15");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -553,7 +553,7 @@ session_start();
                             </li>
                             <li>
                                 <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 16");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -565,7 +565,7 @@ session_start();
                             </li>
                             <li>
                                 <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 17");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -577,7 +577,7 @@ session_start();
                             </li>
                             <li>
                                 <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 18");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -589,7 +589,7 @@ session_start();
                             </li>
                             <li>
                                 <?php
-                                    $dbCarte = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 19");
                                     while ($carte = $recupPlat->fetch()){
                                     echo '<u>'.$carte['name'].'</u>';
@@ -614,7 +614,7 @@ session_start();
             <div class="horaires" id="lundi">
                 LUNDI <br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $lundiMO = $horaire['lundiM'];
@@ -628,7 +628,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $lundiMF = $horaire['lundiM'];
@@ -640,7 +640,7 @@ session_start();
                     
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $lundiSO = $horaire['lundiS'];
@@ -654,7 +654,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $lundiSF = $horaire['lundiS'];
@@ -669,7 +669,7 @@ session_start();
             <div class="horaires" id="mardi">
                 MARDI <br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $mardiMO = $horaire['mardiM'];
@@ -683,7 +683,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $mardiMF = $horaire['mardiM'];
@@ -695,7 +695,7 @@ session_start();
                     
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $mardiSO = $horaire['mardiS'];
@@ -709,7 +709,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $mardiSF = $horaire['mardiS'];
@@ -723,7 +723,7 @@ session_start();
             </div>
             <div class="horaires" id="mercredi">MERCREDI <br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $mercrediMO = $horaire['mercrediM'];
@@ -737,7 +737,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $mercrediMF = $horaire['mercrediM'];
@@ -748,7 +748,7 @@ session_start();
                     }
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $mercrediMO = $horaire['mercrediM'];
@@ -762,7 +762,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $mercrediSF = $horaire['mercrediS'];
@@ -775,7 +775,7 @@ session_start();
             <div class="horaires" id="jeudi">
                 JEUDI <br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $jeudiMO = $horaire['jeudiM'];
@@ -789,7 +789,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $jeudiMO = $horaire['jeudiM'];
@@ -801,7 +801,7 @@ session_start();
                     
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $jeudiMO = $horaire['jeudiS'];
@@ -815,7 +815,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $jeudiMO = $horaire['jeudiS'];
@@ -830,7 +830,7 @@ session_start();
             <div class="horaires" id="vendredi">
                 VENDREDI <br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $vendrediM0 = $horaire['vendrediM'];
@@ -844,7 +844,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $vendrediM0 = $horaire['vendrediM'];
@@ -856,7 +856,7 @@ session_start();
                     
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $vendrediM0 = $horaire['vendrediS'];
@@ -870,7 +870,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $vendrediM0 = $horaire['vendrediS'];
@@ -884,7 +884,7 @@ session_start();
             </div>
             <div class="horaires" id="samedi">SAMEDI <br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $samediM0 = $horaire['samediM'];
@@ -898,7 +898,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $samediM0 = $horaire['samediM'];
@@ -910,7 +910,7 @@ session_start();
                     
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $samediM0 = $horaire['samediS'];
@@ -924,7 +924,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $samediM0 = $horaire['samediS'];
@@ -937,7 +937,7 @@ session_start();
             <div class="horaires" id="dimanche">
                 DIMANCHE<br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $dimancheSO = $horaire['dimancheM'];
@@ -951,7 +951,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $dimancheSO = $horaire['dimancheM'];
@@ -963,7 +963,7 @@ session_start();
                     
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $dimancheM0 = $horaire['dimancheS'];
@@ -977,7 +977,7 @@ session_start();
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $dimancheM0 = $horaire['dimancheS'];

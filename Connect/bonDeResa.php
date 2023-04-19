@@ -79,7 +79,7 @@ if ( isset( $_POST['submit'] ) ) {
         echo "<br>";
         var_dump($allergy);
     $switch = 0;
-   $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+   $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
     
     $sqlInsert = "INSERT INTO reservation 
     (

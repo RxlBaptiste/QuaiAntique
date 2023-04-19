@@ -2,7 +2,7 @@
 session_start();
 $ID = $_SESSION['id'];
 // Connexion à la base de données
-$dbMenu = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+$dbMenu = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
 /* 
 if (isset($_POST["entre0"])) { */
 	$entre1 = $_POST["entre0"];

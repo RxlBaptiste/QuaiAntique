@@ -55,7 +55,7 @@ $id = $_GET['id'];
             <div class="horaires" id="lundi">
                 LUNDI <br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $lundiMO = $horaire['lundiM'];
@@ -69,7 +69,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $lundiMF = $horaire['lundiM'];
@@ -81,7 +81,7 @@ $id = $_GET['id'];
                     
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $lundiSO = $horaire['lundiS'];
@@ -95,7 +95,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $lundiSF = $horaire['lundiS'];
@@ -110,7 +110,7 @@ $id = $_GET['id'];
             <div class="horaires" id="mardi">
                 MARDI <br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $mardiMO = $horaire['mardiM'];
@@ -124,7 +124,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $mardiMF = $horaire['mardiM'];
@@ -136,7 +136,7 @@ $id = $_GET['id'];
                     
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $mardiSO = $horaire['mardiS'];
@@ -150,7 +150,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $mardiSF = $horaire['mardiS'];
@@ -164,7 +164,7 @@ $id = $_GET['id'];
             </div>
             <div class="horaires" id="mercredi">MERCREDI <br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $mercrediMO = $horaire['mercrediM'];
@@ -178,7 +178,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $mercrediMF = $horaire['mercrediM'];
@@ -189,7 +189,7 @@ $id = $_GET['id'];
                     }
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $mercrediMO = $horaire['mercrediM'];
@@ -203,7 +203,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $mercrediSF = $horaire['mercrediS'];
@@ -216,7 +216,7 @@ $id = $_GET['id'];
             <div class="horaires" id="jeudi">
                 JEUDI <br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $jeudiMO = $horaire['jeudiM'];
@@ -230,7 +230,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $jeudiMO = $horaire['jeudiM'];
@@ -242,7 +242,7 @@ $id = $_GET['id'];
                     
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $jeudiMO = $horaire['jeudiS'];
@@ -256,7 +256,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $jeudiMO = $horaire['jeudiS'];
@@ -271,7 +271,7 @@ $id = $_GET['id'];
             <div class="horaires" id="vendredi">
                 VENDREDI <br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $vendrediM0 = $horaire['vendrediM'];
@@ -285,7 +285,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $vendrediM0 = $horaire['vendrediM'];
@@ -297,7 +297,7 @@ $id = $_GET['id'];
                     
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $vendrediM0 = $horaire['vendrediS'];
@@ -311,7 +311,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $vendrediM0 = $horaire['vendrediS'];
@@ -325,7 +325,7 @@ $id = $_GET['id'];
             </div>
             <div class="horaires" id="samedi">SAMEDI <br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $samediM0 = $horaire['samediM'];
@@ -339,7 +339,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $samediM0 = $horaire['samediM'];
@@ -351,7 +351,7 @@ $id = $_GET['id'];
                     
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $samediM0 = $horaire['samediS'];
@@ -365,7 +365,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $samediM0 = $horaire['samediS'];
@@ -378,7 +378,7 @@ $id = $_GET['id'];
             <div class="horaires" id="dimanche">
                 DIMANCHE<br /><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $dimancheSO = $horaire['dimancheM'];
@@ -392,7 +392,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $dimancheSO = $horaire['dimancheM'];
@@ -404,7 +404,7 @@ $id = $_GET['id'];
                     
                  ?><br />
                 <?php
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 1");
                     while ($horaire = $recupHoraire->fetch()){
                         $dimancheM0 = $horaire['dimancheS'];
@@ -418,7 +418,7 @@ $id = $_GET['id'];
                     }else{
                         echo "&nbsp-&nbsp";
                     }
-                    $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+                    $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                     $recupHoraire = $dbClient->query("SELECT * FROM horaires WHERE id = 2");
                     while ($horaire = $recupHoraire->fetch()){
                         $dimancheM0 = $horaire['dimancheS'];
@@ -502,7 +502,7 @@ input {
         $price = $_POST['price'];   
         $cat = $_POST['categories'];
     
-        $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+        $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
         $dbClient->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Afficher les erreurs PDO
     
         $sqlUpdate = "UPDATE carte SET name='$name', description='$desc', price='$price', categories='$cat' WHERE id = $id ";

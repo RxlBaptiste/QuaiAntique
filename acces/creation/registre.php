@@ -8,7 +8,7 @@
         $nbPers = $_POST['NbPers'];
         $nbEnfant = $_POST['NbEnfant'];
 
-        $dbClient = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+        $dbClient =  new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
     
         $sqlSelect = "SELECT * FROM client where mail = '$mail'";
         $sqlPrepareSelect = $dbClient->prepare($sqlSelect);

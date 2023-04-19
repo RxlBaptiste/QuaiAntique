@@ -4,7 +4,7 @@
 
 session_start();
 // Connexion à la base de données
-$dbHoraire = new PDO('mysql:host=localhost;dbname=lequaiantique;', 'root', '');
+$dbHoraire = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
 /* if (isset($_POST["submit"])) { */
 /*--------Horaire du midi------------*/
 	$lundiMo = $_POST["lundiMO"];

@@ -76,7 +76,7 @@ $allergie20 = $allergy[$count];
     $allergies_str = implode(',', $allergies); // concaténer les allergies avec une virgule
     $mail = $_SESSION['mail'];
 
-    $dbClient = new mysqli('localhost', 'root', '', 'lequaiantique');
+    $dbClient = ('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
     if ($dbClient->connect_errno) {
         echo "Failed to connect to MySQL: " . $dbClient->connect_error;
         exit();
