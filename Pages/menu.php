@@ -44,7 +44,7 @@
                         $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                         $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 1"); 
                         while ($menu = $recupMenu->fetch()){ 
-                          echo $menu['name']."&nbsp";
+                          echo utf8_encode($menu['name'])."&nbsp";
                           echo "(".$menu['price']."€)";
                         }
                       ?></b></u></p>
@@ -58,9 +58,9 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 1"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['plat1'];
+                            echo utf8_encode($menu['plat1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat2'];
+                            echo utf8_encode($menu['plat2']);
                             echo "<br>";
                           }
                         ?>
@@ -73,9 +73,9 @@
                             ?>
                                             <div><?php
                             echo "<br>";
-                            echo $menu['dessert1'];
+                            echo utf8_encode($menu['dessert1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['dessert2'];
+                            echo utf8_encode($menu['dessert2']);
                             echo "<br>";
                             echo "<br>";
                         }?>
@@ -88,7 +88,7 @@
                         $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                         $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 3"); 
                         while ($menu = $recupMenu->fetch()){ 
-                          echo $menu['name']."<br>";
+                          echo utf8_encode($menu['name'])."<br>";
                           echo "(".$menu['price']."€)";
                         }
                       ?></b></u></p>
@@ -99,9 +99,9 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 3"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['entre1'];
+                            echo utf8_encode($menu['entre1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['entre2'];
+                            echo utf8_encode($menu['entre2']);
                             echo "<br>";
                           }
                         ?>
@@ -111,11 +111,11 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 3"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['plat1'];
+                            echo utf8_encode($menu['plat1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat2'];
+                            echo utf8_encode($menu['plat2']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat3'];
+                            echo utf8_encode($menu['plat3']);
                             echo "<br>";
                           }
                         ?>
@@ -128,9 +128,9 @@
                             ?>
                                     <div><?php
                             echo "<br>";
-                            echo $menu['dessert1'];
+                            echo utf8_encode($menu['dessert1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['dessert2'];
+                            echo utf8_encode($menu['dessert2']);
                             echo "<br>";
                             echo "<br>";
                         }?>
@@ -153,7 +153,7 @@
                         $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                         $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 2"); 
                         while ($menu = $recupMenu->fetch()){ 
-                          echo $menu['name']."<br>";
+                          echo utf8_encode($menu['name'])."<br>";
                           echo "(".$menu['price']."€)";
                         }
                       ?></b></u></p>
@@ -165,9 +165,9 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 2"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['entre1'];
+                            echo utf8_encode($menu['entre1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['entre2'];
+                            echo utf8_encode($menu['entre2']);
                             echo "<br>";
                           }
                         ?>
@@ -177,11 +177,11 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 2"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['plat1'];
+                            echo utf8_encode($menu['plat1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat2'];
+                            echo utf8_encode($menu['plat2']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat3'];
+                            echo utf8_encode($menu['plat3']);
                             echo "<br>";
                           }
                         ?>
@@ -194,9 +194,9 @@
                             ?>
                                     <div><?php
                             echo "<br>";
-                            echo $menu['dessert1'];
+                            echo utf8_encode($menu['dessert1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['dessert2'];
+                            echo utf8_encode($menu['dessert2']);
                             echo "<br>";
                             echo "<br>";
                         }?>
@@ -208,7 +208,7 @@
                         $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                         $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 4"); 
                         while ($menu = $recupMenu->fetch()){ 
-                          echo $menu['name']."<br>";
+                          echo utf8_encode($menu['name'])."<br>";
                           echo "(".$menu['price']."€)";
                         }?>
                                 </b></u></p>
@@ -219,9 +219,9 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 4"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['entre1'];
+                            echo utf8_encode($menu['entre1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['entre2'];
+                            echo utf8_encode($menu['entre2']);
                             echo "<br>";
                           }
                         ?>
@@ -231,11 +231,11 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 4"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['plat1'];
+                            echo utf8_encode($menu['plat1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat2'];
+                            echo utf8_encode($menu['plat2']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat3'];
+                            echo utf8_encode($menu['plat3']);
                             echo "<br>";
                           }
                         ?>
@@ -248,9 +248,9 @@
                             ?>
                                     <div><?php
                             echo "<br>";
-                            echo $menu['dessert1'];
+                            echo utf8_encode($menu['dessert1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['dessert2'];
+                            echo utf8_encode($menu['dessert2']);
                             echo "<br>";
                             echo "<br>";
                         }?>
@@ -272,7 +272,7 @@
                         $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                         $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 1"); 
                         while ($menu = $recupMenu->fetch()){ 
-                          echo $menu['name']."&nbsp";
+                          echo utf8_encode($menu['name'])."&nbsp";
                           echo "(".$menu['price']."€)";
                         }
                       ?>
@@ -285,9 +285,9 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 1"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['plat1'];
+                            echo utf8_encode($menu['plat1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat2'];
+                            echo utf8_encode($menu['plat2']);
                             echo "<br>";
                           }
                         ?>
@@ -300,9 +300,9 @@
                             ?>
                                 <div><?php
                             echo "<br>";
-                            echo $menu['dessert1'];
+                            echo utf8_encode($menu['dessert1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['dessert2'];
+                            echo utf8_encode($menu['dessert2']);
                             echo "<br>";
                             echo "<br>";
                         }?>
@@ -319,7 +319,7 @@
                         $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                         $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 2"); 
                         while ($menu = $recupMenu->fetch()){ 
-                          echo $menu['name']."<br>";
+                          echo utf8_encode($menu['name'])."<br>";
                           echo "(".$menu['price']."€)";
                         }
                       ?></p>
@@ -328,7 +328,7 @@
                         $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                         $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 3"); 
                         while ($menu = $recupMenu->fetch()){ 
-                          echo $menu['name']."<br>";
+                          echo utf8_encode($menu['name'])."<br>";
                           echo "(".$menu['price']."€)";
                         }
                       ?></p>
@@ -342,9 +342,9 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 2"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['entre1'];
+                            echo utf8_encode($menu['entre1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['entre2'];
+                            echo utf8_encode($menu['entre2']);
                             echo "<br>";
                           }
                         ?>
@@ -354,11 +354,11 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 2"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['plat1'];
+                            echo utf8_encode($menu['plat1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat2'];
+                            echo utf8_encode($menu['plat2']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat3'];
+                            echo utf8_encode($menu['plat3']);
                             echo "<br>";
                           }
                         ?>
@@ -371,9 +371,9 @@
                             ?>
                                     <div><?php
                             echo "<br>";
-                            echo $menu['dessert1'];
+                            echo utf8_encode($menu['dessert1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['dessert2'];
+                            echo utf8_encode($menu['dessert2']);
                             echo "<br>";
                             echo "<br>";
                         }?>
@@ -390,9 +390,9 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 3"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['entre1'];
+                            echo utf8_encode($menu['entre1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['entre2'];
+                            echo utf8_encode($menu['entre2']);
                             echo "<br>";
                           }
                         ?>
@@ -402,11 +402,11 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 3"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['plat1'];
+                            echo utf8_encode($menu['plat1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat2'];
+                            echo utf8_encode($menu['plat2']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat3'];
+                            echo utf8_encode($menu['plat3']);
                             echo "<br>";
                           }
                         ?>
@@ -419,9 +419,9 @@
                             ?>
                                     <div><?php
                             echo "<br>";
-                            echo $menu['dessert1'];
+                            echo utf8_encode($menu['dessert1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['dessert2'];
+                            echo utf8_encode($menu['dessert2']);
                             echo "<br>";
                             echo "<br>";
                         }?>
@@ -439,7 +439,7 @@
                         $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                         $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 4"); 
                         while ($menu = $recupMenu->fetch()){ 
-                          echo $menu['name']."<br>";
+                          echo utf8_encode($menu['name'])."<br>";
                           echo "(".$menu['price']."€)";
                         }
                       ?>
@@ -452,9 +452,9 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 4"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['entre1'];
+                            echo utf8_encode($menu['entre1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['entre2'];
+                            echo utf8_encode($menu['entre2']);
                             echo "<br>";
                           }
                         ?>
@@ -464,11 +464,11 @@
                           $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 4"); 
                           while ($menu = $recupMenu->fetch()){
                             echo "<br>";
-                            echo $menu['plat1'];
+                            echo utf8_encode($menu['plat1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat2'];
+                            echo utf8_encode($menu['plat2']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['plat3'];
+                            echo utf8_encode($menu['plat3']);
                             echo "<br>";
                           }
                         ?>
@@ -481,9 +481,9 @@
                             ?>
                                 <div><?php
                             echo "<br>";
-                            echo $menu['dessert1'];
+                            echo utf8_encode($menu['dessert1']);
                             echo "<br>"." OU "."<br>";
-                            echo $menu['dessert2'];
+                            echo utf8_encode($menu['dessert2']);
                             echo "<br>";
                             echo "<br>";
                         }?>

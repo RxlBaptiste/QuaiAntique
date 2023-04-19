@@ -64,36 +64,36 @@ session_start();
                                     <li class="LiEntre1">
                                         <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 1");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 1");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                     <li class="LiEntre3">
                                         <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 3");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 3");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?></li>
                                     <li class="LiEntre5">
                                         <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 5");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 5");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                 </div>
@@ -106,11 +106,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 6");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                     <li class="LiPlat3">
@@ -118,11 +118,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 8");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                     <li class="LiPlat5">
@@ -130,11 +130,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 10");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                     <li class="LiPlat7">
@@ -142,11 +142,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 12");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                     <li class="LiPlat9">
@@ -154,11 +154,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 14");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                 </div>
@@ -171,11 +171,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 15");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                     <li class="LiDessert3">
@@ -183,11 +183,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 17");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                     <li class="LiDessert5">
@@ -195,11 +195,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 19");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                 </div>
@@ -223,25 +223,25 @@ session_start();
                                     <li class="LiEntre2">
                                         <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 2");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 2");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                     <li class="LiEntre4">
                                         <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 4");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 4");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                 </div>
@@ -254,11 +254,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 7");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                     <li class="LiPlat4">
@@ -266,11 +266,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 9");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                     <li class="LiPlat6">
@@ -278,11 +278,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 11");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                     <li class="LiPlat8">
@@ -290,11 +290,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 13");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                 </div>
@@ -307,11 +307,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 16");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                     <li class="LiDessert4">
@@ -319,11 +319,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 18");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                     </li>
                                 </div>
@@ -345,61 +345,61 @@ session_start();
                             <li>
                                 <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 1");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre'  and id = 1");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                             </li>
                             <li>
                                 <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 2");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 2");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                             </li>
                             <li>
                                 <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 3");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 3");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
-                                    ?>
-                            </li>
-                            <li>
-                                <?php
-                                    $dbCarte =  new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 4");
-                                    while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                             </li>
                             <li>
                                 <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 5");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 4");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
+                                    ?>
+                            </li>
+                            <li>
+                                <?php
+                                    $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 5");
+                                    while ($carte = $recupPlat->fetch()){
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                             </li>
                         </ul>
@@ -417,11 +417,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 6");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                 </li>
                                 <li>
@@ -429,11 +429,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 7");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                 </li>
                                 <li>
@@ -441,11 +441,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 8");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                 </li>
                                 <li>
@@ -453,11 +453,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 9");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                 </li>
                                 <li>
@@ -465,11 +465,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 14");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                 </li>
                                 <!-- 
@@ -483,11 +483,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 10");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                 </li>
                                 <li>
@@ -495,11 +495,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 11");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                 </li>
                                 <li>
@@ -507,11 +507,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 12");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                 </li>
                                 <li>
@@ -519,11 +519,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'plat' and id = 13");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                                 </li>
                             </ul>
@@ -541,11 +541,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 15");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                             </li>
                             <li>
@@ -553,11 +553,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 16");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                             </li>
                             <li>
@@ -565,11 +565,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 17");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                             </li>
                             <li>
@@ -577,11 +577,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 18");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                             </li>
                             <li>
@@ -589,11 +589,11 @@ session_start();
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                                     $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'dessert' and id = 19");
                                     while ($carte = $recupPlat->fetch()){
-                                    echo '<u>'.$carte['name'].'</u>';
-                                    echo'&nbsp';
-                                    echo '<b>'.$carte['price'].'€ </b>';
-                                    echo '<br>';
-                                    echo '<i>'.$carte['description'].'</i>';}
+    echo '<u>'.utf8_encode($carte['name']).'</u>';
+    echo'&nbsp';
+    echo '<b>'.$carte['price'].'€ </b>';
+    echo '<br>';
+    echo '<i>'.utf8_encode($carte['description']).'</i>';}
                                     ?>
                             </li>
                         </ul>

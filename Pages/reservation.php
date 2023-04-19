@@ -370,7 +370,7 @@
                             foreach (array_reverse($lastHalfIds) as $id) {
                                 $statement->execute([':id' => $id]);
                                 $allergie = $statement->fetch();
-                                $html .= generateAllergyHtml2($allergie['id'], $allergie['name'], $allergie['description']);
+                                $html .= generateAllergyHtml2($allergie['id'], utf8_encode($allergie['name']), utf8_encode($allergie['description']));
                             }
                         ?>
                         <section class="Gauche">

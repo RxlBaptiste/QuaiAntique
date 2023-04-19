@@ -64,10 +64,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
-                                            <b><?=$carte['price']?>€ </b>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
+                                            <b><?= $carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -85,10 +85,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -106,10 +106,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -132,10 +132,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -153,10 +153,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -174,10 +174,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -195,10 +195,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -216,10 +216,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -242,10 +242,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -263,10 +263,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -284,10 +284,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -322,10 +322,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -343,10 +343,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -369,10 +369,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -390,10 +390,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -411,10 +411,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -432,10 +432,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -458,10 +458,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -479,10 +479,10 @@ session_start();
                                                     style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                     l'entré</button>
                                             </a>
-                                            <u><?= $carte['name']; ?></u>&nbsp
+                                            <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                             <b><?=$carte['price']?>€ </b>&nbsp
                                             <br>
-                                            <i><?= $carte['description']; ?></i>
+                                            <i><?= utf8_encode($carte['description']); ?></i>
                                         </div>
                                         <?php
                                 }
@@ -508,7 +508,7 @@ session_start();
                             <li>
                                 <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 1");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 1");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
                                 <div class="article">
@@ -516,10 +516,10 @@ session_start();
                                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                             l'entré</button>
                                     </a>
-                                    <u><?= $carte['name']; ?></u>&nbsp
-                                    <b><?=$carte['price']?>€ </b>&nbsp
+                                    <u><?= utf8_encode($carte['name']); ?></u>&nbsp
+                                    <b><?= $carte['price']?>€ </b>&nbsp
                                     <br>
-                                    <i><?= $carte['description']; ?></i>
+                                    <i><?= utf8_encode($carte['description']); ?></i>
                                 </div>
                                 <?php
                                 }
@@ -528,7 +528,7 @@ session_start();
                             <li>
                                 <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 2");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 2");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
                                 <div class="article">
@@ -536,10 +536,10 @@ session_start();
                                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                             l'entré</button>
                                     </a>
-                                    <u><?= $carte['name']; ?></u>&nbsp
+                                    <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                     <b><?=$carte['price']?>€ </b>&nbsp
                                     <br>
-                                    <i><?= $carte['description']; ?></i>
+                                    <i><?= utf8_encode($carte['description']); ?></i>
                                 </div>
                                 <?php
                                 }
@@ -556,10 +556,10 @@ session_start();
                                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                             l'entré</button>
                                     </a>
-                                    <u><?= $carte['name']; ?></u>&nbsp
+                                    <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                     <b><?=$carte['price']?>€ </b>&nbsp
                                     <br>
-                                    <i><?= $carte['description']; ?></i>
+                                    <i><?= utf8_encode($carte['description']); ?></i>
                                 </div>
                                 <?php
                                 }
@@ -576,10 +576,10 @@ session_start();
                                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                             l'entré</button>
                                     </a>
-                                    <u><?= $carte['name']; ?></u>&nbsp
+                                    <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                     <b><?=$carte['price']?>€ </b>&nbsp
                                     <br>
-                                    <i><?= $carte['description']; ?></i>
+                                    <i><?= utf8_encode($carte['description']); ?></i>
                                 </div>
                                 <?php
                                 }
@@ -596,10 +596,10 @@ session_start();
                                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                             l'entré</button>
                                     </a>
-                                    <u><?= $carte['name']; ?></u>&nbsp
+                                    <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                     <b><?=$carte['price']?>€ </b>&nbsp
                                     <br>
-                                    <i><?= $carte['description']; ?></i>
+                                    <i><?= utf8_encode($carte['description']); ?></i>
                                 </div>
                                 <?php
                                 }
@@ -627,10 +627,10 @@ session_start();
                                                 style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                 l'entré</button>
                                         </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
+                                        <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                         <b><?=$carte['price']?>€ </b>&nbsp
                                         <br>
-                                        <i><?= $carte['description']; ?></i>
+                                        <i><?= utf8_encode($carte['description']); ?></i>
                                     </div>
                                     <?php
                                 }
@@ -648,10 +648,10 @@ session_start();
                                                 style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                 l'entré</button>
                                         </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
+                                        <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                         <b><?=$carte['price']?>€ </b>&nbsp
                                         <br>
-                                        <i><?= $carte['description']; ?></i>
+                                        <i><?= utf8_encode($carte['description']); ?></i>
                                     </div>
                                     <?php
                                 }
@@ -669,10 +669,10 @@ session_start();
                                                 style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                 l'entré</button>
                                         </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
+                                        <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                         <b><?=$carte['price']?>€ </b>&nbsp
                                         <br>
-                                        <i><?= $carte['description']; ?></i>
+                                        <i><?= utf8_encode($carte['description']); ?></i>
                                     </div>
                                     <?php
                                 }
@@ -690,10 +690,10 @@ session_start();
                                                 style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                 l'entré</button>
                                         </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
+                                        <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                         <b><?=$carte['price']?>€ </b>&nbsp
                                         <br>
-                                        <i><?= $carte['description']; ?></i>
+                                        <i><?= utf8_encode($carte['description']); ?></i>
                                     </div>
                                     <?php
                                 }
@@ -711,10 +711,10 @@ session_start();
                                                 style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                 l'entré</button>
                                         </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
+                                        <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                         <b><?=$carte['price']?>€ </b>&nbsp
                                         <br>
-                                        <i><?= $carte['description']; ?></i>
+                                        <i><?= utf8_encode($carte['description']); ?></i>
                                     </div>
                                     <?php
                                 }
@@ -736,10 +736,10 @@ session_start();
                                                 style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                 l'entré</button>
                                         </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
+                                        <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                         <b><?=$carte['price']?>€ </b>&nbsp
                                         <br>
-                                        <i><?= $carte['description']; ?></i>
+                                        <i><?= utf8_encode($carte['description']); ?></i>
                                     </div>
                                     <?php
                                 }
@@ -757,10 +757,10 @@ session_start();
                                                 style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                 l'entré</button>
                                         </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
+                                        <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                         <b><?=$carte['price']?>€ </b>&nbsp
                                         <br>
-                                        <i><?= $carte['description']; ?></i>
+                                        <i><?= utf8_encode($carte['description']); ?></i>
                                     </div>
                                     <?php
                                 }
@@ -778,10 +778,10 @@ session_start();
                                                 style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                 l'entré</button>
                                         </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
+                                        <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                         <b><?=$carte['price']?>€ </b>&nbsp
                                         <br>
-                                        <i><?= $carte['description']; ?></i>
+                                        <i><?= utf8_encode($carte['description']); ?></i>
                                     </div>
                                     <?php
                                 }
@@ -799,10 +799,10 @@ session_start();
                                                 style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                                 l'entré</button>
                                         </a>
-                                        <u><?= $carte['name']; ?></u>&nbsp
+                                        <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                         <b><?=$carte['price']?>€ </b>&nbsp
                                         <br>
-                                        <i><?= $carte['description']; ?></i>
+                                        <i><?= utf8_encode($carte['description']); ?></i>
                                     </div>
                                     <?php
                                 }
@@ -832,10 +832,10 @@ session_start();
                                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                             l'entré</button>
                                     </a>
-                                    <u><?= $carte['name']; ?></u>&nbsp
+                                    <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                     <b><?=$carte['price']?>€ </b>&nbsp
                                     <br>
-                                    <i><?= $carte['description']; ?></i>
+                                    <i><?= utf8_encode($carte['description']); ?></i>
                                 </div>
                                 <?php
                                 }
@@ -852,10 +852,10 @@ session_start();
                                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                             l'entré</button>
                                     </a>
-                                    <u><?= $carte['name']; ?></u>&nbsp
+                                    <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                     <b><?=$carte['price']?>€ </b>&nbsp
                                     <br>
-                                    <i><?= $carte['description']; ?></i>
+                                    <i><?= utf8_encode($carte['description']); ?></i>
                                 </div>
                                 <?php
                                 }
@@ -872,10 +872,10 @@ session_start();
                                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                             l'entré</button>
                                     </a>
-                                    <u><?= $carte['name']; ?></u>&nbsp
+                                    <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                     <b><?=$carte['price']?>€ </b>&nbsp
                                     <br>
-                                    <i><?= $carte['description']; ?></i>
+                                    <i><?= utf8_encode($carte['description']); ?></i>
                                 </div>
                                 <?php
                                 }
@@ -892,10 +892,10 @@ session_start();
                                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                             l'entré</button>
                                     </a>
-                                    <u><?= $carte['name']; ?></u>&nbsp
+                                    <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                     <b><?=$carte['price']?>€ </b>&nbsp
                                     <br>
-                                    <i><?= $carte['description']; ?></i>
+                                    <i><?= utf8_encode($carte['description']); ?></i>
                                 </div>
                                 <?php
                                 }
@@ -912,10 +912,10 @@ session_start();
                                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                                             l'entré</button>
                                     </a>
-                                    <u><?= $carte['name']; ?></u>&nbsp
+                                    <u><?= utf8_encode($carte['name']); ?></u>&nbsp
                                     <b><?=$carte['price']?>€ </b>&nbsp
                                     <br>
-                                    <i><?= $carte['description']; ?></i>
+                                    <i><?= utf8_encode($carte['description']); ?></i>
                                 </div>
                                 <?php
                                 }

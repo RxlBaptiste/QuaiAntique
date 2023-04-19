@@ -154,24 +154,24 @@
             <div class="slider">
                 <div class="slide-track">
                     <?php $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'entré'"); while
+                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'entre'"); while
                             ($row = $recupPlat->fetch()){
                         ?>
                     <div class="imgHover">
                         <img class="slide" class="entré1" <?php echo "src='" . $row['image_path'] . "'"?>
-                            alt=" Entré : " <?php $row['name']?>" />
+                            alt=" Entrée : " <?php $row['name']?>" />
                         <div class="HoverBox">
                             <?php echo $row['name'] ;?>
                         </div>
                     </div>
                     <?php }?>
                     <?php $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'entré'"); while
+                            $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'entre'"); while
                             ($row = $recupPlat->fetch()){
                         ?>
                     <div class="imgHover">
                         <img class="slide" class="entré1" <?php echo "src='" . $row['image_path'] . "'"?>
-                            alt=" Entré : " <?php $row['name']?>" />
+                            alt=" Entrée : " <?php $row['name']?>" />
                         <div class="HoverBox">
                             <?php echo $row['name'] ;?>
                         </div>

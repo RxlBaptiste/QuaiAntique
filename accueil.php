@@ -9,6 +9,13 @@
     <link href="css/style.css" rel="stylesheet" />
     <title class="DocTitle">Le Quai Antique</title>
 </head>
+<?php
+$dir = "..Assets\Images";
+$files = glob($dir . "*.{jpg,jpeg,png,gif}", GLOB_BRACE);
+foreach ($files as $file) {
+    echo "<link rel='preload' as='image' href='" . $file . "'>\n";
+}
+?>
 
 <body>
     <nav class="parent">
