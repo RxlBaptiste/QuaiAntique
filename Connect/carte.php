@@ -49,7 +49,7 @@ session_start();
             <!--Carte Version Mobile-->
             <div class="MGauche">
                 <div class="Textmobile" id="MavantG">
-                    <div id="TextMenu">MENU</div>
+                    <div id="TextMenu">CARTE</div>
                     <div class="TextCarte">
                         <p>Q</p>
                         <p>A</p>
@@ -335,7 +335,7 @@ session_start();
             <!--Carte Version Desktop-->
             <div id="Gauche">
                 <div id="avantG">
-                    <div id="Textme">ME</div>
+                    <div id="Textme">CAR</div>
                     <p class="textCarte">Q</p>
                 </div>
                 <div id="inteG">
@@ -600,7 +600,7 @@ session_start();
                     </div>
                 </div>
                 <div id="avantD">
-                    <div id="Textnu">NU</div>
+                    <div id="Textnu">TE</div>
                     <p class="textCarte">A</p>
                 </div>
             </div>

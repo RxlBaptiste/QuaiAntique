@@ -95,22 +95,34 @@
         align-items: center;
     }
 
-    #BtnPopup {
-        border-radius: 20px;
-        border: #f8cf2c solid 5px;
-        background-color: #291211;
-        color: #f8cf2c;
-
-        padding: 10px;
-
-        font-size: 20px;
-        font-family: "lora", sans-serif;
+    #TextCheckbox {
+        font-size: 1.5em;
     }
 
-    #BtnPopup:hover {
-        border: #f8cf2c solid 5px;
-        color: #291211;
+    #CheckBox {
+        transform: scale(1.5);
+    }
+
+    .BtnPopUp {
+        display: flex;
+        align-items: center;
+    }
+
+    #BtnPopUp:hover {
+        background-color: #291211;
+        color: #f8cf2c;
+    }
+
+    #BtnPopUp {
+        width: auto;
+        height: 45px;
+        border-radius: 30px;
+        padding: 0 1em;
         background-color: #f8cf2c;
+        color: #291211;
+        font-family: "Montserrat";
+        font-weight: 800;
+        font-size: 20px;
     }
     </style>
 </head>
@@ -128,11 +140,11 @@
             <br>
             <div>
                 <form action="accueil.php" method="GET" class="formPopup">
-                    <div>
-                        <input type="checkbox" required>Lu et accepté
+                    <div id="TextCheckbox">
+                        <input id="CheckBox" type="checkbox" required> &nbsp Lu et accepté
                     </div>
                     <br>
-                    <button id="BtnPopup" type="submit">Validé</button>
+                    <button class="BtnPopUp" id="BtnPopUp" type="submit">Validé</button>
                 </form>
             </div>
         </div>

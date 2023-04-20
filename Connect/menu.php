@@ -58,15 +58,15 @@ session_start();
                 </div>
                 <div id="MinteG" style="padding: 0">
                     <div class="Textmobile">
-                        <p class="MTitleG"><b><u>Menu
-                                    <?php 
+                        <p class="MTitleG"><b>Menu
+                                <?php 
                         $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                         $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 1"); 
                         while ($menu = $recupMenu->fetch()){ 
                           echo utf8_encode($menu['name'])."&nbsp";
-                          echo "(".$menu['price']."€)";
+                            echo "(". $menu['price'] . "€)";
                         }
-                      ?></b></u></p>
+                      ?></b></p>
                         <div>
                             <ul class="Mplat">
                                 <div class="LiEntreG">
@@ -102,15 +102,15 @@ session_start();
                                     </ul>
                                 </div>
                             </ul>
-                            <p class="MTitleG"><b><u>Menu
-                                        <?php 
+                            <p class="MTitleG"><b>Menu
+                                    <?php 
                         $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                         $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 3"); 
                         while ($menu = $recupMenu->fetch()){ 
                           echo utf8_encode($menu['name'])."<br>";
                           echo "(".$menu['price']."€)";
                         }
-                      ?></b></u></p>
+                      ?></b></p>
                             <ul>
                                 <li style="display:flex;text-align: center;justify-content: center;">
                                     <?php 
@@ -167,15 +167,15 @@ session_start();
                     -->
                 <div id="MinteD">
                     <div class="Textmobile">
-                        <p class="MTitleD"><b><u>Menu
-                                    <?php 
+                        <p class="MTitleD"><b>Menu
+                                <?php 
                         $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                         $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 2"); 
                         while ($menu = $recupMenu->fetch()){ 
                           echo utf8_encode($menu['name'])."<br>";
                           echo "(".$menu['price']."€)";
                         }
-                      ?></b></u></p>
+                      ?></b></p>
                         <div>
                             <ul>
                                 <li style="display:flex;text-align: center;justify-content: center;">
@@ -221,16 +221,16 @@ session_start();
                         }?>
                                 </li>
                             </ul>
-                            <p class="MTitleD"><b><u>
-                                        Menu
-                                        <?php 
+                            <p class="MTitleD"><b>
+                                    Menu
+                                    <?php 
                         $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                         $recupMenu = $dbCarte->query("SELECT * FROM menus WHERE id = 4"); 
                         while ($menu = $recupMenu->fetch()){ 
                           echo utf8_encode($menu['name'])."<br>";
                           echo "(".$menu['price']."€)";
                         }?>
-                                </b></u></p>
+                                </b></p>
                             <ul>
                                 <li style="display:flex;text-align: center;justify-content: center;">
                                     <?php 

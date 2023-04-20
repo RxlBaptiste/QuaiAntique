@@ -69,12 +69,12 @@ if(isset($_POST['submit'])){/*
                 echo "Le mot de passe est validé";
             }else{
                 echo "Le mot de passe n'est pas vérifié";
-                header("Location: ../acces/creation/inscription.html");
+                header("Location: ../acces/creation/inscription.php");
             }
-        }else{
+        }/* else{
             echo"Le mot de passe n'est pas vérifié";
-            header("Location: ../acces/creation/inscription.html");
-        }
+            header("Location: ../acces/creation/inscription.php");
+        } */
     }
 }
 ?>
