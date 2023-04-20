@@ -266,10 +266,10 @@ session_start();
     <nav class="parent">
         <div class="title">
             <h1>
-                <a href="../connection.php">Le Quai Antique</a>
+                <a href="../../Connect/Accueil.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="paramCompte.php" class="BtnSeConnecter">
+        <form action="../../Connect/paramCompte.php" class="BtnSeConnecter">
             <button class="btnConnecter" style="width:auto; padding:0 1em;">
                 <?php
         if (!empty($_SESSION['mail'])) {
@@ -383,18 +383,18 @@ session_start();
                                           $recupAllergie = 
                                           $dbClient->query("SELECT * FROM allergies WHERE id=4");
                                           while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
+                                            echo '<u>'.utf8_encode($allergie['name']).'</u>';/* 
                                              */
                                         ?>
                                         <label class="switch">
                                             <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
+                                                value="<?php echo utf8_encode($allergie['name']); ?>" />
                                             <span></span>
                                         </label>
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -449,18 +449,18 @@ session_start();
                                           $recupAllergie = 
                                           $dbClient->query("SELECT * FROM allergies WHERE id=7");
                                           while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
+                                            echo '<u>'.utf8_encode($allergie['name']).'</u>';/* 
                                              */
                                         ?>
                                         <label class="switch">
                                             <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
+                                                value="<?php echo utf8_encode($allergie['name']); ?>" />
                                             <span></span>
                                         </label>
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -515,18 +515,18 @@ session_start();
                                           $recupAllergie = 
                                           $dbClient->query("SELECT * FROM allergies WHERE id=10");
                                           while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
+                                            echo '<u>'.utf8_encode($allergie['name']).'</u>';/* 
                                              */
                                         ?>
                                         <label class="switch">
                                             <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
+                                                value="<?php echo utf8_encode($allergie['name']); ?>" />
                                             <span></span>
                                         </label>
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -563,18 +563,18 @@ session_start();
                                           $recupAllergie = 
                                           $dbClient->query("SELECT * FROM allergies WHERE id=12");
                                           while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
+                                            echo '<u>'.utf8_encode($allergie['name']).'</u>';/* 
                                              */
                                         ?>
                                         <label class="switch">
                                             <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
+                                                value="<?php echo utf8_encode($allergie['name']); ?>" />
                                             <span></span>
                                         </label>
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -629,18 +629,18 @@ session_start();
                                           $recupAllergie = 
                                           $dbClient->query("SELECT * FROM allergies WHERE id=15");
                                           while ($allergie = $recupAllergie->fetch()){
-                                            echo '<u>'.$allergie['name'].'</u>';/* 
+                                            echo '<u>'.utf8_encode($allergie['name']).'</u>';/* 
                                              */
                                         ?>
                                         <label class="switch">
                                             <input type="checkbox" name="allergies[]"
-                                                value="<?php echo $allergie['name']; ?>" />
+                                                value="<?php echo utf8_encode($allergie['name']); ?>" />
                                             <span></span>
                                         </label>
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -741,7 +741,7 @@ session_start();
                                           while ($allergie = $recupAllergie->fetch()){
                                             echo '<u>'.$allergie['name'].'</u>';/* 
                                              */
-                                        ?>
+                                        ?>utf8_encode(
                                         <label class="switch">
                                             <input type="checkbox" name="allergies[]"
                                                 value="<?php echo $allergie['name']; ?>" />
@@ -759,7 +759,7 @@ session_start();
                         </section>
                     </div>
                     <section id="submitAllergies">
-                        <input type="submit" class="btnConnecter" value="Validé les allergies">
+                        <input type="submit" class="btnConnecter" value="Valider les allergies">
 
                     </section>
 

@@ -7,15 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="Assets/favicon.PNG" rel="icon" type="image/png" />
     <link href="css/style.css" rel="stylesheet" />
-    <title class="DocTitle">Le Quai Antique</title>
+    <title class="DocTitle">Le Quai Antique | Accueil</title>
 </head>
-<?php
-$dir = "..Assets\Images";
-$files = glob($dir . "*.{jpg,jpeg,png,gif}", GLOB_BRACE);
-foreach ($files as $file) {
-    echo "<link rel='preload' as='image' href='" . $file . "'>\n";
-}
-?>
 
 <body>
     <nav class="parent">

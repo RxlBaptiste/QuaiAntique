@@ -14,9 +14,9 @@ session_start();
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../favicon.PNG" rel="icon" type="image/png" />
+    <link href="../../../Assets/favicon.PNG" rel="icon" type="image/png" />
     <link href="../../../css/style.css" rel="stylesheet" />
-    <title class="DocTitle">Le Quai Antique / La carte</title>
+    <title class="DocTitle">Le Quai Antique | La carte</title>
 </head>
 
 <body>
@@ -40,7 +40,7 @@ session_start();
             <!--Carte Version Mobile-->
             <div class="MGauche">
                 <div class="Textmobile" id="MavantG">
-                    <div id="TextMenu">MENU</div>
+                    <div id="TextMenu">CARTE</div>
                     <div class="TextCarte">
                         <p>Q</p>
                         <p>A</p>
@@ -55,7 +55,7 @@ session_start();
                                     <li>
                                         <?php
                                     $dbCarte =  new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 1");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 1");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
                                         <div class="article">
@@ -76,7 +76,7 @@ session_start();
                                     <li>
                                         <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 2");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 2");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
                                         <div class="article">
@@ -97,7 +97,7 @@ session_start();
                                     <li>
                                         <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 3");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 3");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
                                         <div class="article">
@@ -313,7 +313,7 @@ session_start();
                                     <li>
                                         <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 4");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 4");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
                                         <div class="article">
@@ -334,7 +334,7 @@ session_start();
                                     <li>
                                         <?php
                                     $dbCarte = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entrée' and id = 5");
+                                    $recupPlat = $dbCarte->query("SELECT * FROM carte WHERE categories = 'entre' and id = 5");
                                     while ($carte = $recupPlat->fetch()){
                                         ?>
                                         <div class="article">
@@ -498,7 +498,7 @@ session_start();
             <!--Carte Version Desktop-->
             <div id="Gauche">
                 <div id="avantG">
-                    <div id="Textme">ME</div>
+                    <div id="Textme">CAR</div>
                     <p class="textCarte">Q</p>
                 </div>
                 <div id="inteG">
@@ -812,9 +812,6 @@ session_start();
                         </div>
                     </div>
                 </div>
-                <div class="BtnMenu">
-                    <a href="menu.php"><input id="BtnMenu" type="button" value="Modifier les menus" /></a>
-                </div>
             </div>
             <div id="Droite">
                 <div id="inteD">
@@ -925,7 +922,7 @@ session_start();
                     </div>
                 </div>
                 <div id="avantD">
-                    <div id="Textnu">NU</div>
+                    <div id="Textnu">TE</div>
                     <p class="textCarte">A</p>
                 </div>
             </div>

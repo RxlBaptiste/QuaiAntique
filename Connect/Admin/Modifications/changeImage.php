@@ -20,7 +20,7 @@ $imagePath = isset($_GET['image_path']) ? $_GET['image_path'] : null;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../../../Assets/favicon.PNG" rel="icon" type="image/png" />
     <link href="../../../css/style.css" rel="stylesheet" />
-    <title class="DocTitle">Le Quai Antique</title>
+    <title class="DocTitle">Le quai antique | Les images</title>
 </head>
 
 <body>

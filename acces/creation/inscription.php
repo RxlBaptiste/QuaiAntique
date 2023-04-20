@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../../Assets/favicon.PNG" rel="icon" type="image/png" />
     <link href="../../css/style.css" rel="stylesheet" />
-    <title class="DocTitle">Le Quai Antique</title>
+    <title class="DocTitle">Le quai antique | Inscription</title>
     <style>
     /* Style pour les appareils mobiles */
     @media only screen and (max-width:600px) {

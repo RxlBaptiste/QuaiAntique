@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../favicon.PNG" rel="icon" type="image/png" />
+    <link href="../Assets/favicon.PNG" rel="icon" type="image/png" />
     <link href="../css/style.css" rel="stylesheet" />
-    <title>Le Quai Antique / Connection</title>
+    <title>Le Quai Antique | Connection</title>
     <style>
     /* Style pour les appareils mobiles */
     @media only screen and (max-width:500px) {

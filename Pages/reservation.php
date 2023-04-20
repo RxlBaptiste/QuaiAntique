@@ -5,10 +5,149 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../favicon.PNG" rel="icon" type="image/png" />
+    <link href="../Assets/favicon.PNG" rel="icon" type="image/png" />
     <link href="../css/style.css" rel="stylesheet" />
-    <title class="DocTitle">Le Quai Antique / Votre Revervation</title>
+    <title class="DocTitle">Le Quai Antique | Votre Revervation</title>
     <style>
+    @media only screen and (max-width:1300px) {
+
+
+        .TextHoraire {
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .Allergies {
+            padding: 0 5em !important;
+        }
+
+        .switch {
+            height: 28.6px !important;
+            width: 50px !important;
+        }
+
+        .switch input+span:before {
+            width: 21px !important;
+            height: 21px !important;
+        }
+
+        .switch input:checked+span:before {
+            left: 25px !important;
+        }
+
+        .Gauche,
+        .Droite {
+            font-size: .5em;
+        }
+
+        .textAllergies {
+            font-size: 1em;
+        }
+
+        footer {
+            font-size: 14px;
+        }
+    }
+
+    @media only screen and (max-width:800px) {
+        .preambule {
+            margin: 1em 1em 0 !important;
+        }
+
+        .LabelToInputs {
+            margin-left: 3em !important;
+        }
+
+        #choixHoraires {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .HoraireMidi {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .TextHoraire {
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .HoraireSoir {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #titleAllergies {
+            font-size: 1em !important;
+        }
+
+        .Allergies {
+            padding: 0 4em !important;
+        }
+
+        .Gauche,
+        .Droite {
+            font-size: .2em;
+        }
+
+        .textAllergies {
+            font-size: 2em;
+        }
+
+        .btnConnecter {
+            padding: 1em !important;
+            margin: 1em !important;
+            width: 20vw !important;
+            height: 7vw !important;
+        }
+
+        /* 
+        .btnConnecter {} */
+    }
+
+    @media only screen and (max-width:600px) {
+        #titleAllergies {
+            font-size: 0.65em !important;
+        }
+
+        .FormReservation {
+            padding: 0 4em !important;
+        }
+
+        .Allergies {
+            padding: 0 4.5em !important;
+        }
+
+        .switch {
+            height: 28.6px !important;
+            width: 50px !important;
+        }
+
+        .switch input+span:before {
+            width: 21px !important;
+            height: 21px !important;
+        }
+
+        .Gauche,
+        .Droite {
+            font-size: .2em;
+        }
+
+        .textAllergies {
+            font-size: 2em;
+        }
+
+        .btnConnecter {
+            width: 28vw !important;
+            height: 7vw !important;
+        }
+    }
+
     /*Style pour les allergies*/
     #btnGoAllergie {
         display: flex;
@@ -150,7 +289,7 @@
                 <a href="../index.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="connection.html" class="BtnSeConnecter">
+        <form action="../acces/connection.php" class="BtnSeConnecter">
             <button class="btnConnecter">Se Connecter</button>
         </form>
     </nav>
@@ -161,26 +300,26 @@
                     <div class="preambule">
                         <p class="phrases">
                             Merci d'avance de préciser en commentaire le nombre d'enfants
-                            présent à table (si il y en a).
+                            présents à table (si il y en a).
                         </p>
                         <br />
                         <p class="phrases">
                             Pour tout retard de plus de 20min votre table sera donnée à
-                            d'autre client !
+                            d'autres clients !
                         </p>
                     </div>
                     <div id="inputs">
-                        <label for="name" class="LabelToInputs">Veuiller indiquer votre nom :
+                        <label for="name" class="LabelToInputs">Veuillez indiquer votre nom :
                         </label>
                         <input id="name" name="name" class="InputReservation" type="text"
                             placeholder="Nom de la réservation" required />
                         <br />
-                        <label for="tel" class="LabelToInputs">Veuiller indiquer votre numéro de téléphone :
+                        <label for="tel" class="LabelToInputs">Veuillez indiquer votre numéro de téléphone :
                         </label>
                         <input id="tel" name="tel" class="InputReservation" type="tel" placeholder="Numéro de téléphone"
                             pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" required />
                         <br />
-                        <label for="nbPers" class="LabelToInputs">Veuiller indiquer le nombre de personne :
+                        <label for="nbPers" class="LabelToInputs">Veuillez indiquer le nombre de personnes :
                         </label>
                         <input id="number" name="nbPers" class="InputReservation" type="number"
                             placeholder="Nombre de personnes" min="1" max="10" required />
@@ -427,7 +566,7 @@
                     <br><br>
                     <section id="submitAllergies">
                         <button type="button" class="btnConnecter" onclick="prevPage()">
-                            Validé les allergies
+                            Valider les allergies
                         </button>
                     </section>
 

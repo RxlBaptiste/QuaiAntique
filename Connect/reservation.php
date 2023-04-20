@@ -13,9 +13,9 @@ if(isset($_SESSION['id'])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../favicon.PNG" rel="icon" type="image/png" />
+    <link href="../Assets/favicon.PNG" rel="icon" type="image/png" />
     <link href="../css/style.css" rel="stylesheet" />
-    <title class="DocTitle">Le Quai Antique / Votre Revervation</title>
+    <title class="DocTitle">Le Quai Antique | Votre Revervation</title>
     <style>
     @media only screen and (max-width:1300px) {
 
@@ -385,7 +385,7 @@ if(isset($_SESSION['id'])) {
                     ?>
                 <div id="page2" style="display: block">
                     <div id="titleAllergies">
-                        <u>Vos allergies enregisté.</u><br>
+                        <u>Vos allergies enregistés.</u><br>
                         <p style="font-size: .5em;">Si vous souffrez d'une allergie qui n'est pas mentionnée, veuillez
                             l'indiquer dans la section
                             commentaire. </p>
@@ -464,27 +464,27 @@ if(isset($_SESSION['id'])) {
                         <div class="preambule">
                             <p class="phrases">
                                 Merci d'avance de préciser en commentaire le nombre d'enfants
-                                présent à table (si il y en a).
+                                présents à table (si il y en a).
                             </p>
                             <br />
                             <p class="phrases">
                                 Pour tout retard de plus de 20min votre table sera donnée à
-                                d'autre client !
+                                d'autres clients !
                             </p>
                         </div>
                         <div id="inputs">
-                            <label class="LabelToInputs">Veuiller indiquer votre nom :
+                            <label class="LabelToInputs">Veuillez indiquer votre nom :
                             </label>
                             <input id="name" name="name" class="InputReservation" type="text"
                                 placeholder="Nom de la réservation" required />
                             <br />
-                            <label class="LabelToInputs">Veuiller indiquer votre numéro de téléphone :
+                            <label class="LabelToInputs">Veuillez indiquer votre numéro de téléphone :
                             </label>
                             <input id="tel" name="tel" class="InputReservation" type="tel"
                                 placeholder="Numéro de téléphone" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}"
                                 required />
                             <br />
-                            <label class="LabelToInputs">Veuiller indiquer le nombre de personne :
+                            <label class="LabelToInputs">Veuillez indiquer le nombre de personnes :
                             </label>
                             <input id="number" name="nbPers" class="InputReservation" type="number"
                                 placeholder="Nombre de personnes" min="1" max="10" required />

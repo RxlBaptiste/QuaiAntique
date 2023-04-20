@@ -22,9 +22,9 @@ $sqlClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="favicon.PNG" rel="icon" type="image/png" />
+    <link href="../Assets/favicon.PNG" rel="icon" type="image/png" />
     <link href="../css/style.css" rel="stylesheet" />
-    <title class="DocTitle">Le Quai Antique</title>
+    <title class="DocTitle">Le Quai Antique | Paramètre</title>
     <style>
     @media screen and (min-width: 200px) and (max-width: 810px) {
         .btnConnecter {

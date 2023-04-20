@@ -15,19 +15,19 @@ $id = $_GET['id'];
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../favicon.PNG" rel="icon" type="image/png" />
+    <link href="../../../Assets/favicon.PNG" rel="icon" type="image/png" />
     <link href="../../../css/style.css" rel="stylesheet" />
-    <title class="DocTitle">Le Quai Antique / Le menu</title>
+    <title class="DocTitle">Le Quai Antique | La carte</title>
 </head>
 
 <body>
     <nav class="parent">
         <div class="title">
             <h1>
-                <a href="carte.php">Le Quai Antique</a>
+                <a href="../index.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="menu.php" class="BtnSeConnecter">
+        <form action="carte.php" class="BtnSeConnecter">
             <button type="submit" class="btnConnecter">
                 RETOUR
             </button>

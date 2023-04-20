@@ -19,7 +19,7 @@ $updateEtat = "UPDATE reservation SET etat='1' WHERE etat = 0";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../../Assets/favicon.PNG" rel="icon" type="image/png" />
     <link href="../../css/style.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Le quai antique | Les réservations</title>
 </head>
 
 <body>
