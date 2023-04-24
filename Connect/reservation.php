@@ -490,8 +490,8 @@ if(isset($_SESSION['id'])) {
                                 placeholder="Nombre de personnes" min="1" max="10" required />
                             <br />
                             <label class="LabelToInputs">Choisissez votre date : </label>
-                            <input id="date" name="date" class="InputReservation" type="date" placeholder="Quel jour"
-                                required />
+                            <input id="date" name="date" class="InputReservation" min="<?php echo date('Y-m-d'); ?>"
+                                type="date" placeholder="Quel jour" required />
                             <?php 
     $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
     $recupName = $dbClient->query("SELECT Date AS Date, Horaire AS Horaire FROM reservation");

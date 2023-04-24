@@ -300,7 +300,7 @@
                     <div class="preambule">
                         <p class="phrases">
                             Merci d'avance de préciser en commentaire le nombre d'enfants
-                            présents à table (si il y en a).
+                            présents à table.
                         </p>
                         <br />
                         <p class="phrases">
@@ -325,8 +325,8 @@
                             placeholder="Nombre de personnes" min="1" max="10" required />
                         <br />
                         <label for="date" class="LabelToInputs">Choisissez votre date : </label>
-                        <input id="date" name="date" class="InputReservation" type="date" placeholder="Quel jour"
-                            required />
+                        <input id="date" name="date" class="InputReservation" min="<?php echo date('Y-m-d'); ?>"
+                            type="date" placeholder="Quel jour" required />
                         <?php 
                         $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
                         // Requête SQL pour récupérer les dates et heures regroupées ensemble et le nombre de fois où ils apparaissent
@@ -1104,6 +1104,7 @@
         }
     }
 
+
     const inputDate = document.getElementById("date");
     /*
          const heureInput = document.getElementById("heure"); */
@@ -1284,6 +1285,7 @@
             }
         }
     });
+
     //Formulaire en 2
     function nextPage() {
         document.getElementById("page1").style.display = "none";
