@@ -2,12 +2,7 @@
 session_start();
 
 $dbClient = new PDO('mysql:host=lequaic8.mysql.db;dbname=lequaic8;', 'lequaic8', 'LeQuaiAntiqueEstMon1SiteOvh');
-/* 
 if(isset($_POST['submit'])){
-    
-} */
-if(isset($_POST['submit'])){/* 
-    if(!empty($_POST['email']) AND !empty($_POST['password'])){ */
         $pseudoParDefaut = "admin@lequaiantique.fr";
         $mdpParDefaut = "LeQuaiAntique_Admin";
 
@@ -28,13 +23,9 @@ if(isset($_POST['submit'])){/*
             $_SESSION['mdp'] = $mdpSaisi;
             header('location: Admin/index.php');
         } else{
-            /*echo "Mot de passe ou pseudo incorrect";
-        } 
-    }*/
 
         $mail = $_POST['email'];
         $pass = $_POST['password'];
-    /* $mdpSaisi = htmlspecialchars($_POST['password']); */
 
         $sqlPassClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
         while ($passSession =$sqlPassClient->fetch()){
@@ -60,6 +51,7 @@ if(isset($_POST['submit'])){/*
             $mailSession = $session['mail'];
             $passSession = $session['password'];
         }
+            header("Location: ../acces/creation/inscription.php");
         echo $mailSession;
         echo "<br>";
         echo $mail; 
@@ -68,13 +60,9 @@ if(isset($_POST['submit'])){/*
                 header("Location:Accueil.php" );
                 echo "Le mot de passe est validé";
             }else{
-                echo "Le mot de passe n'est pas vérifié";
                 header("Location: ../acces/creation/inscription.php");
             }
-        }/* else{
-            echo"Le mot de passe n'est pas vérifié";
-            header("Location: ../acces/creation/inscription.php");
-        } */
+        }
     }
 }
 ?>

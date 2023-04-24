@@ -201,7 +201,7 @@ $sqlClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
                 </div>
                 <br>
                 <div style="text-align:center;">Vos allergies :
-                    <div style="display:flex; flex-direction:row; flex-wrap:wrap; align-items: center;">
+                    <div style="display:flex; flex-direction:column; flex-wrap:wrap; align-items: center;">
                         <?php 
                         if (!empty($allergies)) {
                             $allergies_list = explode('-', $allergies);

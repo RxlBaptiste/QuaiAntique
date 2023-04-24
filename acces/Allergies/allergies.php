@@ -328,7 +328,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -350,7 +350,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -372,7 +372,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -416,7 +416,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -438,7 +438,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -482,7 +482,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -504,7 +504,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -552,7 +552,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -596,7 +596,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -618,7 +618,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -662,7 +662,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -684,7 +684,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -706,7 +706,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -728,7 +728,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
@@ -741,7 +741,7 @@ session_start();
                                           while ($allergie = $recupAllergie->fetch()){
                                             echo '<u>'.$allergie['name'].'</u>';/* 
                                              */
-                                        ?>utf8_encode(
+                                        ?>
                                         <label class="switch">
                                             <input type="checkbox" name="allergies[]"
                                                 value="<?php echo $allergie['name']; ?>" />
@@ -750,7 +750,7 @@ session_start();
                                     </div>
                                     <div class="textAllergies">
                                         <?php
-                                            echo '<i style="font-size:0.8em">'.$allergie['description'].'</i>';
+                                            echo '<i style="font-size:0.8em">'.utf8_encode($allergie['description']).'</i>';
                                             }
                                           ?>
                                     </div>
