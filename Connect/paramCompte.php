@@ -84,7 +84,7 @@ $sqlClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
         border: 1px solid #f8cf2c;
         border-radius: 1.5em;
 
-        margin: 5% 0 0 25%;
+        margin: 2% 0 0 25%;
 
         height: 50%;
         width: 50%;

@@ -12,7 +12,7 @@
     @media screen and (max-width: 1500px) {
         .popupText {
             font-size: 8px;
-            top: 200px
+            top: 130px
         }
 
         .formPopup {
@@ -173,7 +173,7 @@
                         <img class="slide" class="entré1" <?php echo "src='" . $row['image_path'] . "'"?>
                             alt=" Entrée : " <?php $row['name']?>" />
                         <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
+                            <?php echo utf8_encode($row['name']) ;?>
                         </div>
                     </div>
                     <?php }?>
@@ -185,7 +185,7 @@
                         <img class="slide" class="entré1" <?php echo "src='" . $row['image_path'] . "'"?>
                             alt=" Entrée : " <?php $row['name']?>" />
                         <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
+                            <?php echo utf8_encode($row['name']) ;?>
                         </div>
                     </div>
                     <?php }?>
@@ -204,7 +204,7 @@
                         <img class="slide" <?php echo "src='" . $row['image_path'] . "'"?> alt=" Plat : "
                             <?php $row['name']?>" />
                         <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
+                            <?php echo utf8_encode($row['name']) ;?>
                         </div>
                     </div>
                     <?php }?>
@@ -216,7 +216,7 @@
                         <img class="slide" <?php echo "src='" . $row['image_path'] . "'"?> alt=" Plat : "
                             <?php $row['name']?>" />
                         <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
+                            <?php echo utf8_encode($row['name']) ;?>
                         </div>
                     </div>
                     <?php }?>
@@ -237,7 +237,7 @@
                         <img class="slide" <?php echo "src='" . $row['image_path'] . "'"?> alt=" Dessert : "
                             <?php $row['name']?>" />
                         <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
+                            <?php echo utf8_encode($row['name']) ;?>
                         </div>
                     </div>
                     <?php }?>
@@ -249,7 +249,7 @@
                         <img class="slide" class="entré1" <?php echo "src='" . $row['image_path'] . "'"?>
                             alt=" Dessert : " <?php $row['name']?>" />
                         <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
+                            <?php echo utf8_encode($row['name']) ;?>
                         </div>
                     </div>
                     <?php }?>

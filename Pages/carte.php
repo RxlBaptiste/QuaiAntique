@@ -14,10 +14,10 @@
     <nav class="parent">
         <div class="title">
             <h1>
-                <a href="../index.php">Le Quai Antique</a>
+                <a href="../accueil.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="../index.php" class="BtnSeConnecter">
+        <form action="../accueil.php" class="BtnSeConnecter">
             <button type="submit" class="btnConnecter">
                 RETOUR
             </button>
@@ -315,7 +315,7 @@
                 </div>
             </div>
             <!--Carte Version Desktop-->
-            <div id="Gauche">
+            <div id="Gauche" style="height: 1300px;">
                 <div id="avantG">
                     <div id="Textme">CAR</div>
                     <p class="textCarte">Q</p>
@@ -388,7 +388,7 @@
                     </div>
                 </div>
             </div>
-            <div class="Fond">
+            <div class="Fond" style="height: 1300px;">
                 <div class="fond">
                     <p id="TitleP">Nos Plats</p>
                     <div class="TextPlats">
@@ -513,7 +513,7 @@
                     </div>
                 </div>
             </div>
-            <div id="Droite">
+            <div id="Droite" style="height: 1300px;">
                 <div id="inteD">
                     <p id="TitleD">Nos Desserts</p>
                     <div class="liPanneau">

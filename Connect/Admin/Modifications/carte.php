@@ -496,7 +496,7 @@ session_start();
             </div>
 
             <!--Carte Version Desktop-->
-            <div id="Gauche">
+            <div id="Gauche" style="height:1400px !important;">
                 <div id="avantG">
                     <div id="Textme">CAR</div>
                     <p class="textCarte">Q</p>
@@ -609,7 +609,7 @@ session_start();
                     </div>
                 </div>
             </div>
-            <div class="Fond">
+            <div class="Fond" style="height:1400px !important;">
                 <div class="fond">
                     <p id="TitleP">Nos Plats</p>
                     <div class="TextPlats">
@@ -813,7 +813,7 @@ session_start();
                     </div>
                 </div>
             </div>
-            <div id="Droite">
+            <div id="Droite" style="height:1400px !important;">
                 <div id="inteD">
                     <p id="TitleD">Nos Desserts</p>
                     <div class="liPanneau">
@@ -1602,7 +1602,7 @@ main {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;

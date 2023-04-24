@@ -14,10 +14,10 @@
     <nav class="parent">
         <div class="title">
             <h1>
-                <a href="../index.php">Le Quai Antique</a>
+                <a href="../accueil.php">Le Quai Antique</a>
             </h1>
         </div>
-        <form action="../index.php" class="BtnSeConnecter">
+        <form action="../accueil.php" class="BtnSeConnecter">
             <button type="submit" class="btnConnecter">
                 RETOUR
             </button>
@@ -888,6 +888,7 @@
 
 #TitleD,
 #TitleG {
+    font-size: 35px;
     text-align: center;
 }
 

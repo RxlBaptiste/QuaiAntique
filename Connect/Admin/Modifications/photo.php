@@ -42,10 +42,10 @@ session_start();
                 $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'entre'"); while
                 ($row = $recupPlat->fetch()){
                         echo "<div class='Hoverbox'>";
-                        echo "<img src='../../../" . $row['image_path'] . "' alt='" . $row['name'] . "'>"; 
+                        echo "<img src='../../../" . $row['image_path'] . "' alt='" . utf8_encode($row['name']) . "'>"; 
                         ?>
                 <div class="hover">
-                    <?php echo "<div class='text'> ".$row['name']."</div>" ;?>
+                    <?php echo "<div class='text'> ".utf8_encode($row['name'])."</div>" ;?>
                     <a href=" changeImage.php?id=<?= $row['id']; ?>&image_path=<?= $row['image_path']; ?>">
                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                             cette image</button>
@@ -63,10 +63,10 @@ session_start();
                 $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'plat'"); while
                 ($row = $recupPlat->fetch()){
                         echo "<div class='Hoverbox'>";
-                        echo "<img src='../../../" . $row['image_path'] . "' alt='" . $row['name'] . "'>"; 
+                        echo "<img src='../../../" . $row['image_path'] . "' alt='" . utf8_encode($row['name']) . "'>"; 
                         ?>
                 <div class="hover">
-                    <?php echo "<div class='text'> ".$row['name']."</div>" ;?>
+                    <?php echo "<div class='text'> ".utf8_encode($row['name'])."</div>" ;?>
                     <a href=" changeImage.php?id=<?= $row['id']; ?>&image_path=<?= $row['image_path']; ?>">
                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                             cette image</button>
@@ -84,10 +84,10 @@ session_start();
                 $recupPlat = $dbCarte->query("SELECT * FROM images WHERE categorie = 'dessert'"); while
                 ($row = $recupPlat->fetch()){
                         echo "<div class='Hoverbox'>";
-                        echo "<img src='../../../" . $row['image_path'] . "' alt='" . $row['name'] . "'>"; 
+                        echo "<img src='../../../" . $row['image_path'] . "' alt='" . utf8_encode($row['name']) . "'>"; 
                         ?>
                 <div class="hover">
-                    <?php echo "<div class='text'> ".$row['name']."</div>" ;?>
+                    <?php echo "<div class='text'> ".utf8_encode($row['name'])."</div>" ;?>
                     <a href=" changeImage.php?id=<?= $row['id']; ?>&image_path=<?= $row['image_path']; ?>">
                         <button style="color:white; background-color:red; margin:0 0 10px 0;">Changer
                             cette image</button>

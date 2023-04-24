@@ -280,7 +280,7 @@ session_start();
                 </div>
             </div>
             <!--Carte Version Desktop-->
-            <div id="Gauche" style="height:950px;">
+            <div id="Gauche" style="height:950px !important;">
                 <div id="avantG">
                     <div id="Textme">ME</div>
                     <p class="textCarte">Q</p>
@@ -330,7 +330,7 @@ session_start();
                     </div>
                 </div>
             </div>
-            <div class="Fond" style="height:950px;">
+            <div class="Fond" style="height:950px !important;">
                 <div class="fond">
                     <div class="SpanMenu">
                         <p id="TitleL">Menu
@@ -450,7 +450,7 @@ session_start();
                     </div>
                 </div>
             </div>
-            <div id="Droite" style="height:950px;">
+            <div id="Droite" style="height:950px !important;">
                 <div id="inteD">
                     <p id="TitleD">
                         Menu
@@ -907,6 +907,7 @@ session_start();
 
 #TitleD,
 #TitleG {
+    font-size: 35px;
     text-align: center;
 }
 

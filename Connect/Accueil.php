@@ -55,7 +55,7 @@ session_start();
                         <img class="slide" class="entré1" <?php echo "src='../" . $row['image_path'] . "'"?>
                             alt=" Entré : " <?php $row['name']?>" />
                         <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
+                            <?php echo utf8_encode($row['name']) ;?>
                         </div>
                     </div>
                     <?php }?>
@@ -67,7 +67,7 @@ session_start();
                         <img class="slide" class="entré1" <?php echo "src='../" . $row['image_path'] . "'"?>
                             alt=" Entré : " <?php $row['name']?>" />
                         <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
+                            <?php echo utf8_encode($row['name']) ;?>
                         </div>
                     </div>
                     <?php }?>
@@ -86,7 +86,7 @@ session_start();
                         <img class="slide" <?php echo "src='../" . $row['image_path'] . "'"?> alt=" Plat : "
                             <?php $row['name']?>" />
                         <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
+                            <?php echo utf8_encode($row['name']) ;?>
                         </div>
                     </div>
                     <?php }?>
@@ -98,7 +98,7 @@ session_start();
                         <img class="slide" <?php echo "src='../" . $row['image_path'] . "'"?> alt=" Plat : "
                             <?php $row['name']?>" />
                         <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
+                            <?php echo utf8_encode($row['name']) ;?>
                         </div>
                     </div>
                     <?php }?>
@@ -119,7 +119,7 @@ session_start();
                         <img class="slide" <?php echo "src='../" . $row['image_path'] . "'"?> alt=" Dessert : "
                             <?php $row['name']?>" />
                         <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
+                            <?php echo utf8_encode($row['name']) ;?>
                         </div>
                     </div>
                     <?php }?>
@@ -131,7 +131,7 @@ session_start();
                         <img class="slide" class="entré1" <?php echo "src='../" . $row['image_path'] . "'"?>
                             alt=" Dessert : " <?php $row['name']?>" />
                         <div class="HoverBox">
-                            <?php echo $row['name'] ;?>
+                            <?php echo utf8_encode($row['name']) ;?>
                         </div>
                     </div>
                     <?php }?>
