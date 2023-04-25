@@ -8,6 +8,89 @@
     <link href="Assets/favicon.PNG" rel="icon" type="image/png" />
     <link href="css/style.css" rel="stylesheet" />
     <title class="DocTitle">Le Quai Antique | Validation</title>
+    <style>
+    @media screen and (max-width: 1500px) {
+        span {
+            font-size: 3em !important;
+        }
+
+        .slider {
+            width: 550px !important;
+        }
+
+        .br {
+            color: #282527 !important;
+        }
+    }
+
+    @media screen and (max-width: 810px) {
+        span {
+            font-size: 2em !important;
+        }
+
+        .slider {
+            width: 350px !important;
+            height: 300px !important;
+            margin: 1em 0 !important;
+            padding: 0em 0 !important;
+        }
+
+        img {
+            width: 200px !important;
+            height: 200px !important;
+        }
+
+        .HoverBox:hover {
+            width: 200px !important;
+            height: 200px !important;
+        }
+
+        .br {
+            color: #282527 !important;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        span {
+            font-size: 1.75em !important;
+        }
+
+        img {
+            position: absolute !important;
+            top: 1em !important;
+            width: 150px !important;
+            height: 150px !important;
+        }
+
+        .slider .slide {
+            width: none;
+            height: none;
+        }
+
+        .HoverBox:hover {
+            position: absolute !important;
+            top: 1.3em !important;
+            width: 230px !important;
+            height: 230px !important;
+        }
+
+        .br {
+            color: #282527 !important;
+        }
+    }
+
+    @media only screen and (min-width:500px) {
+        .slide {
+            height: 230px !important;
+            width: 230px !important;
+        }
+
+        .HoverBox:hover {
+            height: 230px !important;
+            width: 230px !important;
+        }
+    }
+    </style>
 </head>
 
 <body>

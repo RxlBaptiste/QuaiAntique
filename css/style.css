@@ -257,8 +257,8 @@ img {
 }
 
 .slider .slide {
-  height: 250px;
-  width: 250px; /*
+  height: 230px !important;
+  width: 230px !important; /*
   padding: 0 10px; */
   transition: 0.15s;
 }
@@ -281,8 +281,8 @@ img {
 }
 
 .HoverBox {
-  width: 220px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
   position: absolute;
   color: transparent;
   background-color: none;
@@ -295,8 +295,8 @@ img {
   text-transform: uppercase;
 }
 .HoverBox:hover {
-  width: 220px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
   position: absolute;
   color: #f8cf2c;
   background-color: #28252790;

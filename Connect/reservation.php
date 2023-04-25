@@ -386,7 +386,8 @@ if(isset($_SESSION['id'])) {
                 <div id="page2" style="display: block">
                     <div id="titleAllergies">
                         <u>Vos allergies enregistés.</u><br>
-                        <p style="font-size: .5em;">Si vous souffrez d'une allergie qui n'est pas mentionnée, veuillez
+                        <p style="font-size: .9em;">Si vous souffrez d'une allergie qui n'est pas mentionnée, <br>
+                            veuillez
                             l'indiquer dans la section
                             commentaire. </p>
                     </div>
@@ -529,7 +530,7 @@ while ($client = $recupName->fetch()) {
                                 placeholder="Commentaire" />
                         </div>
                         <div id="btnGoAllergie">
-                            <button id="BtnAllergies" type="button" onclick="nextPage()">
+                            <button style="font-size:1em;" id="BtnAllergies" type="button" onclick="nextPage()">
                                 Des allergies ? Cliquer ici.
                             </button>
                         </div>
