@@ -207,6 +207,7 @@ $sqlClient = $dbClient->query("SELECT * FROM client WHERE mail = '$mail'");
                             $allergies_list = explode('-', $allergies);
                             foreach ($allergies_list as $allergie) {
                                 echo '<div style="text-align:center; padding:0.2em;">'.$allergie.' <br> <?php </div>';
+                            echo '<a href="../acces/Allergies/allergies.php">Changer vos allergies.</a>';
                                 
                             }
                         } else {

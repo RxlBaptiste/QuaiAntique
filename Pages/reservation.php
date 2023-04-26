@@ -474,8 +474,6 @@
                             commentaire. </p>
                     </div>
                     <div class="Allergies">
-                        <!--DEBUT TEST-->
-
                         <section class="Gauche">
                             <div class="allergieGauche">
                                 <section>
@@ -923,7 +921,6 @@
                                 </section>
                             </div>
                         </section>
-                        <!--FIN TEST-->
                     </div>
                     <br><br>
                     <section id="submitAllergies">
