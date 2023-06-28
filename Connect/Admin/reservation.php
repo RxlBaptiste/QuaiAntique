@@ -56,6 +56,7 @@ $updateEtat = "UPDATE reservation SET etat='1' WHERE etat = 0";
                 while ($resa = $recupBase->fetch()) {
                     $clientName = $resa['name'];
                     $clientNb = $resa['NbPers'];
+                    $clientTel = $resa['Tel'];
                     $clientDate = strftime("%d/%m/%Y", strtotime($resa['Date']));
                     $clientHoraire = $resa['Horaire'];
                     $clientCommentaire = $resa['Commentaire'];
@@ -66,6 +67,7 @@ $updateEtat = "UPDATE reservation SET etat='1' WHERE etat = 0";
             <div class="container">
                 <p class="numeroResa">Réservation N° : <?php echo $count++; ?></p>
                 <p class="nomResa">Nom de la réservation : <?php echo $clientName; ?> </p>
+                <p class="nomResa">Numéro de téléphone : <?php echo $clientTel; ?> </p>
                 <p class="personneResa">Nombre de personnes : <?php echo $clientNb; ?> </p>
                 <p class="dateResa">Date de la réservation : <?php echo $clientDate; ?> </p>
                 <p class="heureResa">Heure de la réservation : <?php echo substr($clientHoraire, 0, 5); ?> </p>
